@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PYT Radar</title>
-    <link rel="alternate" type="application/rss+xml" title="PYT Radar RSS Feed" href="https://ericspiegelman.github.io/pyt-radar/feed.xml">
-    <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-    header { border-bottom: 1px solid #333; padding-bottom: 1.5rem; margin-bottom: 2rem; }
-    h1 { font-size: 2rem; color: #fff; letter-spacing: -0.02em; }
-    h1 span { color: #4ade80; }
-    .subtitle { color: #888; font-size: 0.95rem; margin-top: 0.25rem; }
-    .subscribe { margin-top: 0.75rem; }
-    .subscribe a { color: #4ade80; text-decoration: none; font-size: 0.9rem; border: 1px solid #333; padding: 0.3rem 0.75rem; border-radius: 4px; }
-    .subscribe a:hover { background: #1a2e1a; }
-    .subscribe a + a { margin-left: 0.5rem; }
-    .digest { background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
-    .digest-date { color: #4ade80; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-    .digest h2 { font-size: 1.25rem; color: #fff; margin: 0.5rem 0; }
-    .digest .show { color: #888; font-size: 0.9rem; }
-    .digest .summary { margin-top: 0.75rem; color: #bbb; }
-    .digest .links { margin-top: 1rem; }
-    .digest .links a { color: #4ade80; text-decoration: none; margin-right: 1rem; font-size: 0.9rem; }
-    .digest .links a:hover { text-decoration: underline; }
-    .tag { display: inline-block; background: #1a2e1a; color: #4ade80; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; }
-    .sentiment { margin-top: 0.5rem; font-size: 0.9rem; }
-    .sentiment-negative { color: #f87171; }
-    .quote { border-left: 2px solid #333; padding-left: 1rem; margin: 0.75rem 0; color: #999; font-style: italic; }
-    .targets { color: #666; font-size: 0.85rem; margin-top: 0.5rem; }
-    .empty { color: #555; text-align: center; padding: 3rem 0; font-size: 0.95rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PYT Radar</title>
+  <link rel="alternate" type="application/rss+xml" title="PYT Radar RSS Feed" href="https://ericspiegelman.github.io/pyt-radar/feed.xml">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+    header { background: #111; border-bottom: 1px solid #222; padding: 2rem; text-align: center; }
+    header h1 { font-size: 2rem; color: #fff; margin-bottom: 0.25rem; }
+    header p { color: #888; font-size: 0.95rem; }
+    .subscribe { margin-top: 1rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .subscribe a { display: inline-block; padding: 0.5rem 1.25rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: opacity 0.2s; }
+    .subscribe a:hover { opacity: 0.85; }
+    .subscribe .btn-email { background: #d44; color: #fff; }
+    .subscribe .btn-rss { background: #f90; color: #fff; }
+    main { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    .digest { background: #161616; border: 1px solid #222; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .digest-date { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .digest h2 { font-size: 1.25rem; color: #fff; margin-bottom: 0.15rem; }
+    .digest h3 { font-size: 1rem; color: #aaa; font-weight: 400; margin-bottom: 0.75rem; }
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .tag { background: #1a3a5c; color: #6cb4ee; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; }
+    .tag-mention { background: #3a2a1a; color: #e0a050; }
+    .tag-guest { background: #1a3a2a; color: #50c080; }
+    .sentiment { font-size: 0.85rem; margin-bottom: 0.75rem; font-weight: 500; }
+    .sentiment-negative { color: #e05050; }
+    .sentiment-positive { color: #50c080; }
+    .sentiment-neutral { color: #888; }
+    .sentiment-mixed { color: #e0a050; }
+    .digest p { margin-bottom: 0.75rem; color: #ccc; }
+    .quote { border-left: 3px solid #d44; padding: 0.75rem 1rem; margin: 1rem 0; background: #1a1111; border-radius: 0 6px 6px 0; }
+    .quote p { color: #e0c0c0; font-style: italic; margin-bottom: 0.25rem; }
+    .quote cite { color: #888; font-size: 0.85rem; }
+    .quote a { color: #6cb4ee; }
+    .links { margin-top: 0.75rem; }
+    .links a { color: #6cb4ee; text-decoration: none; font-size: 0.9rem; }
+    .links a:hover { text-decoration: underline; }
+    .empty { text-align: center; color: #555; padding: 3rem 1rem; }
+    footer { text-align: center; padding: 2rem; color: #555; font-size: 0.8rem; border-top: 1px solid #222; margin-top: 2rem; }
+  </style>
 </head>
 <body>
-    <div class="container">
-    <header>
-        <h1><span>PYT</span> Radar</h1>
-        <p class="subtitle">Podcast &amp; YouTube Tracking &mdash; automated episode digest</p>
-        <p class="targets">Tracking: Karen Bass (guest) &middot; Nithya Raman (topic)</p>
-        <p class="subscribe"><a href="https://blogtrottr.com/?subscribe=https://ericspiegelman.github.io/pyt-radar/feed.xml">&#9993; Subscribe via email</a> <a href="https://ericspiegelman.github.io/pyt-radar/feed.xml">&#128226; RSS feed</a></p>
-    </header>
-    <main id="digests">
-    <p class="empty">No episodes found yet. PYT Radar scans twice daily at 8am and 6pm.</p>
-    </main>
+  <header>
+    <h1>PYT Radar</h1>
+    <p>Podcast &amp; YouTube Tracking &mdash; automated episode digest</p>
+    <div class="subscribe">
+      <a class="btn-email" href="https://blogtrottr.com/?subscribe=https://ericspiegelman.github.io/pyt-radar/feed.xml">Subscribe via Email</a>
+      <a class="btn-rss" href="https://ericspiegelman.github.io/pyt-radar/feed.xml">RSS Feed</a>
     </div>
+  </header>
+  <main id="digests">
+    <div class="digest" id="2026-03-23-fly-on-the-wall">
+      <div class="digest-date">March 23, 2026</div>
+      <h2>Fly on the Wall with Dana Carvey and David Spade</h2>
+      <h3>Adam Friedland Joins the Old Boys Club</h3>
+      <div class="tags">
+        <span class="tag">Karen Bass</span>
+        <span class="tag tag-mention">Mentioned</span>
+      </div>
+      <div class="sentiment sentiment-negative">Sentiment: Negative</div>
+      <p>David Spade directly named Mayor Karen Bass and Governor Newsom as bearing responsibility for the decline of Hollywood production in LA, citing the bankruptcy of CBS Radford Studio Center. Dana Carvey called the Hollywood studio system dying and argued for tax breaks and union negotiations to bring production back.</p>
+      <blockquote class="quote">
+        <p>&ldquo;I was on the lot at CBS Radford when we were doing Just Shoot Me... just filed for bankruptcy. The lot, terrifying in L.A. Thanks, Karen Bass. Thanks, Gavin.&rdquo;</p>
+        <cite>&mdash; David Spade at <a href="https://www.youtube.com/watch?v=h6Q_vcA8kcI&amp;t=1254">20:54</a></cite>
+      </blockquote>
+      <div class="links">
+        <a href="https://www.youtube.com/watch?v=h6Q_vcA8kcI">&#9654; Watch Episode</a> |
+        <a href="https://www.dropbox.com/scl/fi/s04t1duywlj10r329v3kv/Fly-on-the-Wall-Adam-Friedland-Joins-the-Old-Boys-Club-Summary.docx?rlkey=sgxlc50i8r93975j7tuzm65st&amp;dl=0">&#128196; Summary</a> |
+        <a href="https://www.dropbox.com/scl/fi/ncb3cxk6imk639pf2vlo2/Fly-on-the-Wall-Adam-Friedland-Joins-the-Old-Boys-Club-Transcript.docx?rlkey=of2zvyae6p37q5z09fx8azqla&amp;dl=0">&#128196; Full Transcript</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>PYT Radar &mdash; Automated podcast &amp; YouTube tracking</p>
+  </footer>
 </body>
 </html>
