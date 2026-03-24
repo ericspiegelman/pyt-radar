@@ -2,18 +2,30 @@ name: PYT Radar Scan
 
 on:
   schedule:
-    # Every 30 minutes
-    - cron: '*/30 * * * *'
+    # YouTube scan: every 2 hours
+    - cron: '0 */2 * * *'
+    # Podcast scan: 8am ET (12:00 UTC) and 6pm ET (22:00 UTC)
+    - cron: '0 12,22 * * *'
   workflow_dispatch:
-    # Allow manual triggers from the Actions tab
+    inputs:
+      mode:
+        description: 'Search mode'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - youtube
+          - podcast
 
 permissions:
   contents: write
 
 jobs:
-  scan:
+  youtube-scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    if: github.event.schedule == '0 */2 * * *' || github.event_name == 'workflow_dispatch'
 
     steps:
       - name: Checkout repo
@@ -28,26 +40,58 @@ jobs:
         run: |
           pip install requests python-docx yt-dlp
 
-      - name: Run PYT Radar scan
+      - name: Run YouTube scan
         id: scan
         env:
           ASSEMBLYAI_API_KEY: ${{ secrets.ASSEMBLYAI_API_KEY }}
           DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          LISTENNOTES_API_KEY: ${{ secrets.LISTENNOTES_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
-        run: python scanner.py
+        run: python scanner.py --mode ${{ github.event.inputs.mode || 'youtube' }}
 
       - name: Commit and push changes
         run: |
           git config user.name "PYT Radar Bot"
           git config user.email "pyt-radar[bot]@users.noreply.github.com"
-          for f in data/found_episodes.json index.html feed.xml kb/*; do
-            [ -f "$f" ] && git add "$f"
-          done
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "PYT Radar: new episode(s) found $(date -u +%Y-%m-%d)"
-            git push
-          fi
+          git add data/ index.html feed.xml kb/*
+          git diff --staged --quiet || git commit -m "PYT Radar: new YouTube episodes found"
+          git push
+
+  podcast-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.event.schedule == '0 12,22 * * *' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-docx yt-dlp
+
+      - name: Run podcast scan
+        id: scan
+        env:
+          ASSEMBLYAI_API_KEY: ${{ secrets.ASSEMBLYAI_API_KEY }}
+          DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          LISTENNOTES_API_KEY: ${{ secrets.LISTENNOTES_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
+        run: python scanner.py --mode ${{ github.event.inputs.mode || 'podcast' }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "PYT Radar Bot"
+          git config user.email "pyt-radar[bot]@users.noreply.github.com"
+          git add data/ index.html feed.xml kb/*
+          git diff --staged --quiet || git commit -m "PYT Radar: new podcast episodes found"
+          git push
