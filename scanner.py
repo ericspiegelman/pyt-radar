@@ -140,11 +140,6 @@ def find_new_episodes(episodes_data):
                 if duration < 300:
                     print(f"  Skip (too short {duration}s): {r['title']}")
                     continue
-                # Check if the guest name appears in title or description
-                text = (r["title"] + " " + r["description"]).lower()
-                if guest.lower() not in text:
-                    print(f"  Skip (name not in metadata): {r['title']}")
-                    continue
                 print(f"  FOUND: {r['title']} ({r['channel']})")
                 new_episodes.append({
                     "url": r["url"],
@@ -174,10 +169,6 @@ def find_new_episodes(episodes_data):
                 duration = get_video_duration(r["video_id"])
                 if duration < 300:
                     print(f"  Skip (too short {duration}s): {r['title']}")
-                    continue
-                text = (r["title"] + " " + r["description"]).lower()
-                if topic.lower() not in text:
-                    print(f"  Skip (topic not in metadata): {r['title']}")
                     continue
                 print(f"  FOUND: {r['title']} ({r['channel']})")
                 new_episodes.append({
