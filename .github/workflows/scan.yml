@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "PYT Radar Bot"
           git config user.email "pyt-radar[bot]@users.noreply.github.com"
-          for f in data/found_episodes.json index.html feed.xml; do
+          for f in data/found_episodes.json index.html feed.xml kb/*; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --staged --quiet; then
