@@ -13,6 +13,7 @@ import sys
 import json
 import time
 import re
+import shutil
 import subprocess
 import tempfile
 import argparse
@@ -313,17 +314,110 @@ def find_new_episodes(episodes_data, mode="all"):
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def download_youtube_audio(url):
-    """Download audio from YouTube using yt-dlp, return local file path."""
+    """Download audio from YouTube using yt-dlp with resilient options.
+    Returns local file path. Tries multiple strategies to work around
+    YouTube blocking datacenter IPs (common on GitHub Actions runners)."""
     tmpdir = tempfile.mkdtemp()
     output_template = os.path.join(tmpdir, "audio.%(ext)s")
-    subprocess.run(
-        ["yt-dlp", "-f", "bestaudio", "-o", output_template, url],
-        check=True, capture_output=True
-    )
-    for f in os.listdir(tmpdir):
-        if f.startswith("audio."):
-            return os.path.join(tmpdir, f)
-    raise RuntimeError("yt-dlp did not produce an audio file")
+
+    # Strategy 1: Use iOS player client (less aggressive bot detection)
+    strategies = [
+        {
+            "name": "iOS client",
+            "args": [
+                "yt-dlp",
+                "-f", "bestaudio/best",
+                "--extractor-args", "youtube:player_client=ios",
+                "--no-check-certificates",
+                "--retries", "3",
+                "--socket-timeout", "30",
+                "--user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15",
+                "-o", output_template,
+                url,
+            ],
+        },
+        {
+            "name": "web + mweb clients",
+            "args": [
+                "yt-dlp",
+                "-f", "bestaudio/best",
+                "--extractor-args", "youtube:player_client=mweb,web",
+                "--no-check-certificates",
+                "--retries", "3",
+                "--socket-timeout", "30",
+                "-o", output_template,
+                url,
+            ],
+        },
+        {
+            "name": "default with fallback format",
+            "args": [
+                "yt-dlp",
+                "-f", "worstaudio/worst",
+                "--no-check-certificates",
+                "--retries", "3",
+                "--socket-timeout", "30",
+                "-o", output_template,
+                url,
+            ],
+        },
+    ]
+
+    last_error = None
+    for strategy in strategies:
+        # Clean any leftover files from previous attempts
+        for f in os.listdir(tmpdir):
+            os.unlink(os.path.join(tmpdir, f))
+        try:
+            print(f"  yt-dlp strategy: {strategy['name']}")
+            result = subprocess.run(
+                strategy["args"],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode == 0:
+                for f in os.listdir(tmpdir):
+                    if f.startswith("audio."):
+                        print(f"  yt-dlp succeeded with strategy: {strategy['name']}")
+                        return os.path.join(tmpdir, f)
+            else:
+                print(f"  yt-dlp failed ({strategy['name']}): {result.stderr[:200]}")
+                last_error = result.stderr
+        except subprocess.TimeoutExpired:
+            print(f"  yt-dlp timed out ({strategy['name']})")
+            last_error = "timeout"
+        except Exception as e:
+            print(f"  yt-dlp error ({strategy['name']}): {e}")
+            last_error = str(e)
+
+    # Clean up tmpdir on failure
+    shutil.rmtree(tmpdir, ignore_errors=True)
+    raise RuntimeError(f"All yt-dlp strategies failed for {url}. Last error: {last_error}")
+
+
+def get_youtube_audio_url(url):
+    """Try to extract the direct audio stream URL from YouTube using yt-dlp -g.
+    Returns the URL string if successful, None otherwise.
+    This URL can be passed directly to AssemblyAI for transcription."""
+    strategies = [
+        ["yt-dlp", "-g", "-f", "bestaudio/best",
+         "--extractor-args", "youtube:player_client=ios",
+         "--no-check-certificates", url],
+        ["yt-dlp", "-g", "-f", "bestaudio/best",
+         "--extractor-args", "youtube:player_client=mweb,web",
+         "--no-check-certificates", url],
+        ["yt-dlp", "-g", "-f", "worstaudio/worst",
+         "--no-check-certificates", url],
+    ]
+    for args in strategies:
+        try:
+            result = subprocess.run(args, capture_output=True, text=True, timeout=60)
+            if result.returncode == 0 and result.stdout.strip():
+                audio_url = result.stdout.strip().split("\n")[0]
+                print(f"  Got direct audio URL via yt-dlp -g")
+                return audio_url
+        except Exception:
+            continue
+    return None
 
 
 def upload_to_assemblyai(filepath):
@@ -380,19 +474,34 @@ def transcribe(audio_url):
 
 def transcribe_episode(episode):
     """Full pipeline: download audio â upload â transcribe.
-    Handles both YouTube videos and podcast episodes with direct audio URLs."""
+    Handles both YouTube videos and podcast episodes with direct audio URLs.
+    For YouTube, tries multiple strategies:
+      1. Download audio locally with yt-dlp, upload to AssemblyAI
+      2. Extract direct stream URL with yt-dlp -g, pass to AssemblyAI
+    """
     print(f"Transcribing: {episode['title']}")
 
     audio_url_for_aai = episode.get("audio_url")
 
     if episode.get("video_id"):
-        # YouTube: download audio locally, then upload to AssemblyAI
-        audio_path = download_youtube_audio(episode["url"])
+        # YouTube: try download first, then fall back to direct URL extraction
         try:
-            audio_url_for_aai = upload_to_assemblyai(audio_path)
-        finally:
-            os.unlink(audio_path)
-            os.rmdir(os.path.dirname(audio_path))
+            audio_path = download_youtube_audio(episode["url"])
+            try:
+                audio_url_for_aai = upload_to_assemblyai(audio_path)
+            finally:
+                os.unlink(audio_path)
+                os.rmdir(os.path.dirname(audio_path))
+        except RuntimeError as e:
+            print(f"  Download failed, trying direct URL extraction: {e}")
+            direct_url = get_youtube_audio_url(episode["url"])
+            if direct_url:
+                print(f"  Using direct stream URL for AssemblyAI")
+                audio_url_for_aai = direct_url
+            else:
+                raise RuntimeError(
+                    f"All YouTube audio strategies failed for: {episode['title']}"
+                )
     elif audio_url_for_aai:
         # Podcast with direct audio URL â AssemblyAI can fetch it directly
         print(f"  Using direct audio URL from podcast")
@@ -512,7 +621,7 @@ def generate_basic_summary(episode, transcript_data):
         "speaker": "Unknown",
         "timestamp_mm_ss": "00:00",
         "timestamp_seconds": 0,
-        "context": "Automated detection â manual review recommended",
+        "context": "Automated detection â review recommended",
     }
     if "context" not in key_moment:
         key_moment["context"] = f"{episode['search_target']} was discussed in this episode"
@@ -572,7 +681,7 @@ def create_summary_docx(episode, summary, output_path):
 
     # Sentiment
     doc.add_heading("Sentiment Analysis", level=2)
-    p = doc.add_paragraph()
+    p = docc.add_paragraph()
     run = p.add_run(f"Sentiment toward {episode['search_target']}: {summary['sentiment'].upper()}")
     run.bold = True
     doc.add_paragraph(summary.get("sentiment_explanation", ""))
