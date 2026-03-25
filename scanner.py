@@ -33,7 +33,7 @@ except ImportError:
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 ASSEMBLYAI_KEY = os.environ["ASSEMBLYAI_API_KEY"]
-DROPBOX_TOKEN = os.environ["DROPBOX_TOKEN"]
+DROPBOX_TOKEN = os.environ.get("DROPBOX_TOKEN", "")
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 LISTENNOTES_API_KEY = os.environ.get("LISTENNOTES_API_KEY", "")
 
@@ -922,6 +922,15 @@ def update_blog(episode, summary, dropbox_links):
     match_class = "tag-guest" if episode["match_type"] == "guest" else "tag-mention"
     match_label = "Guest" if episode["match_type"] == "guest" else "Mentioned"
 
+    # Build document links – show Dropbox links if available, otherwise omit
+    doc_links = ""
+    if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+        doc_links += f""" |
+        <a href="{html_escape(dropbox_links['summary'])}">&#128196; Summary</a>"""
+    if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+        doc_links += f""" |
+        <a href="{html_escape(dropbox_links['transcript'])}">&#128196; Full Transcript</a>"""
+
     digest_html = f"""    <div class="digest" id="{entry_id}">
       <div class="digest-date">{today}</div>
       <h2>{html_escape(episode['show_name'])}</h2>
@@ -937,9 +946,7 @@ def update_blog(episode, summary, dropbox_links):
         <cite>&mdash; {km_speaker} at <a href="{episode['url']}&amp;t={km_secs}">{km_ts}</a></cite>
       </blockquote>
       <div class="links">
-        <a href="{episode['url']}">&#9654; Watch Episode</a> |
-        <a href="{html_escape(dropbox_links['summary'])}">&#128196; Summary</a> |
-        <a href="{html_escape(dropbox_links['transcript'])}">&#128196; Full Transcript</a>
+        <a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links}
       </div>
     </div>"""
 
@@ -973,15 +980,20 @@ def update_rss(episode, summary, dropbox_links, entry_id):
 
     headline = f"{episode['show_name'].split(' with ')[0] if ' with ' in episode['show_name'] else episode['show_name']}: {summary.get('overview', episode['title'])[:80]}"
 
+    # Build document links for RSS – only include if Dropbox succeeded
+    doc_links_html = ""
+    if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+        doc_links_html += f'\n<a href="{dropbox_links["summary"]}">📄 Summary</a>'
+    if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+        doc_links_html += f' |\n<a href="{dropbox_links["transcript"]}">📄 Full Transcript</a>'
+
     description_html = f"""<p><strong>{html_escape(episode['show_name'])}</strong><br/>
-"{html_escape(episode['title'])}" â Published {episode['date_published']}</p>
+"{html_escape(episode['title'])}" – Published {episode['date_published']}</p>
 <p><strong>Match:</strong> {html_escape(episode['search_target'])} ({episode['match_type']})</p>
 <p><strong>Sentiment: {summary.get('sentiment', 'neutral').title()}</strong></p>
 <p>{html_escape(summary.get('overview', ''))}</p>
-<p><strong>Key moment at <a href="{episode['url']}&t={km_secs}">{km_ts}</a>:</strong> "{html_escape(km.get('text', ''))}" â {html_escape(km.get('speaker', 'Unknown'))}</p>
-<p><a href="{episode['url']}">â¶ Watch Episode</a> |
-<a href="{dropbox_links['summary']}">ð Summary</a> |
-<a href="{dropbox_links['transcript']}">ð Full Transcript</a></p>"""
+<p><strong>Key moment at <a href="{episode['url']}&t={km_secs}">{km_ts}</a>:</strong> "{html_escape(km.get('text', ''))}" – {html_escape(km.get('speaker', 'Unknown'))}</p>
+<p><a href="{episode['url']}">▶ Watch Episode</a>{doc_links_html}</p>"""
 
     item_xml = f"""    <item>
       <title>{html_escape(headline)}</title>
@@ -1130,23 +1142,26 @@ def process_episode(episode, episodes_data):
     create_summary_docx(episode, summary, summary_path)
     create_transcript_docx(episode, transcript_data, transcript_path)
 
-    # 5. Upload to Dropbox
+    # 5. Upload to Dropbox (non-fatal – blog still updates if this fails)
     dbx_summary = f"/{base_name} - Summary.docx"
     dbx_transcript = f"/{base_name} - Transcript.docx"
 
-    upload_to_dropbox(summary_path, dbx_summary)
-    upload_to_dropbox(transcript_path, dbx_transcript)
+    dropbox_links = {"summary": "#", "transcript": "#"}
+    dropbox_paths = {"summary": dbx_summary, "transcript": dbx_transcript}
 
-    # 6. Get shared links
-    summary_link = get_dropbox_link(dbx_summary)
-    transcript_link = get_dropbox_link(dbx_transcript)
-    print(f"  Summary link: {summary_link}")
-    print(f"  Transcript link: {transcript_link}")
+    try:
+        upload_to_dropbox(summary_path, dbx_summary)
+        upload_to_dropbox(transcript_path, dbx_transcript)
 
-    dropbox_links = {
-        "summary": summary_link,
-        "transcript": transcript_link,
-    }
+        # 6. Get shared links
+        summary_link = get_dropbox_link(dbx_summary)
+        transcript_link = get_dropbox_link(dbx_transcript)
+        print(f"  Summary link: {summary_link}")
+        print(f"  Transcript link: {transcript_link}")
+        dropbox_links = {"summary": summary_link, "transcript": transcript_link}
+    except Exception as e:
+        print(f"  WARNING: Dropbox upload/link failed: {e}")
+        print("  Continuing without Dropbox links – blog will still be updated")
 
     # 7. Update blog and RSS
     entry_id = update_blog(episode, summary, dropbox_links)
@@ -1162,18 +1177,18 @@ def process_episode(episode, episodes_data):
         "date_published": episode["date_published"],
         "search_target": episode["search_target"],
         "match_type": episode["match_type"],
-        "dropbox_paths": {
-            "transcript": dbx_transcript,
-            "summary": dbx_summary,
-        },
+        "dropbox_paths": dropbox_paths,
         "dropbox_links": dropbox_links,
     })
     save_episodes(episodes_data)
 
     # Cleanup
-    os.unlink(summary_path)
-    os.unlink(transcript_path)
-    os.rmdir(tmpdir)
+    try:
+        os.unlink(summary_path)
+        os.unlink(transcript_path)
+        os.rmdir(tmpdir)
+    except OSError:
+        pass
 
     print(f"\nDone processing: {episode['title']}")
     return True
