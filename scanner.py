@@ -44,6 +44,7 @@ EPISODES_FILE = REPO_ROOT / "data" / "found_episodes.json"
 INDEX_FILE = REPO_ROOT / "index.html"
 FEED_FILE = REPO_ROOT / "feed.xml"
 KB_DIR = REPO_ROOT / "kb"
+COOKIES_FILE = Path("cookies.txt")
 
 
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
@@ -327,6 +328,10 @@ def download_youtube_audio(url):
     output_template = os.path.join(tmpdir, "audio.%(ext)s")
 
     # Strategy 1: Use iOS player client (less aggressive bot detection)
+    cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
+    if cookie_args:
+        print("  Using YouTube cookies for authentication")
+
     strategies = [
         {
             "name": "iOS client",
@@ -376,8 +381,9 @@ def download_youtube_audio(url):
             os.unlink(os.path.join(tmpdir, f))
         try:
             print(f"  yt-dlp strategy: {strategy['name']}")
+            full_args = strategy["args"][:-1] + cookie_args + [strategy["args"][-1]]
             result = subprocess.run(
-                strategy["args"],
+                full_args,
                 capture_output=True, text=True, timeout=120
             )
             if result.returncode == 0:
@@ -404,6 +410,7 @@ def get_youtube_audio_url(url):
     """Try to extract the direct audio stream URL from YouTube using yt-dlp -g.
     Returns the URL string if successful, None otherwise.
     This URL can be passed directly to AssemblyAI for transcription."""
+    cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
     strategies = [
         ["yt-dlp", "-g", "-f", "bestaudio/best",
          "--extractor-args", "youtube:player_client=ios",
@@ -416,7 +423,8 @@ def get_youtube_audio_url(url):
     ]
     for args in strategies:
         try:
-            result = subprocess.run(args, capture_output=True, text=True, timeout=60)
+            full_args = args[:-1] + cookie_args + [args[-1]]
+            result = subprocess.run(full_args, capture_output=True, text=True, timeout=60)
             if result.returncode == 0 and result.stdout.strip():
                 audio_url = result.stdout.strip().split("\n")[0]
                 print(f"  Got direct audio URL via yt-dlp -g")
