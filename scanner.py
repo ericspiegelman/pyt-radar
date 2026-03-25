@@ -681,7 +681,7 @@ def create_summary_docx(episode, summary, output_path):
 
     # Sentiment
     doc.add_heading("Sentiment Analysis", level=2)
-    p = docc.add_paragraph()
+    p = doc.add_paragraph()
     run = p.add_run(f"Sentiment toward {episode['search_target']}: {summary['sentiment'].upper()}")
     run.bold = True
     doc.add_paragraph(summary.get("sentiment_explanation", ""))
