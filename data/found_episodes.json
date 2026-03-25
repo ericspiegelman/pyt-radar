@@ -67,6 +67,30 @@
         "summary": "#",
         "transcript": "#"
       }
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=UFVwPHr48Sk",
+      "video_id": "UFVwPHr48Sk",
+      "title": "LA Times Says Supporting Karen Bass Was a Misstep | Adam Carolla Show News - Daily Podcast",
+      "show_name": "Veritas Imperium",
+      "date_published": "2026-03-20",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "duration": 3767,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-25T23:48:10.827842"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5SN0PoVpalY",
+      "video_id": "5SN0PoVpalY",
+      "title": "Jack Harlow Feels Blacker|LA Mayor Karen Bass Homeless Problem Update + More",
+      "show_name": "Kamal (The Shadowban Man) Johnson",
+      "date_published": "2026-03-19",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "duration": 4622,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-25T23:48:17.325827"
     }
   ]
 }
