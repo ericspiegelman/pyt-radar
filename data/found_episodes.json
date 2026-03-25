@@ -1,0 +1,72 @@
+{
+  "episodes": [
+    {
+      "url": "https://www.youtube.com/watch?v=x2_3EAzSLe4",
+      "title": "Karen Bass Endorsement Under Fire After LA Times Criticism | Adam Carolla Show News - Daily Podcast",
+      "show_name": "Culture Shock Radio",
+      "date_found": "2026-03-25",
+      "date_published": "2026-03-20",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Culture Shock Radio - Karen Bass Endorsement Under Fire After LA Times Criticism  Adam Carolla Show News - Daily Podcast - Summary.docx",
+        "transcript": "/Culture Shock Radio - Karen Bass Endorsement Under Fire After LA Times Criticism  Adam Carolla Show News - Daily Podcast - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      }
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EUmuseNq9zY",
+      "title": "Karen Bass Blames LA Heat Wave on Climate Change | Adam Carolla Reacts!",
+      "show_name": "Adam Carolla",
+      "date_found": "2026-03-25",
+      "date_published": "2026-03-19",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Adam Carolla - Karen Bass Blames LA Heat Wave on Climate Change  Adam Carolla Reacts - Summary.docx",
+        "transcript": "/Adam Carolla - Karen Bass Blames LA Heat Wave on Climate Change  Adam Carolla Reacts - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      }
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=V-j3Rige7Cc",
+      "title": "Who&#39;s Going to Fix LA? Nithya Raman on the Budget Crisis, Housing &amp; 2028 Olympics | The Moment LIVE",
+      "show_name": "The Moment LIVE",
+      "date_found": "2026-03-25",
+      "date_published": "2026-03-23",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "dropbox_paths": {
+        "summary": "/The Moment LIVE - Who39s Going to Fix LA Nithya Raman on the Budget Crisis Housing amp 2028 Olympics  The Moment LIVE - Summary.docx",
+        "transcript": "/The Moment LIVE - Who39s Going to Fix LA Nithya Raman on the Budget Crisis Housing amp 2028 Olympics  The Moment LIVE - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      }
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=c3qMvb7q1F4",
+      "title": "Justice for C\u00e9sar Ch\u00e1vez Victims? Taylor Frankie Paul &amp; Nithya Raman for LA Mayor | The Moment LIVE",
+      "show_name": "The Moment LIVE",
+      "date_found": "2026-03-25",
+      "date_published": "2026-03-21",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "dropbox_paths": {
+        "summary": "/The Moment LIVE - Justice for C\u00e9sar Ch\u00e1vez Victims Taylor Frankie Paul amp Nithya Raman for LA Mayor  The Moment LIVE - Summary.docx",
+        "transcript": "/The Moment LIVE - Justice for C\u00e9sar Ch\u00e1vez Victims Taylor Frankie Paul amp Nithya Raman for LA Mayor  The Moment LIVE - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      }
+    }
+  ]
+}
