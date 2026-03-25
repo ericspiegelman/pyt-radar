@@ -40,13 +40,13 @@ jobs:
         run: |
           pip install requests python-docx yt-dlp youtube-transcript-api
 
-      - name: Decode YouTube cookies
+      - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          echo "$YOUTUBE_COOKIES" | base64 -d > cookies.txt
-          echo "YouTube cookies file created"
+          printf '%s' "$YOUTUBE_COOKIES" > cookies.txt
+          echo "YouTube cookies file created ($(wc -c < cookies.txt) bytes)"
 
       - name: Run YouTube scan
         id: scan
@@ -85,13 +85,13 @@ jobs:
         run: |
           pip install requests python-docx yt-dlp youtube-transcript-api
 
-      - name: Decode YouTube cookies
+      - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          echo "$YOUTUBE_COOKIES" | base64 -d > cookies.txt
-          echo "YouTube cookies file created"
+          printf '%s' "$YOUTUBE_COOKIES" > cookies.txt
+          echo "YouTube cookies file created ($(wc -c < cookies.txt) bytes)"
 
       - name: Run podcast scan
         id: scan
