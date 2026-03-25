@@ -38,7 +38,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-docx yt-dlp
+          pip install requests python-docx yt-dlp youtube-transcript-api youtube-transcript-api
 
       - name: Run YouTube scan
         id: scan
@@ -75,7 +75,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-docx yt-dlp
+          pip install requests python-docx yt-dlp youtube-transcript-api youtube-transcript-api
 
       - name: Run podcast scan
         id: scan
