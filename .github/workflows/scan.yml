@@ -38,7 +38,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-docx yt-dlp youtube-transcript-api
+          pip install requests python-docx youtube-transcript-api
+          pip install "yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.tar.gz"
 
       - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
@@ -83,7 +84,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-docx yt-dlp youtube-transcript-api
+          pip install requests python-docx youtube-transcript-api
+          pip install "yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.tar.gz"
 
       - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
