@@ -352,7 +352,7 @@ def download_youtube_audio(url):
             "args": [
                 "yt-dlp",
                 "-f", "bestaudio/best",
-                "--extractor-args", "youtube:player_client=mediaconnect",
+                "--extractor-args", "youtube:player_client=tv_embedded",
                 "--no-check-certificates",
                 "--retries", "3",
                 "--socket-timeout", "30",
@@ -416,7 +416,7 @@ def get_youtube_audio_url(url):
          "--extractor-args", "youtube:player_client=web_creator",
          "--no-check-certificates", url],
         ["yt-dlp", "-g", "-f", "bestaudio/best",
-         "--extractor-args", "youtube:player_client=mediaconnect",
+         "--extractor-args", "youtube:player_client=tv_embedded",
          "--no-check-certificates", url],
         ["yt-dlp", "-g", "-f", "worstaudio/worst",
          "--no-check-certificates", url],
@@ -562,9 +562,8 @@ def transcribe_episode(episode):
 
         if audio_url_for_aai:
             return transcribe(audio_url_for_aai)
-        raise RuntimeError(
-            f"All YouTube transcript strategies failed for: {episode['title']}"
-        )
+        print(f"  WARNING: All YouTube transcript strategies failed for: {episode['title']}")
+        return None
 
     elif episode.get("audio_url"):
         print(f"  Using direct audio URL from podcast")
