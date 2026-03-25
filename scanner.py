@@ -337,6 +337,7 @@ def download_youtube_audio(url):
             "name": "iOS client",
             "args": [
                 "yt-dlp",
+                "--js-runtimes", "node",
                 "-f", "bestaudio/best",
                 "--extractor-args", "youtube:player_client=web_creator",
                 "--no-check-certificates",
@@ -351,6 +352,7 @@ def download_youtube_audio(url):
             "name": "web + mweb clients",
             "args": [
                 "yt-dlp",
+                "--js-runtimes", "node",
                 "-f", "bestaudio/best",
                 "--extractor-args", "youtube:player_client=tv_embedded",
                 "--no-check-certificates",
@@ -364,6 +366,7 @@ def download_youtube_audio(url):
             "name": "default with fallback format",
             "args": [
                 "yt-dlp",
+                "--js-runtimes", "node",
                 "-f", "worstaudio/worst",
                 "--no-check-certificates",
                 "--retries", "3",
@@ -412,13 +415,13 @@ def get_youtube_audio_url(url):
     This URL can be passed directly to AssemblyAI for transcription."""
     cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
     strategies = [
-        ["yt-dlp", "-g", "-f", "bestaudio/best",
+        ["yt-dlp", "--js-runtimes", "node", "-g", "-f", "bestaudio/best",
          "--extractor-args", "youtube:player_client=web_creator",
          "--no-check-certificates", url],
-        ["yt-dlp", "-g", "-f", "bestaudio/best",
+        ["yt-dlp", "--js-runtimes", "node", "-g", "-f", "bestaudio/best",
          "--extractor-args", "youtube:player_client=tv_embedded",
          "--no-check-certificates", url],
-        ["yt-dlp", "-g", "-f", "worstaudio/worst",
+        ["yt-dlp", "--js-runtimes", "node", "-g", "-f", "worstaudio/worst",
          "--no-check-certificates", url],
     ]
     for args in strategies:
