@@ -21,6 +21,12 @@ import requests
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+try:
+    from youtube_transcript_api import YouTubeTranscriptApi
+    HAS_YT_TRANSCRIPT = True
+except ImportError:
+    HAS_YT_TRANSCRIPT = False
+
 
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 # Configuration
@@ -472,19 +478,65 @@ def transcribe(audio_url):
         time.sleep(15)
 
 
+def get_youtube_transcript(video_id):
+    """Try to get YouTube captions/transcript via youtube-transcript-api.
+    Returns transcript_data dict compatible with AssemblyAI format, or None."""
+    if not HAS_YT_TRANSCRIPT:
+        print("  youtube-transcript-api not available")
+        return None
+    try:
+        ytt_api = YouTubeTranscriptApi()
+        transcript_list = ytt_api.fetch(video_id)
+        # Convert to AssemblyAI-compatible format
+        utterances = []
+        full_text_parts = []
+        for entry in transcript_list:
+            start_ms = int(entry.start * 1000)
+            end_ms = int((entry.start + entry.duration) * 1000)
+            text = entry.text.strip()
+            if not text:
+                continue
+            utterances.append({
+                "start": start_ms,
+                "end": end_ms,
+                "text": text,
+                "speaker": "A",  # captions don't have speaker labels
+            })
+            full_text_parts.append(text)
+        if not utterances:
+            print("  YouTube captions were empty")
+            return None
+        total_duration = utterances[-1]["end"] // 1000 if utterances else 0
+        print(f"  Got YouTube captions: {len(utterances)} segments, ~{total_duration // 60}m")
+        return {
+            "utterances": utterances,
+            "text": " ".join(full_text_parts),
+            "audio_duration": total_duration,
+            "source": "youtube_captions",
+        }
+    except Exception as e:
+        print(f"  YouTube captions not available: {e}")
+        return None
+
 def transcribe_episode(episode):
-    """Full pipeline: download audio â upload â transcribe.
-    Handles both YouTube videos and podcast episodes with direct audio URLs.
-    For YouTube, tries multiple strategies:
-      1. Download audio locally with yt-dlp, upload to AssemblyAI
-      2. Extract direct stream URL with yt-dlp -g, pass to AssemblyAI
+    """Full pipeline: get transcript for episode.
+    For YouTube, tries in order:
+      1. YouTube captions via youtube-transcript-api (no download needed)
+      2. Download audio with yt-dlp, upload to AssemblyAI
+      3. Extract direct stream URL with yt-dlp -g, pass to AssemblyAI
+    For podcasts, uses direct audio URL with AssemblyAI.
     """
     print(f"Transcribing: {episode['title']}")
 
-    audio_url_for_aai = episode.get("audio_url")
-
     if episode.get("video_id"):
-        # YouTube: try download first, then fall back to direct URL extraction
+        # Strategy 1: Try YouTube captions first (avoids bot detection entirely)
+        transcript_data = get_youtube_transcript(episode["video_id"])
+        if transcript_data:
+            print("  Using YouTube captions (no audio download needed)")
+            return transcript_data
+
+        # Strategy 2: Try yt-dlp download + AssemblyAI
+        audio_url_for_aai = None
         try:
             audio_path = download_youtube_audio(episode["url"])
             try:
@@ -494,26 +546,23 @@ def transcribe_episode(episode):
                 os.rmdir(os.path.dirname(audio_path))
         except RuntimeError as e:
             print(f"  Download failed, trying direct URL extraction: {e}")
+            # Strategy 3: Try yt-dlp -g for direct URL
             direct_url = get_youtube_audio_url(episode["url"])
             if direct_url:
                 print(f"  Using direct stream URL for AssemblyAI")
                 audio_url_for_aai = direct_url
-            else:
-                raise RuntimeError(
-                    f"All YouTube audio strategies failed for: {episode['title']}"
-                )
-    elif audio_url_for_aai:
-        # Podcast with direct audio URL â AssemblyAI can fetch it directly
+
+        if audio_url_for_aai:
+            return transcribe(audio_url_for_aai)
+        raise RuntimeError(
+            f"All YouTube transcript strategies failed for: {episode['title']}"
+        )
+
+    elif episode.get("audio_url"):
         print(f"  Using direct audio URL from podcast")
+        return transcribe(episode["audio_url"])
     else:
         raise RuntimeError(f"No audio source for episode: {episode['title']}")
-
-    return transcribe(audio_url_for_aai)
-
-
-# ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-# Summary generation (using Claude API)
-# ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 def generate_summary_with_claude(episode, transcript_data):
     """Use Claude API to generate a structured summary of the transcript."""
