@@ -338,7 +338,7 @@ def download_youtube_audio(url):
             "args": [
                 "yt-dlp",
                 "-f", "bestaudio/best",
-                "--extractor-args", "youtube:player_client=ios",
+                "--extractor-args", "youtube:player_client=web_creator",
                 "--no-check-certificates",
                 "--retries", "3",
                 "--socket-timeout", "30",
@@ -352,7 +352,7 @@ def download_youtube_audio(url):
             "args": [
                 "yt-dlp",
                 "-f", "bestaudio/best",
-                "--extractor-args", "youtube:player_client=mweb,web",
+                "--extractor-args", "youtube:player_client=mediaconnect",
                 "--no-check-certificates",
                 "--retries", "3",
                 "--socket-timeout", "30",
@@ -413,10 +413,10 @@ def get_youtube_audio_url(url):
     cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
     strategies = [
         ["yt-dlp", "-g", "-f", "bestaudio/best",
-         "--extractor-args", "youtube:player_client=ios",
+         "--extractor-args", "youtube:player_client=web_creator",
          "--no-check-certificates", url],
         ["yt-dlp", "-g", "-f", "bestaudio/best",
-         "--extractor-args", "youtube:player_client=mweb,web",
+         "--extractor-args", "youtube:player_client=mediaconnect",
          "--no-check-certificates", url],
         ["yt-dlp", "-g", "-f", "worstaudio/worst",
          "--no-check-certificates", url],
@@ -1098,6 +1098,16 @@ def process_episode(episode, episodes_data):
 
     # 1. Transcribe
     transcript_data = transcribe_episode(episode)
+
+    if not transcript_data:
+        print("  WARNING: All transcription methods failed for this episode")
+        print("  Recording episode as found (without transcript)")
+        episode["status"] = "transcript_unavailable"
+        episode["processed_date"] = datetime.now().isoformat()
+        episodes_data["episodes"].append(episode)
+        save_episodes(episodes_data)
+        print(f"  Episode logged: {episode['title']} (transcript unavailable)")
+        return True
 
     # 2. Generate summary
     print("Generating summary...")
