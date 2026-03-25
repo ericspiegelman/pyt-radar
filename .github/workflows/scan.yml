@@ -36,10 +36,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install dependencies
         run: |
           pip install requests python-docx youtube-transcript-api
-          pip install "yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.tar.gz"
+          pip install "yt-dlp[default]"
 
       - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
@@ -82,10 +87,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install dependencies
         run: |
           pip install requests python-docx youtube-transcript-api
-          pip install "yt-dlp @ https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.tar.gz"
+          pip install "yt-dlp[default]"
 
       - name: Create YouTube cookies file
         if: env.YOUTUBE_COOKIES != ''
