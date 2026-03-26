@@ -1697,9 +1697,11 @@ def main():
     for episode in new_episodes:
         try:
             result = process_episode(episode, episodes_data)
-            if result:
+            if isinstance(result, dict):
                 processed += 1
                 digest_results.append(result)
+            elif result:
+                processed += 1
         except Exception as e:
             print(f"\nERROR processing {episode['title']}: {e}")
             continue
