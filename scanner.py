@@ -1236,10 +1236,176 @@ def process_episode(episode, episodes_data):
     return True
 
 
+
+def update_blog_links(episode, dropbox_links):
+    """Update an existing blog entry to add Dropbox document links."""
+    if not INDEX_FILE.exists():
+        return
+    content = INDEX_FILE.read_text()
+
+    # Find the digest entry for this episode by matching the episode URL
+    ep_url = episode["url"]
+    watch_link = f'<a href="{ep_url}">&#9654; Watch Episode</a>'
+    if watch_link not in content:
+        escaped_url = html_escape(ep_url)
+        watch_link = f'<a href="{escaped_url}">&#9654; Watch Episode</a>'
+    if watch_link not in content:
+        print(f"  WARNING: Could not find blog entry to update for: {episode['title']}")
+        return
+
+    # Build new doc links
+    doc_links = ""
+    if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+        doc_links += f""" |
+        <a href="{html_escape(dropbox_links['summary'])}">&#128196; Summary</a>"""
+    if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+        doc_links += f""" |
+        <a href="{html_escape(dropbox_links['transcript'])}">&#128196; Full Transcript</a>"""
+
+    if doc_links:
+        content = content.replace(watch_link, watch_link + doc_links)
+        INDEX_FILE.write_text(content)
+        print(f"  Blog entry updated with Dropbox links")
+
+def reprocess_failed_episodes(episodes_data):
+    """Retry failed episodes: re-transcribe if needed, re-upload to Dropbox, update blog."""
+    episodes = episodes_data["episodes"]
+    to_reprocess = []
+
+    for i, ep in enumerate(episodes):
+        needs_work = False
+        reason = ""
+        if ep.get("status") == "transcript_unavailable":
+            needs_work = True
+            reason = "transcript_unavailable"
+        elif ep.get("dropbox_links", {}).get("summary") == "#":
+            needs_work = True
+            reason = "dropbox_failed"
+        if needs_work:
+            to_reprocess.append((i, ep, reason))
+
+    if not to_reprocess:
+        print("\nNo failed episodes to reprocess.")
+        return
+
+    print(f"\nFound {len(to_reprocess)} episode(s) to reprocess")
+
+    processed = 0
+    for idx, ep, reason in to_reprocess:
+        try:
+            print(f"\n{'='*60}")
+            print(f"Reprocessing: {ep['title']}")
+            print(f"  Reason: {reason}")
+            print(f"{'='*60}")
+
+            # Build episode dict
+            episode = {
+                "url": ep["url"],
+                "video_id": ep.get("video_id", ""),
+                "title": ep["title"],
+                "show_name": ep["show_name"],
+                "date_published": ep.get("date_published", ""),
+                "search_target": ep["search_target"],
+                "match_type": ep["match_type"],
+            }
+            if not episode.get("audio_url") and ep.get("audio_url"):
+                episode["audio_url"] = ep["audio_url"]
+            # Extract video_id from URL if not present
+            if not episode["video_id"] and "youtube.com/watch" in episode["url"]:
+                import urllib.parse
+                parsed = urllib.parse.urlparse(episode["url"])
+                qs = urllib.parse.parse_qs(parsed.query)
+                episode["video_id"] = qs.get("v", [""])[0]
+
+            # Transcribe
+            transcript_data = transcribe_episode(episode)
+            if not transcript_data:
+                print("  Still unable to transcribe. Skipping.")
+                continue
+
+            # Generate summary
+            summary = generate_summary_with_claude(episode, transcript_data)
+
+            # Save to knowledge base
+            save_to_knowledge_base(episode, transcript_data, summary)
+
+            # Create docx files
+            safe_title = re.sub(r'[^\w\s-]', '', episode['title']).strip()
+            safe_show = re.sub(r'[^\w\s-]', '', episode['show_name']).strip()
+            base_name = f"{safe_show} - {safe_title}"
+            tmpdir = tempfile.mkdtemp()
+            summary_path = os.path.join(tmpdir, f"{base_name} - Summary.docx")
+            transcript_path = os.path.join(tmpdir, f"{base_name} - Transcript.docx")
+            create_summary_docx(episode, summary, summary_path)
+            create_transcript_docx(episode, transcript_data, transcript_path)
+
+            # Upload to Dropbox
+            dbx_summary = f"/{base_name} - Summary.docx"
+            dbx_transcript = f"/{base_name} - Transcript.docx"
+            dropbox_links = {"summary": "#", "transcript": "#"}
+
+            try:
+                upload_to_dropbox(summary_path, dbx_summary)
+                upload_to_dropbox(transcript_path, dbx_transcript)
+                summary_link = get_dropbox_link(dbx_summary)
+                transcript_link = get_dropbox_link(dbx_transcript)
+                dropbox_links = {"summary": summary_link, "transcript": transcript_link}
+                print(f"  Summary link: {summary_link}")
+                print(f"  Transcript link: {transcript_link}")
+            except Exception as e:
+                print(f"  WARNING: Dropbox upload failed: {e}")
+
+            # Update or add blog entry
+            if reason == "transcript_unavailable":
+                # This episode never got a blog entry, so add one
+                entry_id = update_blog(episode, summary, dropbox_links)
+                if entry_id:
+                    update_rss(episode, summary, dropbox_links, entry_id)
+            else:
+                # Blog entry exists, just update the Dropbox links
+                update_blog_links(episode, dropbox_links)
+
+            # Update episode record in place
+            episodes_data["episodes"][idx] = {
+                "url": episode["url"],
+                "title": episode["title"],
+                "show_name": episode["show_name"],
+                "date_found": ep.get("date_found", datetime.now().strftime("%Y-%m-%d")),
+                "date_published": episode["date_published"],
+                "search_target": episode["search_target"],
+                "match_type": episode["match_type"],
+                "dropbox_paths": {"summary": dbx_summary, "transcript": dbx_transcript},
+                "dropbox_links": dropbox_links,
+            }
+            save_episodes(episodes_data)
+
+            # Cleanup
+            try:
+                os.unlink(summary_path)
+                os.unlink(transcript_path)
+                os.rmdir(tmpdir)
+            except OSError:
+                pass
+
+            processed += 1
+
+        except Exception as e:
+            print(f"\nERROR reprocessing {ep['title']}: {e}")
+            import traceback
+            traceback.print_exc()
+            continue
+
+    print(f"\n{'='*60}")
+    print(f"Reprocess complete. Fixed {processed}/{len(to_reprocess)} episodes.")
+    print(f"{'='*60}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="PYT Radar scanner")
     parser.add_argument("--mode", choices=["youtube", "podcast", "all"], default="all",
                         help="Search mode: youtube, podcast, or all (default: all)")
+    parser.add_argument("--reprocess", action="store_true",
+                        help="Reprocess failed episodes (retry transcription and Dropbox uploads)")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1253,6 +1419,11 @@ def main():
 
     # Refresh Dropbox token (gets a fresh short-lived token from the long-lived refresh token)
     refresh_dropbox_token()
+
+    # Handle reprocess mode
+    if args.reprocess:
+        reprocess_failed_episodes(episodes_data)
+        return
 
     # Search for new episodes
     new_episodes = find_new_episodes(episodes_data, mode=args.mode)
