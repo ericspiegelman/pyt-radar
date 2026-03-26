@@ -121,6 +121,9 @@ def search_youtube(query, max_results=10, published_after=None):
         params["publishedAfter"] = published_after.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     resp = requests.get(url, params=params)
+    if resp.status_code == 403:
+        print(f"  WARNING: YouTube API quota exceeded or forbidden (403). Skipping this query.")
+        return []
     resp.raise_for_status()
     data = resp.json()
 
@@ -150,6 +153,9 @@ def get_video_duration(video_id):
         "key": YOUTUBE_API_KEY,
     }
     resp = requests.get(url, params=params)
+    if resp.status_code == 403:
+        print(f"  WARNING: YouTube API quota exceeded (403) for video duration check")
+        return 0
     resp.raise_for_status()
     items = resp.json().get("items", [])
     if not items:
