@@ -2,9 +2,7 @@ name: PYT Radar Scan
 
 on:
   schedule:
-    # YouTube scan: every 2 hours
-    - cron: '0 */2 * * *'
-    # Podcast scan: 8am ET (12:00 UTC) and 6pm ET (22:00 UTC)
+    # Both scans: 8am ET (12:00 UTC) and 6pm ET (22:00 UTC)
     - cron: '0 12,22 * * *'
   workflow_dispatch:
     inputs:
@@ -30,7 +28,10 @@ jobs:
   youtube-scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: github.event.schedule == '0 */2 * * *' || github.event_name == 'workflow_dispatch'
+    if: >-
+      github.event_name == 'schedule' ||
+      (github.event_name == 'workflow_dispatch' &&
+       (github.event.inputs.mode == 'all' || github.event.inputs.mode == 'youtube'))
 
     steps:
       - name: Checkout repo
@@ -89,7 +90,10 @@ jobs:
   podcast-scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: github.event.schedule == '0 12,22 * * *' || github.event_name == 'workflow_dispatch'
+    if: >-
+      github.event_name == 'schedule' ||
+      (github.event_name == 'workflow_dispatch' &&
+       (github.event.inputs.mode == 'all' || github.event.inputs.mode == 'podcast'))
 
     steps:
       - name: Checkout repo
