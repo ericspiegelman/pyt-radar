@@ -33,7 +33,10 @@ except ImportError:
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 ASSEMBLYAI_KEY = os.environ["ASSEMBLYAI_API_KEY"]
-DROPBOX_TOKEN = os.environ.get("DROPBOX_TOKEN", "")
+DROPBOX_REFRESH_TOKEN = os.environ.get("DROPBOX_REFRESH_TOKEN", "")
+DROPBOX_APP_KEY = os.environ.get("DROPBOX_APP_KEY", "")
+DROPBOX_APP_SECRET = os.environ.get("DROPBOX_APP_SECRET", "")
+DROPBOX_TOKEN = os.environ.get("DROPBOX_TOKEN", "")  # fallback; prefer refresh token
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 LISTENNOTES_API_KEY = os.environ.get("LISTENNOTES_API_KEY", "")
 
@@ -46,6 +49,39 @@ FEED_FILE = REPO_ROOT / "feed.xml"
 KB_DIR = REPO_ROOT / "kb"
 COOKIES_FILE = Path("cookies.txt")
 
+
+
+# ────────────────────────────────────────────────────────
+# Dropbox token refresh
+# ────────────────────────────────────────────────────────
+
+def refresh_dropbox_token():
+    """Use the long-lived refresh token to get a fresh short-lived access token.
+    Falls back to DROPBOX_TOKEN env var if refresh token is not configured."""
+    global DROPBOX_TOKEN
+    if not DROPBOX_REFRESH_TOKEN or not DROPBOX_APP_KEY or not DROPBOX_APP_SECRET:
+        if DROPBOX_TOKEN:
+            print("  Dropbox: using static access token (may be expired)")
+        else:
+            print("  Dropbox: no credentials configured - uploads will be skipped")
+        return
+    try:
+        resp = requests.post(
+            "https://api.dropboxapi.com/oauth2/token",
+            data={
+                "grant_type": "refresh_token",
+                "refresh_token": DROPBOX_REFRESH_TOKEN,
+                "client_id": DROPBOX_APP_KEY,
+                "client_secret": DROPBOX_APP_SECRET,
+            },
+        )
+        resp.raise_for_status()
+        DROPBOX_TOKEN = resp.json()["access_token"]
+        print("  Dropbox: refreshed access token successfully")
+    except Exception as e:
+        print(f"  WARNING: Dropbox token refresh failed: {e}")
+        if DROPBOX_TOKEN:
+            print("  Falling back to static DROPBOX_TOKEN")
 
 # ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 # Episode log (deduplication)
@@ -1208,6 +1244,9 @@ def main():
     # Load episode log
     episodes_data = load_episodes()
     print(f"Loaded {len(episodes_data['episodes'])} previously found episodes")
+
+    # Refresh Dropbox token (gets a fresh short-lived token from the long-lived refresh token)
+    refresh_dropbox_token()
 
     # Search for new episodes
     new_episodes = find_new_episodes(episodes_data, mode=args.mode)
