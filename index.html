@@ -40,6 +40,10 @@
     .links a:hover { text-decoration: underline; }
     .empty { text-align: center; color: #555; padding: 3rem 1rem; }
     footer { text-align: center; padding: 2rem; color: #555; font-size: 0.8rem; border-top: 1px solid #222; margin-top: 2rem; }
+    .subscribe-form { display: flex; gap: 0.5rem; align-items: center; }
+    .subscribe-form input[type="email"] { padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid #444; background: #1a1a1a; color: #e0e0e0; font-size: 0.85rem; width: 200px; }
+    .subscribe-form input[type="email"]::placeholder { color: #666; }
+    .subscribe-form input[type="email"]:focus { outline: none; border-color: #d44; }
     .digest-episode { border-top: 1px solid #333; padding-top: 1rem; margin-top: 1rem; }
     .digest-episode:first-child { border-top: none; padding-top: 0; margin-top: 0; }
     .digest-episode h3 { font-size: 1.1rem; color: #fff; margin-bottom: 0.1rem; }
@@ -57,7 +61,10 @@
     <h1>PYT Radar</h1>
     <p>Podcast &amp; YouTube Tracking &mdash; automated episode digest</p>
     <div class="subscribe">
-      <a class="btn-email" href="https://blogtrottr.com/?subscribe=https://ericspiegelman.github.io/pyt-radar/feed.xml">Subscribe via Email</a>
+      <form class="subscribe-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn-email">Request Email Delivery</button>
+      </form>
       <a class="btn-rss" href="https://ericspiegelman.github.io/pyt-radar/feed.xml">RSS Feed</a>
     </div>
   </header>
