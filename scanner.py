@@ -607,6 +607,15 @@ def transcribe_episode(episode):
 
         if audio_url_for_aai:
             return transcribe(audio_url_for_aai)
+
+        # Strategy 4: Pass YouTube URL directly to AssemblyAI
+        # AssemblyAI can download from YouTube using their own infrastructure
+        print(f"  Trying AssemblyAI direct YouTube URL transcription...")
+        try:
+            return transcribe(episode["url"])
+        except Exception as e:
+            print(f"  AssemblyAI direct URL also failed: {e}")
+
         print(f"  WARNING: All YouTube transcript strategies failed for: {episode['title']}")
         return None
 
