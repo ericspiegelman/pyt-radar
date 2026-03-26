@@ -1546,6 +1546,109 @@ def update_digest_rss(digest_results, entry_id):
     print(f"  RSS feed updated with digest")
 
 
+def send_digest_email(digest_results):
+    """Send digest email via Mailgun to all recipients in config."""
+    mailgun_api_key = os.environ.get("MAILGUN_API_KEY")
+    mailgun_domain = os.environ.get("MAILGUN_DOMAIN")
+
+    if not mailgun_api_key or not mailgun_domain:
+        print("  Mailgun not configured, skipping email delivery")
+        return
+
+    # Load recipients from config
+    config_path = REPO_ROOT / "references" / "config.json"
+    if not config_path.exists():
+        print("  No config.json found, skipping email")
+        return
+    config = json.loads(config_path.read_text())
+    recipients = config.get("recipients", [])
+    if not recipients:
+        print("  No recipients configured, skipping email")
+        return
+
+    today = datetime.now().strftime("%B %d, %Y")
+    episode_count = len(digest_results)
+
+    # Build email HTML
+    episodes_html = ""
+    for result in digest_results:
+        episode = result["episode"]
+        summary = result["summary"]
+        dropbox_links = result["dropbox_links"]
+
+        km = summary.get("key_moment", {})
+        km_ts = km.get("timestamp_mm_ss", "0:00")
+        km_secs = km.get("timestamp_seconds", 0)
+
+        doc_links_html = ""
+        if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+            doc_links_html += f'<a href="{dropbox_links["summary"]}">Summary</a> '
+        if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+            doc_links_html += f'| <a href="{dropbox_links["transcript"]}">Full Transcript</a>'
+
+        sentiment = summary.get("sentiment", "neutral").title()
+        sentiment_colors = {"Positive": "#50c080", "Negative": "#e05050", "Neutral": "#888", "Mixed": "#e0a050"}
+        s_color = sentiment_colors.get(sentiment, "#888")
+
+        episodes_html += f"""
+        <div style="border-top: 1px solid #333; padding: 16px 0; margin-top: 16px;">
+          <h3 style="color: #fff; margin: 0 0 4px 0; font-size: 16px;">{html_escape(episode['show_name'])}</h3>
+          <p style="color: #aaa; margin: 0 0 8px 0; font-size: 14px;">{html_escape(episode['title'])}</p>
+          <p style="margin: 0 0 4px 0;">
+            <span style="background: #1a3a5c; color: #6cb4ee; padding: 2px 8px; border-radius: 4px; font-size: 12px;">{html_escape(episode['search_target'])}</span>
+            <span style="color: {s_color}; font-size: 13px; margin-left: 8px;">Sentiment: {sentiment}</span>
+          </p>
+          <p style="color: #ccc; margin: 8px 0; font-size: 14px;">{html_escape(summary.get('overview', ''))}</p>
+          <blockquote style="border-left: 3px solid #d44; padding: 8px 12px; margin: 12px 0; background: #1a1111; border-radius: 0 6px 6px 0;">
+            <p style="color: #e0c0c0; font-style: italic; margin: 0 0 4px 0; font-size: 14px;">"{html_escape(km.get('text', ''))}"</p>
+            <cite style="color: #888; font-size: 12px;">&mdash; {html_escape(km.get('speaker', 'Unknown'))} at <a href="{episode['url']}&t={km_secs}" style="color: #6cb4ee;">{km_ts}</a></cite>
+          </blockquote>
+          <p style="margin: 8px 0 0 0; font-size: 13px;">
+            <a href="{episode['url']}" style="color: #6cb4ee; text-decoration: none;">&#9654; Watch Episode</a>
+            {(' | ' + doc_links_html) if doc_links_html else ''}
+          </p>
+        </div>"""
+
+    email_html = f"""<!DOCTYPE html>
+<html>
+<body style="background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: #111; border-bottom: 1px solid #222; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
+      <h1 style="color: #fff; margin: 0 0 4px 0; font-size: 22px;">PYT Radar</h1>
+      <p style="color: #888; margin: 0; font-size: 14px;">Podcast &amp; YouTube Tracking Digest</p>
+    </div>
+    <div style="background: #161616; border: 1px solid #222; border-top: none; padding: 20px; border-radius: 0 0 10px 10px;">
+      <h2 style="color: #fff; margin: 0 0 4px 0; font-size: 18px;">Digest &mdash; {today}</h2>
+      <p style="color: #888; margin: 0 0 8px 0; font-size: 13px;">{episode_count} new episode{'s' if episode_count != 1 else ''} found matching tracked targets.</p>
+      {episodes_html}
+    </div>
+    <p style="text-align: center; color: #555; font-size: 12px; margin-top: 16px;">
+      <a href="{BLOG_URL}" style="color: #6cb4ee; text-decoration: none;">View all digests on the web</a>
+    </p>
+  </div>
+</body>
+</html>"""
+
+    # Send via Mailgun
+    try:
+        resp = requests.post(
+            f"https://api.mailgun.net/v3/{mailgun_domain}/messages",
+            auth=("api", mailgun_api_key),
+            data={
+                "from": f"PYT Radar <digest@{mailgun_domain}>",
+                "to": recipients,
+                "subject": f"PYT Radar: {episode_count} new episode{'s' if episode_count != 1 else ''} - {today}",
+                "html": email_html,
+            },
+        )
+        if resp.status_code == 200:
+            print(f"  Digest email sent to {len(recipients)} recipient(s)")
+        else:
+            print(f"  WARNING: Mailgun returned {resp.status_code}: {resp.text}")
+    except Exception as e:
+        print(f"  WARNING: Failed to send digest email: {e}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="PYT Radar scanner")
     parser.add_argument("--mode", choices=["youtube", "podcast", "all"], default="all",
@@ -1598,6 +1701,7 @@ def main():
         entry_id = update_digest(digest_results)
         if entry_id:
             update_digest_rss(digest_results, entry_id)
+        send_digest_email(digest_results)
 
     print(f"\n{'='*60}")
     print(f"Scan complete. Processed {processed}/{len(new_episodes)} episodes.")
