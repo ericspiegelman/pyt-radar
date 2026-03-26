@@ -673,6 +673,14 @@ Generate a JSON response with this exact structure:
     "timestamp_seconds": 1234,
     "context": "1 sentence explaining why this moment matters"
   }},
+
+QUOTE LENGTH RULES (CRITICAL):
+- Each quote in key_quotes MUST be 1-2 sentences max, never more than 50 words.
+- Do NOT dump long transcript passages. Extract only the most pointed, illustrative sentence or two.
+- Prefer 3-5 short quotes that together paint a picture of what was said about the search target.
+- The key_moment text must also be a single short quote, not a passage.
+- If someone spoke at length about the target, pick multiple SHORT quotes from different moments rather than one long block.
+
   "sections": [
     {{"start": "MM:SS", "end": "MM:SS", "description": "what was discussed"}},
     ...
