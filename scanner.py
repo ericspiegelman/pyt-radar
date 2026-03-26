@@ -1214,10 +1214,7 @@ def process_episode(episode, episodes_data):
         print(f"  WARNING: Dropbox upload/link failed: {e}")
         print("  Continuing without Dropbox links – blog will still be updated")
 
-    # 7. Update blog and RSS
-    entry_id = update_blog(episode, summary, dropbox_links)
-    if entry_id:
-        update_rss(episode, summary, dropbox_links, entry_id)
+    # 7. (Blog/RSS now updated as digest after all episodes processed)
 
     # 8. Update episode log
     episodes_data["episodes"].append({
@@ -1242,7 +1239,7 @@ def process_episode(episode, episodes_data):
         pass
 
     print(f"\nDone processing: {episode['title']}")
-    return True
+    return {"episode": episode, "summary": summary, "dropbox_links": dropbox_links}
 
 
 
@@ -1409,6 +1406,146 @@ def reprocess_failed_episodes(episodes_data):
     print(f"{'='*60}")
 
 
+def update_digest(digest_results):
+    """Add a single digest entry to index.html containing all episodes from this scan."""
+    today = datetime.now().strftime("%B %d, %Y")
+    date_slug = datetime.now().strftime("%Y-%m-%d")
+    time_slug = datetime.now().strftime("%H%M")
+    entry_id = f"{date_slug}-digest-{time_slug}"
+
+    episode_count = len(digest_results)
+
+    # Build HTML for each episode within the digest
+    episodes_html = ""
+    for result in digest_results:
+        episode = result["episode"]
+        summary = result["summary"]
+        dropbox_links = result["dropbox_links"]
+
+        km = summary.get("key_moment", {})
+        km_ts = km.get("timestamp_mm_ss", "0:00")
+        km_secs = km.get("timestamp_seconds", 0)
+        km_text = html_escape(km.get("text", ""))
+        km_speaker = html_escape(km.get("speaker", "Unknown"))
+
+        sentiment_class = f"sentiment-{summary.get('sentiment', 'neutral')}"
+        match_class = "tag-guest" if episode["match_type"] == "guest" else "tag-mention"
+        match_label = "Guest" if episode["match_type"] == "guest" else "Mentioned"
+
+        doc_links = ""
+        if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+            doc_links += f' |\n            <a href="{html_escape(dropbox_links["summary"])}">&#128196; Summary</a>'
+        if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+            doc_links += f' |\n            <a href="{html_escape(dropbox_links["transcript"])}">&#128196; Full Transcript</a>'
+
+        episodes_html += f"""
+      <div class="digest-episode">
+        <h3>{html_escape(episode['show_name'])}</h3>
+        <h4>{html_escape(episode['title'])}</h4>
+        <div class="tags">
+          <span class="tag">{html_escape(episode['search_target'])}</span>
+          <span class="tag {match_class}">{match_label}</span>
+        </div>
+        <div class="sentiment {sentiment_class}">Sentiment: {summary.get('sentiment', 'neutral').title()}</div>
+        <p>{html_escape(summary.get('overview', ''))}</p>
+        <blockquote class="quote">
+          <p>&ldquo;{km_text}&rdquo;</p>
+          <cite>&mdash; {km_speaker} at <a href="{episode['url']}&amp;t={km_secs}">{km_ts}</a></cite>
+        </blockquote>
+        <div class="links">
+          <a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links}
+        </div>
+      </div>"""
+
+    digest_html = f"""    <div class="digest" id="{entry_id}">
+      <div class="digest-date">{today}</div>
+      <h2>PYT Radar Digest &mdash; {today}</h2>
+      <p class="digest-summary">{episode_count} new episode{'s' if episode_count != 1 else ''} found matching tracked targets.</p>{episodes_html}
+    </div>"""
+
+    content = INDEX_FILE.read_text()
+    content = re.sub(r'<p class="empty">.*?</p>\s*', '', content)
+
+    insertion_point = '<main id="digests">'
+    if insertion_point in content:
+        content = content.replace(insertion_point, insertion_point + "\n" + digest_html)
+    else:
+        print("  WARNING: Could not find insertion point in index.html")
+        return None
+
+    INDEX_FILE.write_text(content)
+    print(f"  Blog updated with digest: {entry_id} ({episode_count} episodes)")
+    return entry_id
+
+
+def update_digest_rss(digest_results, entry_id):
+    """Add a single RSS item for the digest containing all episodes."""
+    now = datetime.now(timezone.utc)
+    pub_date = now.strftime("%a, %d %b %Y %H:%M:%S +0000")
+    today = datetime.now().strftime("%B %d, %Y")
+
+    episode_count = len(digest_results)
+
+    if episode_count == 1:
+        ep = digest_results[0]["episode"]
+        sm = digest_results[0]["summary"]
+        headline = f"{ep['show_name']}: {sm.get('overview', ep['title'])[:80]}"
+    else:
+        targets = set()
+        for r in digest_results:
+            targets.add(r["episode"]["search_target"])
+        headline = f"PYT Radar: {episode_count} new episodes ({', '.join(targets)})"
+
+    episodes_desc = ""
+    for result in digest_results:
+        episode = result["episode"]
+        summary = result["summary"]
+        dropbox_links = result["dropbox_links"]
+
+        km = summary.get("key_moment", {})
+        km_ts = km.get("timestamp_mm_ss", "0:00")
+        km_secs = km.get("timestamp_seconds", 0)
+
+        doc_links_html = ""
+        if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
+            doc_links_html += f'\n<a href="{dropbox_links["summary"]}">&#128196; Summary</a>'
+        if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
+            doc_links_html += f' |\n<a href="{dropbox_links["transcript"]}">&#128196; Full Transcript</a>'
+
+        episodes_desc += f"""<hr/>
+<p><strong>{html_escape(episode['show_name'])}</strong><br/>
+\"{html_escape(episode['title'])}\" \u2013 Published {episode['date_published']}</p>
+<p><strong>Match:</strong> {html_escape(episode['search_target'])} ({episode['match_type']})</p>
+<p><strong>Sentiment: {summary.get('sentiment', 'neutral').title()}</strong></p>
+<p>{html_escape(summary.get('overview', ''))}</p>
+<p><strong>Key moment at <a href="{episode['url']}&t={km_secs}">{km_ts}</a>:</strong> \"{html_escape(km.get('text', ''))}\" \u2013 {html_escape(km.get('speaker', 'Unknown'))}</p>
+<p><a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links_html}</p>"""
+
+    description_html = f"""<h2>PYT Radar Digest \u2014 {today}</h2>
+<p>{episode_count} new episode{'s' if episode_count != 1 else ''} found.</p>
+{episodes_desc}"""
+
+    item_xml = f"""    <item>
+      <title>{html_escape(headline)}</title>
+      <link>{BLOG_URL}#{entry_id}</link>
+      <guid>{BLOG_URL}#{entry_id}</guid>
+      <pubDate>{pub_date}</pubDate>
+      <description><![CDATA[{description_html}]]></description>
+    </item>"""
+
+    content = FEED_FILE.read_text()
+    atom_link_pattern = r'(<atom:link[^/]*/>[\\s]*)'
+    match_obj = re.search(atom_link_pattern, content)
+    if match_obj:
+        insert_pos = match_obj.end()
+        content = content[:insert_pos] + "\n" + item_xml + "\n" + content[insert_pos:]
+    else:
+        content = content.replace("</channel>", item_xml + "\n  </channel>")
+
+    FEED_FILE.write_text(content)
+    print(f"  RSS feed updated with digest")
+
+
 def main():
     parser = argparse.ArgumentParser(description="PYT Radar scanner")
     parser.add_argument("--mode", choices=["youtube", "podcast", "all"], default="all",
@@ -1445,13 +1582,22 @@ def main():
 
     # Process each new episode
     processed = 0
+    digest_results = []
     for episode in new_episodes:
         try:
-            if process_episode(episode, episodes_data):
+            result = process_episode(episode, episodes_data)
+            if result:
                 processed += 1
+                digest_results.append(result)
         except Exception as e:
             print(f"\nERROR processing {episode['title']}: {e}")
             continue
+
+    # Create digest blog post and RSS entry for all episodes found in this scan
+    if digest_results:
+        entry_id = update_digest(digest_results)
+        if entry_id:
+            update_digest_rss(digest_results, entry_id)
 
     print(f"\n{'='*60}")
     print(f"Scan complete. Processed {processed}/{len(new_episodes)} episodes.")
