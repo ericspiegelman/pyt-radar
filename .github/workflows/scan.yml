@@ -72,6 +72,8 @@ jobs:
           LISTENNOTES_API_KEY: ${{ secrets.LISTENNOTES_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
         run: |
           REPROCESS_FLAG=""
           if [ "${{ github.event.inputs.reprocess }}" = "true" ]; then
@@ -134,6 +136,8 @@ jobs:
           LISTENNOTES_API_KEY: ${{ secrets.LISTENNOTES_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
         run: |
           REPROCESS_FLAG=""
           if [ "${{ github.event.inputs.reprocess }}" = "true" ]; then
