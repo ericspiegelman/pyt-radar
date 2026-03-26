@@ -439,6 +439,9 @@ def download_youtube_audio(url):
             else:
                 print(f"  yt-dlp failed ({strategy['name']}): {result.stderr[:200]}")
                 last_error = result.stderr
+                if "cookies are no longer valid" in result.stderr or "Sign in to confirm" in result.stderr:
+                    global _youtube_cookies_expired
+                    _youtube_cookies_expired = True
         except subprocess.TimeoutExpired:
             print(f"  yt-dlp timed out ({strategy['name']})")
             last_error = "timeout"
@@ -474,6 +477,9 @@ def get_youtube_audio_url(url):
                 audio_url = result.stdout.strip().split("\n")[0]
                 print(f"  Got direct audio URL via yt-dlp -g")
                 return audio_url
+            elif result.stderr and ("cookies are no longer valid" in result.stderr or "Sign in to confirm" in result.stderr):
+                global _youtube_cookies_expired
+                _youtube_cookies_expired = True
         except Exception:
             continue
     return None
@@ -1554,6 +1560,61 @@ def update_digest_rss(digest_results, entry_id):
     print(f"  RSS feed updated with digest")
 
 
+def send_cookie_expiry_alert():
+    """Send alert email when YouTube cookies are detected as expired."""
+    mailgun_api_key = os.environ.get("MAILGUN_API_KEY")
+    mailgun_domain = os.environ.get("MAILGUN_DOMAIN")
+    if not mailgun_api_key or not mailgun_domain:
+        print("  Mailgun not configured, skipping cookie alert")
+        return
+
+    config_path = REPO_ROOT / "references" / "config.json"
+    if not config_path.exists():
+        return
+    config = json.loads(config_path.read_text())
+    recipients = config.get("recipients", [])
+    if not recipients:
+        return
+
+    today = datetime.now().strftime("%B %d, %Y %I:%M %p")
+    email_html = f"""<!DOCTYPE html>
+<html>
+<body style="background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: #2a1111; border: 1px solid #d44; padding: 20px; border-radius: 10px;">
+      <h2 style="color: #d44; margin: 0 0 8px 0;">&#9888; PYT Radar: YouTube Cookies Expired</h2>
+      <p style="color: #ccc; margin: 0 0 12px 0;">Detected at {today}</p>
+      <p style="color: #e0e0e0;">YouTube is blocking video downloads because the authentication cookies have expired or been invalidated. Episodes found via YouTube captions will still work, but any video without auto-captions will be skipped until cookies are refreshed.</p>
+      <p style="color: #e0e0e0; margin-top: 12px;"><strong>To fix:</strong></p>
+      <ol style="color: #ccc;">
+        <li>Open YouTube in Chrome and make sure you're signed in</li>
+        <li>Export cookies using a browser extension (e.g. "Get cookies.txt LOCALLY")</li>
+        <li>Update the YOUTUBE_COOKIES secret in the <a href="https://github.com/ericspiegelman/pyt-radar/settings/secrets/actions" style="color: #6cb4ee;">pyt-radar repo settings</a></li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>"""
+
+    try:
+        resp = requests.post(
+            f"https://api.mailgun.net/v3/{mailgun_domain}/messages",
+            auth=("api", mailgun_api_key),
+            data={{
+                "from": f"PYT Radar <digest@{mailgun_domain}>",
+                "to": recipients,
+                "subject": "PYT Radar Alert: YouTube cookies expired",
+                "html": email_html,
+            }},
+        )
+        if resp.status_code == 200:
+            print("  Cookie expiry alert sent")
+        else:
+            print(f"  WARNING: Cookie alert email failed: {resp.status_code}")
+    except Exception as e:
+        print(f"  WARNING: Failed to send cookie alert: {e}")
+
+
 def send_digest_email(digest_results):
     """Send digest email via Mailgun to all recipients in config."""
     mailgun_api_key = os.environ.get("MAILGUN_API_KEY")
@@ -1712,6 +1773,11 @@ def main():
         if entry_id:
             update_digest_rss(digest_results, entry_id)
         send_digest_email(digest_results)
+
+    # Check for YouTube cookie issues and alert
+    if _youtube_cookies_expired:
+        print("\n  YouTube cookies expired - sending alert...")
+        send_cookie_expiry_alert()
 
     print(f"\n{'='*60}")
     print(f"Scan complete. Processed {processed}/{len(new_episodes)} episodes.")
