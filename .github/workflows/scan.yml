@@ -87,8 +87,12 @@ jobs:
           git config user.email "pyt-radar[bot]@users.noreply.github.com"
           git add -A data/ index.html feed.xml kb/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "PYT Radar: new YouTube episodes found"
-          git pull --rebase origin main || true
-          git push
+          git pull --rebase origin main || {
+            git rebase --abort 2>/dev/null || true
+            echo "Rebase conflict - other job likely pushed same changes. Skipping push."
+            exit 0
+          }
+          git push || echo "Push failed, changes may already be up to date"
 
   podcast-scan:
     runs-on: ubuntu-latest
@@ -152,5 +156,9 @@ jobs:
           git config user.email "pyt-radar[bot]@users.noreply.github.com"
           git add -A data/ index.html feed.xml kb/ 2>/dev/null || true
           git diff --staged --quiet || git commit -m "PYT Radar: new podcast episodes found"
-          git pull --rebase origin main || true
-          git push
+          git pull --rebase origin main || {
+            git rebase --abort 2>/dev/null || true
+            echo "Rebase conflict - other job likely pushed same changes. Skipping push."
+            exit 0
+          }
+          git push || echo "Push failed, changes may already be up to date"
