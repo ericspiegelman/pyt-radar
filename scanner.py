@@ -684,11 +684,13 @@ Generate a JSON response with this exact structure:
     "context": "1 sentence explaining why this moment matters"
   }},
 
-QUOTE LENGTH RULES (CRITICAL):
-- Each quote in key_quotes MUST be 1-2 sentences max, never more than 50 words.
+QUOTE RULES (CRITICAL):
+- Every quote in key_quotes and the key_moment MUST be specifically about {episode['search_target']}. Quotes must mention {episode['search_target']} by name, refer to them directly, or be {episode['search_target']} speaking about themselves/their work.
+- Do NOT include generic quotes about other topics that don't relate to {episode['search_target']}.
+- Each quote MUST be 1-2 sentences max, never more than 50 words.
 - Do NOT dump long transcript passages. Extract only the most pointed, illustrative sentence or two.
-- Prefer 3-5 short quotes that together paint a picture of what was said about the search target.
-- The key_moment text must also be a single short quote, not a passage.
+- Include up to 8 short quotes from different moments where {episode['search_target']} is discussed or speaking.
+- The key_moment text must also be a single short quote about {episode['search_target']}, not a passage.
 - If someone spoke at length about the target, pick multiple SHORT quotes from different moments rather than one long block.
 
   "sections": [
@@ -990,10 +992,11 @@ def update_blog(episode, summary, dropbox_links):
 
     sentiment = summary.get("sentiment", "neutral").title()
     appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
-    match_label = "Guest" if appearance == "guest" or episode["match_type"] == "guest" else "Mentioned"
+    match_label = "Guest Appearance" if appearance == "guest" else "Mentioned"
+    source_label = "Video" if episode.get("video_id") else "Podcast"
 
     # Build tags array
-    tags = [episode["search_target"], match_label]
+    tags = [episode["search_target"], match_label, source_label]
 
     # Build links array
     links = [["Watch Episode", episode["url"]]]
@@ -1002,18 +1005,29 @@ def update_blog(episode, summary, dropbox_links):
     if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
         links.append(["Full Transcript", dropbox_links["transcript"]])
 
-    # Truncate quote if too long
-    quote_text = km_text
-    quote_full_text = ""
-    quote_truncated = False
-    if len(km_text) > 200:
-        quote_text = km_text[:200].rsplit(" ", 1)[0] + "..."
-        quote_full_text = km_text
-        quote_truncated = True
+    # Build quotes array from key_quotes (limit 8)
+    key_quotes = summary.get("key_quotes", [])[:8]
+    quotes = []
+    for kq in key_quotes:
+        q_text = kq.get("text", "")
+        q_speaker = kq.get("speaker", "Unknown")
+        q_ts = kq.get("timestamp_mm_ss", "0:00")
+        q_secs = kq.get("timestamp_seconds", 0)
+        q_link = f"{episode['url']}&t={q_secs}" if q_secs else ""
+        quotes.append({
+            "text": q_text,
+            "attribution": f"-- {q_speaker} at {q_ts}",
+            "link": q_link,
+        })
 
-    # Build quote attribution
-    quote_attr = f"\u2014 {km_speaker} at {km_ts}"
-    quote_link = f"{episode['url']}&t={km_secs}" if km_secs else ""
+    # If no key_quotes, fall back to key_moment
+    if not quotes and km_text:
+        quote_link = f"{episode['url']}&t={km_secs}" if km_secs else ""
+        quotes.append({
+            "text": km_text,
+            "attribution": f"-- {km_speaker} at {km_ts}",
+            "link": quote_link,
+        })
 
     # Build the JS object as a JSON string
     ep_obj = {
@@ -1023,11 +1037,7 @@ def update_blog(episode, summary, dropbox_links):
         "date": today,
         "tags": tags,
         "sentiment": sentiment,
-        "quoteText": quote_text,
-        "quoteFullText": quote_full_text,
-        "quoteTruncated": quote_truncated,
-        "quoteAttribution": quote_attr,
-        "quoteLink": quote_link,
+        "quotes": quotes,
         "links": links,
     }
 
@@ -1455,23 +1465,33 @@ def update_digest(digest_results):
         summary = result["summary"]
         dropbox_links = result["dropbox_links"]
 
-        km = summary.get("key_moment", {})
-        km_ts = km.get("timestamp_mm_ss", "0:00")
-        km_secs = km.get("timestamp_seconds", 0)
-        km_text = html_escape(km.get("text", ""))
-        km_speaker = html_escape(km.get("speaker", "Unknown"))
-
         sentiment_class = f"sentiment-{summary.get('sentiment', 'neutral')}"
-        # Use AI-determined appearance_type if available, fall back to match_type
         appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
         match_class = "tag-guest" if appearance == "guest" else "tag-mention"
-        match_label = "Guest" if appearance == "guest" else "Mentioned"
+        match_label = "Guest Appearance" if appearance == "guest" else "Mentioned"
+        source_label = "Video" if episode.get("video_id") else "Podcast"
 
         doc_links = ""
         if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
             doc_links += f' |\n            <a href="{html_escape(dropbox_links["summary"])}">&#128196; Summary</a>'
         if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
             doc_links += f' |\n            <a href="{html_escape(dropbox_links["transcript"])}">&#128196; Full Transcript</a>'
+
+        # Build multiple quotes HTML (limit 8)
+        key_quotes = summary.get("key_quotes", [])[:8]
+        km = summary.get("key_moment", {})
+        if not key_quotes and km.get("text"):
+            key_quotes = [km]
+
+        quotes_html = ""
+        for kq in key_quotes:
+            q_text = html_escape(kq.get("text", ""))
+            q_speaker = html_escape(kq.get("speaker", "Unknown"))
+            q_ts = kq.get("timestamp_mm_ss", "0:00")
+            q_secs = kq.get("timestamp_seconds", 0)
+            quotes_html += f"""
+          <p>&ldquo;{q_text}&rdquo;</p>
+          <cite>&mdash; {q_speaker} at <a href="{episode['url']}&amp;t={q_secs}">{q_ts}</a></cite>"""
 
         episodes_html += f"""
       <div class="digest-episode">
@@ -1480,12 +1500,11 @@ def update_digest(digest_results):
         <div class="tags">
           <span class="tag">{html_escape(episode['search_target'])}</span>
           <span class="tag {match_class}">{match_label}</span>
+          <span class="tag tag-source">{source_label}</span>
         </div>
         <div class="sentiment {sentiment_class}">Sentiment: {summary.get('sentiment', 'neutral').title()}</div>
         <p>{html_escape(summary.get('overview', ''))}</p>
-        <blockquote class="quote">
-          <p>&ldquo;{km_text}&rdquo;</p>
-          <cite>&mdash; {km_speaker} at <a href="{episode['url']}&amp;t={km_secs}">{km_ts}</a></cite>
+        <blockquote class="quote">{quotes_html}
         </blockquote>
         <div class="links">
           <a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links}
@@ -1666,10 +1685,6 @@ def send_digest_email(digest_results):
         summary = result["summary"]
         dropbox_links = result["dropbox_links"]
 
-        km = summary.get("key_moment", {})
-        km_ts = km.get("timestamp_mm_ss", "0:00")
-        km_secs = km.get("timestamp_seconds", 0)
-
         doc_links_html = ""
         if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
             doc_links_html += f'<a href="{dropbox_links["summary"]}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Summary</a>'
@@ -1680,10 +1695,29 @@ def send_digest_email(digest_results):
         sentiment_colors = {"Positive": "#50c080", "Negative": "#e05050", "Neutral": "#888", "Mixed": "#e0a050"}
         s_color = sentiment_colors.get(sentiment, "#888")
 
-        # Truncate quote for email readability
-        quote_text = km.get('text', '')
-        if len(quote_text) > 200:
-            quote_text = quote_text[:200].rsplit(' ', 1)[0] + '…'
+        appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
+        appearance_label = "Guest Appearance" if appearance == "guest" else "Mentioned"
+        source_label = "Video" if episode.get("video_id") else "Podcast"
+
+        # Build quotes HTML (multiple quotes, limit 8)
+        key_quotes = summary.get("key_quotes", [])[:8]
+        km = summary.get("key_moment", {})
+        if not key_quotes and km.get("text"):
+            key_quotes = [km]
+
+        quotes_html = ""
+        for kq in key_quotes:
+            q_text = kq.get("text", "")
+            if len(q_text) > 200:
+                q_text = q_text[:200].rsplit(" ", 1)[0] + "..."
+            q_speaker = html_escape(kq.get("speaker", "Unknown"))
+            q_ts = kq.get("timestamp_mm_ss", "0:00")
+            q_secs = kq.get("timestamp_seconds", 0)
+            quotes_html += f"""
+            <div style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+              <p style="color: #555; font-style: italic; margin: 0 0 4px 0; font-size: 13px; line-height: 1.5;">&ldquo;{html_escape(q_text)}&rdquo;</p>
+              <cite style="color: #999; font-size: 12px; font-style: normal;">&mdash; {q_speaker} at <a href="{episode['url']}&t={q_secs}" style="color: #3b82f6; text-decoration: none;">{q_ts}</a></cite>
+            </div>"""
 
         episodes_html += f"""
         <div style="background: #ffffff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 20px; margin-top: 16px;">
@@ -1691,12 +1725,13 @@ def send_digest_email(digest_results):
           <h3 style="color: #1a1a1a; margin: 0 0 10px 0; font-size: 16px; font-weight: 600;">{html_escape(episode['title'])}</h3>
           <p style="margin: 0 0 10px 0;">
             <span style="background: #eef4fb; color: #3b82f6; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">{html_escape(episode['search_target'])}</span>
+            <span style="background: #f0e8f4; color: #7b1fa2; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-left: 4px;">{appearance_label}</span>
+            <span style="background: #e8f5e9; color: #2e7d32; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-left: 4px;">{source_label}</span>
             <span style="background: {'#fef2f2' if sentiment == 'Negative' else '#f8f8f8'}; color: {s_color}; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-left: 4px;">{sentiment}</span>
           </p>
           <p style="color: #555; margin: 10px 0; font-size: 14px; line-height: 1.5;">{html_escape(summary.get('overview', ''))}</p>
           <blockquote style="border-left: 3px solid #e74c3c; padding: 10px 14px; margin: 12px 0; background: #fafafa; border-radius: 0 6px 6px 0;">
-            <p style="color: #555; font-style: italic; margin: 0 0 6px 0; font-size: 13px; line-height: 1.5;">&ldquo;{html_escape(quote_text)}&rdquo;</p>
-            <cite style="color: #999; font-size: 12px; font-style: normal;">&mdash; {html_escape(km.get('speaker', 'Unknown'))} at <a href="{episode['url']}&t={km_secs}" style="color: #3b82f6; text-decoration: none;">{km_ts}</a></cite>
+            {quotes_html}
           </blockquote>
           <p style="margin: 12px 0 0 0; font-size: 13px;">
             <a href="{episode['url']}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">&#9654; Watch Episode</a>
@@ -1710,7 +1745,7 @@ def send_digest_email(digest_results):
   <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
     <div style="background: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 24px; text-align: center; border-radius: 10px 10px 0 0;">
       <h1 style="color: #1a1a1a; margin: 0 0 6px 0; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">PYT Radar</h1>
-      <p style="color: #888; margin: 0; font-size: 14px;">Podcast &amp; YouTube Tracking Digest</p>
+      <p style="color: #888; margin: 0; font-size: 14px;">Podcast &amp; YouTube Tracking Digest - Los Angeles 2026 Mayoral Candidates</p>
     </div>
     <div style="background: #fafafa; border: 1px solid #e0e0e0; border-top: none; padding: 20px; border-radius: 0 0 10px 10px;">
       <h2 style="color: #1a1a1a; margin: 0 0 4px 0; font-size: 18px; font-weight: 600;">{today}</h2>
