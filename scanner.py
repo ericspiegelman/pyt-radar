@@ -49,6 +49,8 @@ FEED_FILE = REPO_ROOT / "feed.xml"
 KB_DIR = REPO_ROOT / "kb"
 COOKIES_FILE = Path("cookies.txt")
 
+# Global flag for YouTube cookie expiry detection
+_youtube_cookies_expired = False
 
 
 # ────────────────────────────────────────────────────────
