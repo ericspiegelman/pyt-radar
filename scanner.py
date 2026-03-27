@@ -976,7 +976,7 @@ def html_escape(text):
 
 
 def update_blog(episode, summary, dropbox_links):
-    """Add a new digest entry to index.html."""
+    """Add a new episode entry to the allEpisodes array in index.html."""
     today = datetime.now().strftime("%B %d, %Y")
     date_slug = datetime.now().strftime("%Y-%m-%d")
     show_slug = make_slug(episode["show_name"])
@@ -985,61 +985,73 @@ def update_blog(episode, summary, dropbox_links):
     km = summary.get("key_moment", {})
     km_ts = km.get("timestamp_mm_ss", "0:00")
     km_secs = km.get("timestamp_seconds", 0)
-    km_text = html_escape(km.get("text", ""))
-    km_speaker = html_escape(km.get("speaker", "Unknown"))
+    km_text = km.get("text", "")
+    km_speaker = km.get("speaker", "Unknown")
 
-    sentiment_class = f"sentiment-{summary.get('sentiment', 'neutral')}"
-    # Use AI-determined appearance_type if available, fall back to match_type
+    sentiment = summary.get("sentiment", "neutral").title()
     appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
-    match_class = "tag-guest" if appearance == "guest" else "tag-mention"
-    match_label = "Guest" if appearance == "guest" else "Mentioned"
+    match_label = "Guest" if appearance == "guest" or episode["match_type"] == "guest" else "Mentioned"
 
-    # Build document links – show Dropbox links if available, otherwise omit
-    doc_links = ""
+    # Build tags array
+    tags = [episode["search_target"], match_label]
+
+    # Build links array
+    links = [["Watch Episode", episode["url"]]]
     if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
-        doc_links += f""" |
-        <a href="{html_escape(dropbox_links['summary'])}">&#128196; Summary</a>"""
+        links.append(["Summary", dropbox_links["summary"]])
     if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
-        doc_links += f""" |
-        <a href="{html_escape(dropbox_links['transcript'])}">&#128196; Full Transcript</a>"""
+        links.append(["Full Transcript", dropbox_links["transcript"]])
 
-    digest_html = f"""    <div class="digest" id="{entry_id}">
-      <div class="digest-date">{today}</div>
-      <h2>{html_escape(episode['show_name'])}</h2>
-      <h3>{html_escape(episode['title'])}</h3>
-      <div class="tags">
-        <span class="tag">{html_escape(episode['search_target'])}</span>
-        <span class="tag {match_class}">{match_label}</span>
-      </div>
-      <div class="sentiment {sentiment_class}">Sentiment: {summary.get('sentiment', 'neutral').title()}</div>
-      <p>{html_escape(summary.get('overview', ''))}</p>
-      <blockquote class="quote">
-        <p>&ldquo;{km_text}&rdquo;</p>
-        <cite>&mdash; {km_speaker} at <a href="{episode['url']}&amp;t={km_secs}">{km_ts}</a></cite>
-      </blockquote>
-      <div class="links">
-        <a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links}
-      </div>
-    </div>"""
+    # Truncate quote if too long
+    quote_text = km_text
+    quote_full_text = ""
+    quote_truncated = False
+    if len(km_text) > 200:
+        quote_text = km_text[:200].rsplit(" ", 1)[0] + "..."
+        quote_full_text = km_text
+        quote_truncated = True
 
-    # Read current index.html and insert after <main id="digests">
+    # Build quote attribution
+    quote_attr = f"\u2014 {km_speaker} at {km_ts}"
+    quote_link = f"{episode['url']}&t={km_secs}" if km_secs else ""
+
+    # Build the JS object as a JSON string
+    ep_obj = {
+        "title": episode["title"],
+        "show": episode["show_name"],
+        "description": summary.get("overview", ""),
+        "date": today,
+        "tags": tags,
+        "sentiment": sentiment,
+        "quoteText": quote_text,
+        "quoteFullText": quote_full_text,
+        "quoteTruncated": quote_truncated,
+        "quoteAttribution": quote_attr,
+        "quoteLink": quote_link,
+        "links": links,
+    }
+
+    # Serialize to JS-safe JSON (single entry to prepend to array)
+    import json as _json
+    ep_json = _json.dumps(ep_obj, ensure_ascii=False)
+
+    # Read current index.html and insert into the allEpisodes array
     content = INDEX_FILE.read_text()
 
-    # Remove empty placeholder if present
-    content = re.sub(r'<p class="empty">.*?</p>\s*', '', content)
-
-    # Insert new entry after <main id="digests">
-    insertion_point = '<main id="digests">'
+    insertion_point = "const allEpisodes = ["
     if insertion_point in content:
-        content = content.replace(insertion_point, insertion_point + "\n" + digest_html)
+        # Insert the new episode object right after the opening bracket
+        content = content.replace(
+            insertion_point,
+            insertion_point + "\n" + ep_json + ","
+        )
     else:
-        print("  WARNING: Could not find insertion point in index.html")
+        print("  WARNING: Could not find allEpisodes array in index.html")
         return
 
     INDEX_FILE.write_text(content)
     print(f"  Blog updated with entry: {entry_id}")
     return entry_id
-
 
 def update_rss(episode, summary, dropbox_links, entry_id):
     """Add a new item to feed.xml."""
