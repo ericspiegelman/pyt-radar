@@ -1603,7 +1603,7 @@ def send_cookie_expiry_alert():
             f"https://api.mailgun.net/v3/{mailgun_domain}/messages",
             auth=("api", mailgun_api_key),
             data={{
-                "from": f"PYT Radar <digest@{mailgun_domain}>",
+                "from": f"PYT Radar <pyt-radar@{mailgun_domain}>",
                 "to": recipients,
                 "subject": "PYT Radar Alert: YouTube cookies expired",
                 "html": email_html,
@@ -1706,7 +1706,7 @@ def send_digest_email(digest_results):
             f"https://api.mailgun.net/v3/{mailgun_domain}/messages",
             auth=("api", mailgun_api_key),
             data={
-                "from": f"PYT Radar <digest@{mailgun_domain}>",
+                "from": f"PYT Radar <pyt-radar@{mailgun_domain}>",
                 "to": recipients,
                 "subject": f"PYT Radar: {episode_count} new episode{'s' if episode_count != 1 else ''} - {today}",
                 "html": email_html,
