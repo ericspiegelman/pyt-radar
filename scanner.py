@@ -667,6 +667,8 @@ TRANSCRIPT:
 Generate a JSON response with this exact structure:
 {{
   "overview": "2-3 sentence overview of what the episode is about and why the search target is relevant",
+  "appearance_type": "guest|mentioned",
+  "appearance_type_explanation": "Is {episode['search_target']} actually ON the show as a guest/interviewee, or are they just being discussed/mentioned by others? 'guest' means they are speaking on the episode. 'mentioned' means others are talking about them.",
   "topics": ["topic 1", "topic 2", ...],
   "sentiment": "positive|negative|neutral|mixed",
   "sentiment_explanation": "2-3 sentences explaining the tone toward the search target with specific examples",
@@ -754,6 +756,7 @@ def generate_basic_summary(episode, transcript_data):
 
     return {
         "overview": f"This {duration_min}-minute episode of {episode['show_name']} mentions {episode['search_target']}.",
+        "appearance_type": "mentioned",  # Default to mentioned without AI analysis
         "topics": [episode["search_target"], episode["show_name"]],
         "sentiment": "neutral",
         "sentiment_explanation": "Automated analysis â sentiment could not be determined without Claude API.",
@@ -986,8 +989,10 @@ def update_blog(episode, summary, dropbox_links):
     km_speaker = html_escape(km.get("speaker", "Unknown"))
 
     sentiment_class = f"sentiment-{summary.get('sentiment', 'neutral')}"
-    match_class = "tag-guest" if episode["match_type"] == "guest" else "tag-mention"
-    match_label = "Guest" if episode["match_type"] == "guest" else "Mentioned"
+    # Use AI-determined appearance_type if available, fall back to match_type
+    appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
+    match_class = "tag-guest" if appearance == "guest" else "tag-mention"
+    match_label = "Guest" if appearance == "guest" else "Mentioned"
 
     # Build document links – show Dropbox links if available, otherwise omit
     doc_links = ""
@@ -1445,8 +1450,10 @@ def update_digest(digest_results):
         km_speaker = html_escape(km.get("speaker", "Unknown"))
 
         sentiment_class = f"sentiment-{summary.get('sentiment', 'neutral')}"
-        match_class = "tag-guest" if episode["match_type"] == "guest" else "tag-mention"
-        match_label = "Guest" if episode["match_type"] == "guest" else "Mentioned"
+        # Use AI-determined appearance_type if available, fall back to match_type
+        appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
+        match_class = "tag-guest" if appearance == "guest" else "tag-mention"
+        match_label = "Guest" if appearance == "guest" else "Mentioned"
 
         doc_links = ""
         if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
@@ -1653,48 +1660,53 @@ def send_digest_email(digest_results):
 
         doc_links_html = ""
         if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
-            doc_links_html += f'<a href="{dropbox_links["summary"]}">Summary</a> '
+            doc_links_html += f'<a href="{dropbox_links["summary"]}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Summary</a>'
         if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
-            doc_links_html += f'| <a href="{dropbox_links["transcript"]}">Full Transcript</a>'
+            doc_links_html += f' &nbsp;&middot;&nbsp; <a href="{dropbox_links["transcript"]}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Full Transcript</a>'
 
         sentiment = summary.get("sentiment", "neutral").title()
         sentiment_colors = {"Positive": "#50c080", "Negative": "#e05050", "Neutral": "#888", "Mixed": "#e0a050"}
         s_color = sentiment_colors.get(sentiment, "#888")
 
+        # Truncate quote for email readability
+        quote_text = km.get('text', '')
+        if len(quote_text) > 200:
+            quote_text = quote_text[:200].rsplit(' ', 1)[0] + '…'
+
         episodes_html += f"""
-        <div style="border-top: 1px solid #333; padding: 16px 0; margin-top: 16px;">
-          <h3 style="color: #fff; margin: 0 0 4px 0; font-size: 16px;">{html_escape(episode['show_name'])}</h3>
-          <p style="color: #aaa; margin: 0 0 8px 0; font-size: 14px;">{html_escape(episode['title'])}</p>
-          <p style="margin: 0 0 4px 0;">
-            <span style="background: #1a3a5c; color: #6cb4ee; padding: 2px 8px; border-radius: 4px; font-size: 12px;">{html_escape(episode['search_target'])}</span>
-            <span style="color: {s_color}; font-size: 13px; margin-left: 8px;">Sentiment: {sentiment}</span>
+        <div style="background: #ffffff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 20px; margin-top: 16px;">
+          <p style="color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 4px 0; font-weight: 600;">{html_escape(episode['show_name'])}</p>
+          <h3 style="color: #1a1a1a; margin: 0 0 10px 0; font-size: 16px; font-weight: 600;">{html_escape(episode['title'])}</h3>
+          <p style="margin: 0 0 10px 0;">
+            <span style="background: #eef4fb; color: #3b82f6; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">{html_escape(episode['search_target'])}</span>
+            <span style="background: {'#fef2f2' if sentiment == 'Negative' else '#f8f8f8'}; color: {s_color}; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-left: 4px;">{sentiment}</span>
           </p>
-          <p style="color: #ccc; margin: 8px 0; font-size: 14px;">{html_escape(summary.get('overview', ''))}</p>
-          <blockquote style="border-left: 3px solid #d44; padding: 8px 12px; margin: 12px 0; background: #1a1111; border-radius: 0 6px 6px 0;">
-            <p style="color: #e0c0c0; font-style: italic; margin: 0 0 4px 0; font-size: 14px;">"{html_escape(km.get('text', ''))}"</p>
-            <cite style="color: #888; font-size: 12px;">&mdash; {html_escape(km.get('speaker', 'Unknown'))} at <a href="{episode['url']}&t={km_secs}" style="color: #6cb4ee;">{km_ts}</a></cite>
+          <p style="color: #555; margin: 10px 0; font-size: 14px; line-height: 1.5;">{html_escape(summary.get('overview', ''))}</p>
+          <blockquote style="border-left: 3px solid #e74c3c; padding: 10px 14px; margin: 12px 0; background: #fafafa; border-radius: 0 6px 6px 0;">
+            <p style="color: #555; font-style: italic; margin: 0 0 6px 0; font-size: 13px; line-height: 1.5;">&ldquo;{html_escape(quote_text)}&rdquo;</p>
+            <cite style="color: #999; font-size: 12px; font-style: normal;">&mdash; {html_escape(km.get('speaker', 'Unknown'))} at <a href="{episode['url']}&t={km_secs}" style="color: #3b82f6; text-decoration: none;">{km_ts}</a></cite>
           </blockquote>
-          <p style="margin: 8px 0 0 0; font-size: 13px;">
-            <a href="{episode['url']}" style="color: #6cb4ee; text-decoration: none;">&#9654; Watch Episode</a>
-            {(' | ' + doc_links_html) if doc_links_html else ''}
+          <p style="margin: 12px 0 0 0; font-size: 13px;">
+            <a href="{episode['url']}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">&#9654; Watch Episode</a>
+            {(' &nbsp;&middot;&nbsp; ' + doc_links_html) if doc_links_html else ''}
           </p>
         </div>"""
 
     email_html = f"""<!DOCTYPE html>
 <html>
-<body style="background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0;">
+<body style="background: #f5f5f5; color: #2c3e50; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0;">
   <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-    <div style="background: #111; border-bottom: 1px solid #222; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-      <h1 style="color: #fff; margin: 0 0 4px 0; font-size: 22px;">PYT Radar</h1>
+    <div style="background: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 24px; text-align: center; border-radius: 10px 10px 0 0;">
+      <h1 style="color: #1a1a1a; margin: 0 0 6px 0; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">PYT Radar</h1>
       <p style="color: #888; margin: 0; font-size: 14px;">Podcast &amp; YouTube Tracking Digest</p>
     </div>
-    <div style="background: #161616; border: 1px solid #222; border-top: none; padding: 20px; border-radius: 0 0 10px 10px;">
-      <h2 style="color: #fff; margin: 0 0 4px 0; font-size: 18px;">Digest &mdash; {today}</h2>
+    <div style="background: #fafafa; border: 1px solid #e0e0e0; border-top: none; padding: 20px; border-radius: 0 0 10px 10px;">
+      <h2 style="color: #1a1a1a; margin: 0 0 4px 0; font-size: 18px; font-weight: 600;">{today}</h2>
       <p style="color: #888; margin: 0 0 8px 0; font-size: 13px;">{episode_count} new episode{'s' if episode_count != 1 else ''} found matching tracked targets.</p>
       {episodes_html}
     </div>
-    <p style="text-align: center; color: #555; font-size: 12px; margin-top: 16px;">
-      <a href="{BLOG_URL}" style="color: #6cb4ee; text-decoration: none;">View all digests on the web</a>
+    <p style="text-align: center; color: #999; font-size: 12px; margin-top: 16px;">
+      <a href="{BLOG_URL}" style="color: #3b82f6; text-decoration: none;">View all digests on the web</a>
     </p>
   </div>
 </body>
