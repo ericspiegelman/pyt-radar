@@ -460,6 +460,66 @@
         "summary": "https://www.dropbox.com/scl/fi/ctu9b0eyrwtldhuwx851d/The-KABC-News-Blitz-LA-Metro-Moves-Forward-with-Expansion-into-West-Hollywood-Summary.docx?rlkey=gnavdt5aa9anqirjujak3hym9&dl=0",
         "transcript": "https://www.dropbox.com/scl/fi/tnymewklab5at36pnn5li/The-KABC-News-Blitz-LA-Metro-Moves-Forward-with-Expansion-into-West-Hollywood-Transcript.docx?rlkey=7151vyrknvq4j2swidw7opoh0&dl=0"
       }
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8_q8m3g3XA8",
+      "video_id": "8_q8m3g3XA8",
+      "title": "A conversation with LA mayoral candidate Rae Huang and Nick Caputo of Livable Advanced LA",
+      "show_name": "Rae for LA",
+      "date_published": "2026-03-25",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "duration": 3384,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-27T22:20:20.185468"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=L1GctL0pQmE",
+      "video_id": "L1GctL0pQmE",
+      "title": "LA Mayoral Candidate Spencer Pratt In Studio Interview With John Kobylt",
+      "show_name": "John Kobylt Show & John Kobylt Radio",
+      "date_published": "2026-03-27",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "duration": 1848,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-27T22:20:43.863081"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Qsnm9TT_UPk",
+      "video_id": "Qsnm9TT_UPk",
+      "title": "Rap&#39;s dogpiling problem + Hannah Montana 20th anniversary, Spencer Pratt for LA mayor?",
+      "show_name": "Freshly Pop'd",
+      "date_published": "2026-03-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "duration": 2288,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-27T22:21:07.443657"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fCUNquHGBkk",
+      "video_id": "fCUNquHGBkk",
+      "title": "Spencer Pratt | Creating A Villain, His New Memoir, &amp; Running For LA Mayor!",
+      "show_name": "Off the Vine with Kaitlyn Bristowe",
+      "date_published": "2026-03-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "duration": 3833,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-27T22:21:30.907737"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=KUWxBHWB1Os",
+      "video_id": "KUWxBHWB1Os",
+      "title": "On the Record with Adam Miller",
+      "show_name": "Pat Brown Institute at Cal State LA",
+      "date_published": "2026-03-25",
+      "search_target": "Adam Miller",
+      "match_type": "guest",
+      "duration": 4397,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-27T22:21:54.336666"
     }
   ]
 }
