@@ -999,7 +999,8 @@ def update_blog(episode, summary, dropbox_links):
     tags = [episode["search_target"], match_label, source_label]
 
     # Build links array
-    links = [["Watch Episode", episode["url"]]]
+    episode_link_label = "Watch Episode" if episode.get("video_id") else "Listen to Episode"
+    links = [[episode_link_label, episode["url"]]]
     if dropbox_links.get("summary") and dropbox_links["summary"] != "#":
         links.append(["Summary", dropbox_links["summary"]])
     if dropbox_links.get("transcript") and dropbox_links["transcript"] != "#":
@@ -1087,7 +1088,7 @@ def update_rss(episode, summary, dropbox_links, entry_id):
 <p><strong>Sentiment: {summary.get('sentiment', 'neutral').title()}</strong></p>
 <p>{html_escape(summary.get('overview', ''))}</p>
 <p><strong>Key moment at <a href="{episode['url']}&t={km_secs}">{km_ts}</a>:</strong> "{html_escape(km.get('text', ''))}" – {html_escape(km.get('speaker', 'Unknown'))}</p>
-<p><a href="{episode['url']}">▶ Watch Episode</a>{doc_links_html}</p>"""
+<p><a href="{episode['url']}">▶ {"Watch Episode" if episode.get("video_id") else "Listen to Episode"}</a>{doc_links_html}</p>"""
 
     item_xml = f"""    <item>
       <title>{html_escape(headline)}</title>
@@ -1294,10 +1295,11 @@ def update_blog_links(episode, dropbox_links):
 
     # Find the digest entry for this episode by matching the episode URL
     ep_url = episode["url"]
-    watch_link = f'<a href="{ep_url}">&#9654; Watch Episode</a>'
+    link_label = "Watch Episode" if episode.get("video_id") else "Listen to Episode"
+    watch_link = f'<a href="{ep_url}">&#9654; {link_label}</a>'
     if watch_link not in content:
         escaped_url = html_escape(ep_url)
-        watch_link = f'<a href="{escaped_url}">&#9654; Watch Episode</a>'
+        watch_link = f'<a href="{escaped_url}">&#9654; {link_label}</a>'
     if watch_link not in content:
         print(f"  WARNING: Could not find blog entry to update for: {episode['title']}")
         return
@@ -1507,7 +1509,7 @@ def update_digest(digest_results):
         <blockquote class="quote">{quotes_html}
         </blockquote>
         <div class="links">
-          <a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links}
+          <a href="{episode['url']}">&#9654; {"Watch Episode" if episode.get("video_id") else "Listen to Episode"}</a>{doc_links}
         </div>
       </div>"""
 
@@ -1573,7 +1575,7 @@ def update_digest_rss(digest_results, entry_id):
 <p><strong>Sentiment: {summary.get('sentiment', 'neutral').title()}</strong></p>
 <p>{html_escape(summary.get('overview', ''))}</p>
 <p><strong>Key moment at <a href="{episode['url']}&t={km_secs}">{km_ts}</a>:</strong> \"{html_escape(km.get('text', ''))}\" \u2013 {html_escape(km.get('speaker', 'Unknown'))}</p>
-<p><a href="{episode['url']}">&#9654; Watch Episode</a>{doc_links_html}</p>"""
+<p><a href="{episode['url']}">&#9654; {"Watch Episode" if episode.get("video_id") else "Listen to Episode"}</a>{doc_links_html}</p>"""
 
     description_html = f"""<h2>PYT Radar Digest \u2014 {today}</h2>
 <p>{episode_count} new episode{'s' if episode_count != 1 else ''} found.</p>
@@ -1734,7 +1736,7 @@ def send_digest_email(digest_results):
             {quotes_html}
           </blockquote>
           <p style="margin: 12px 0 0 0; font-size: 13px;">
-            <a href="{episode['url']}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">&#9654; Watch Episode</a>
+            <a href="{episode['url']}" style="color: #3b82f6; text-decoration: none; font-weight: 500;">&#9654; {"Watch Episode" if episode.get("video_id") else "Listen to Episode"}</a>
             {(' &nbsp;&middot;&nbsp; ' + doc_links_html) if doc_links_html else ''}
           </p>
         </div>"""
