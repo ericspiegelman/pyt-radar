@@ -169,16 +169,25 @@ def get_video_duration(video_id):
     return hours * 3600 + minutes * 60 + seconds
 
 
+def parse_target(target):
+    """Parse a search target which can be a string or {"name": ..., "context": ...}."""
+    if isinstance(target, dict):
+        return target["name"], target.get("context", "")
+    return target, ""
+
+
 def find_youtube_episodes(episodes_data):
     """Search YouTube for new episodes matching all targets."""
     new_episodes = []
     cutoff = datetime.now(timezone.utc) - timedelta(days=7)
 
-    for guest in SEARCH_TARGETS.get("guests", []):
+    for target_entry in SEARCH_TARGETS.get("guests", []):
+        guest, context = parse_target(target_entry)
         print(f"Searching YouTube for guest: {guest}")
+        ctx = f" {context}" if context else ""
         queries = [
-            f'"{guest}" interview OR podcast OR guest',
-            f'"{guest}" podcast episode',
+            f'"{guest}"{ctx} interview OR podcast OR guest',
+            f'"{guest}"{ctx} podcast episode',
         ]
         for q in queries:
             results = search_youtube(q, max_results=10, published_after=cutoff)
@@ -204,11 +213,13 @@ def find_youtube_episodes(episodes_data):
                     "duration": duration,
                 })
 
-    for topic in SEARCH_TARGETS.get("topics", []):
+    for target_entry in SEARCH_TARGETS.get("topics", []):
+        topic, context = parse_target(target_entry)
         print(f"Searching YouTube for topic: {topic}")
+        ctx = f" {context}" if context else ""
         queries = [
-            f'"{topic}" interview OR podcast OR discussion',
-            f'"{topic}" podcast episode',
+            f'"{topic}"{ctx} interview OR podcast OR discussion',
+            f'"{topic}"{ctx} podcast episode',
         ]
         for q in queries:
             results = search_youtube(q, max_results=10, published_after=cutoff)
@@ -291,9 +302,10 @@ def find_podcast_episodes(episodes_data):
     new_episodes = []
     cutoff = datetime.now(timezone.utc) - timedelta(days=7)
 
-    for guest in SEARCH_TARGETS.get("guests", []):
+    for target_entry in SEARCH_TARGETS.get("guests", []):
+        guest, context = parse_target(target_entry)
         print(f"Searching podcasts for guest: {guest}")
-        query = f'"{guest}"'
+        query = f'"{guest}"' + (f" {context}" if context else "")
         results = search_listen_notes(query, published_after=cutoff)
         for r in results:
             if is_duplicate(r["url"], episodes_data):
@@ -319,9 +331,10 @@ def find_podcast_episodes(episodes_data):
                 "duration": r["duration"],
             })
 
-    for topic in SEARCH_TARGETS.get("topics", []):
+    for target_entry in SEARCH_TARGETS.get("topics", []):
+        topic, context = parse_target(target_entry)
         print(f"Searching podcasts for topic: {topic}")
-        query = f'"{topic}"'
+        query = f'"{topic}"' + (f" {context}" if context else "")
         results = search_listen_notes(query, published_after=cutoff)
         for r in results:
             if is_duplicate(r["url"], episodes_data):
