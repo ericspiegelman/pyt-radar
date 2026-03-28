@@ -1234,16 +1234,53 @@ def process_episode(episode, episodes_data):
     if not transcript_data:
         print("  WARNING: All transcription methods failed for this episode")
         print("  Recording episode as found (without transcript)")
-        episode["status"] = "transcript_unavailable"
-        episode["processed_date"] = datetime.now().isoformat()
-        episodes_data["episodes"].append(episode)
+        ep_record = {
+            "url": episode["url"],
+            "title": episode["title"],
+            "show_name": episode["show_name"],
+            "date_found": datetime.now().strftime("%Y-%m-%d"),
+            "date_published": episode.get("date_published", ""),
+            "search_target": episode["search_target"],
+            "match_type": episode["match_type"],
+            "status": "transcript_unavailable",
+        }
+        if episode.get("video_id"):
+            ep_record["video_id"] = episode["video_id"]
+        if episode.get("audio_url"):
+            ep_record["audio_url"] = episode["audio_url"]
+        episodes_data["episodes"].append(ep_record)
         save_episodes(episodes_data)
         print(f"  Episode logged: {episode['title']} (transcript unavailable)")
         return True
 
     # 2. Generate summary
     print("Generating summary...")
-    summary = generate_summary_with_claude(episode, transcript_data)
+    try:
+        summary = generate_summary_with_claude(episode, transcript_data)
+    except Exception as e:
+        print(f"  WARNING: Claude API failed during summary: {e}")
+        print("  Saving transcript to KB and marking for retry")
+        basic_summary = generate_basic_summary(episode, transcript_data)
+        save_to_knowledge_base(episode, transcript_data, basic_summary)
+        ep_record = {
+            "url": episode["url"],
+            "title": episode["title"],
+            "show_name": episode["show_name"],
+            "date_found": datetime.now().strftime("%Y-%m-%d"),
+            "date_published": episode.get("date_published", ""),
+            "search_target": episode["search_target"],
+            "match_type": episode["match_type"],
+            "status": "summary_failed",
+            "dropbox_links": {"summary": "#", "transcript": "#"},
+        }
+        if episode.get("video_id"):
+            ep_record["video_id"] = episode["video_id"]
+        if episode.get("audio_url"):
+            ep_record["audio_url"] = episode["audio_url"]
+        episodes_data["episodes"].append(ep_record)
+        save_episodes(episodes_data)
+        print(f"  Episode logged: {episode['title']} (summary failed, transcript saved)")
+        return True
 
     # 3. Save to knowledge base
     save_to_knowledge_base(episode, transcript_data, summary)
@@ -1284,7 +1321,7 @@ def process_episode(episode, episodes_data):
     # 7. (Blog/RSS now updated as digest after all episodes processed)
 
     # 8. Update episode log
-    episodes_data["episodes"].append({
+    ep_record = {
         "url": episode["url"],
         "title": episode["title"],
         "show_name": episode["show_name"],
@@ -1294,7 +1331,12 @@ def process_episode(episode, episodes_data):
         "match_type": episode["match_type"],
         "dropbox_paths": dropbox_paths,
         "dropbox_links": dropbox_links,
-    })
+    }
+    if episode.get("video_id"):
+        ep_record["video_id"] = episode["video_id"]
+    if episode.get("audio_url"):
+        ep_record["audio_url"] = episode["audio_url"]
+    episodes_data["episodes"].append(ep_record)
     save_episodes(episodes_data)
 
     # Cleanup
@@ -1352,6 +1394,9 @@ def reprocess_failed_episodes(episodes_data):
         if ep.get("status") == "transcript_unavailable":
             needs_work = True
             reason = "transcript_unavailable"
+        elif ep.get("status") == "summary_failed":
+            needs_work = True
+            reason = "summary_failed"
         elif ep.get("dropbox_links", {}).get("summary") == "#":
             needs_work = True
             reason = "dropbox_failed"
@@ -1479,7 +1524,7 @@ def reprocess_failed_episodes(episodes_data):
                 update_blog_links(episode, dropbox_links)
 
             # Update episode record in place
-            episodes_data["episodes"][idx] = {
+            ep_record = {
                 "url": episode["url"],
                 "title": episode["title"],
                 "show_name": episode["show_name"],
@@ -1490,6 +1535,11 @@ def reprocess_failed_episodes(episodes_data):
                 "dropbox_paths": {"summary": dbx_summary, "transcript": dbx_transcript},
                 "dropbox_links": dropbox_links,
             }
+            if episode.get("video_id"):
+                ep_record["video_id"] = episode["video_id"]
+            if episode.get("audio_url") or ep.get("audio_url"):
+                ep_record["audio_url"] = episode.get("audio_url") or ep.get("audio_url")
+            episodes_data["episodes"][idx] = ep_record
             save_episodes(episodes_data)
 
             # Cleanup
