@@ -1382,7 +1382,7 @@ def reprocess_failed_episodes(episodes_data):
                 "search_target": ep["search_target"],
                 "match_type": ep["match_type"],
             }
-            if not episode.get("audio_url") and ep.get("audio_url"):
+            if ep.get("audio_url"):
                 episode["audio_url"] = ep["audio_url"]
             # Extract video_id from URL if not present
             if not episode["video_id"] and "youtube.com/watch" in episode["url"]:
@@ -1390,6 +1390,9 @@ def reprocess_failed_episodes(episodes_data):
                 parsed = urllib.parse.urlparse(episode["url"])
                 qs = urllib.parse.parse_qs(parsed.query)
                 episode["video_id"] = qs.get("v", [""])[0]
+            # For non-YouTube episodes without audio_url, use the episode URL directly
+            if not episode.get("video_id") and not episode.get("audio_url"):
+                episode["audio_url"] = episode["url"]
 
             # Transcribe
             transcript_data = transcribe_episode(episode)
