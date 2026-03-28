@@ -520,6 +520,18 @@
       "duration": 4397,
       "status": "transcript_unavailable",
       "processed_date": "2026-03-27T22:21:54.336666"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JFivrIkyacI",
+      "video_id": "JFivrIkyacI",
+      "title": "Los Angeles Mayor Karen Bass Talks Public Transit | Bloomberg Talks",
+      "show_name": "Bloomberg Podcasts",
+      "date_published": "2026-03-28",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "duration": 585,
+      "status": "transcript_unavailable",
+      "processed_date": "2026-03-28T12:28:30.075133"
     }
   ]
 }
