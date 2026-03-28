@@ -9,29 +9,29 @@
 
 ## Summary
 
-This Bloomberg podcast episode features an interview with Los Angeles Mayor Karen Bass discussing various challenges facing the city including high gas prices, housing affordability, public transit, and major upcoming events. Bass speaks extensively about her administration's progress on homelessness reduction, public safety improvements, and preparations for hosting the World Cup and Olympics.
+Los Angeles Mayor Karen Bass appears as a guest on Bloomberg Talks to discuss various city challenges and initiatives. She addresses topics ranging from gas prices and public transit to homelessness, housing construction, the entertainment industry, and upcoming major sporting events.
 
 **Sentiment:** positive
-**Sentiment Detail:** The tone is respectful and professional, with Bass given a platform to highlight her administration's achievements. She presents positive statistics about reducing homelessness by 18% and crime levels returning to 1960s levels. The interviewer asks challenging but fair questions without being confrontational.
+**Sentiment Detail:** The interview maintains a respectful, professional tone with Bass given ample opportunity to highlight her administration's achievements. She presents positive statistics about reducing homelessness and crime while discussing proactive initiatives for infrastructure and major events.
 
-**Topics:** gas prices, public transit, housing affordability, construction permits, Hollywood film industry, World Cup preparations, Olympics planning, homelessness, public safety, mayoral reelection, city services, street lighting
+**Topics:** Public Transit, Gas Prices, Housing Construction, Homelessness, Entertainment Industry, World Cup 2026, Olympics 2028, Public Safety, City Infrastructure
 
 ## Key Moment
 
 > "We've had a decrease in street homelessness of 18%."
 > â Karen Bass at 08:11
-> *Bass highlights her administration's signature achievement in reversing LA's homelessness crisis, contrasting with the national 18% increase trend.*
+> *Bass highlights her administration's key achievement in reversing years of increasing homelessness, positioning this as her primary campaign accomplishment.*
 
 ## Key Quotes
 
-- [00:36] Karen Bass: "We are a city that loves our cars. However, we have spent the last three or four decades building out our public transportation system."
+- [00:34] Karen Bass: "We are a city that loves our cars. However, we have spent the last three or four decades building out our public transportation system."
+- [01:09] Karen Bass: "Affordability is the number one issue we're dealing with here. Period."
 - [01:35] Karen Bass: "I signed an executive directive to fasttrack the building especially of housing. And we have 40,000 units that are currently going through that process."
-- [02:57] Karen Bass: "I have certainly been doing everything to make sure that filming doesn't continue to leave and in fact increases in our city."
+- [02:52] Karen Bass: "The entertainment industry is one of our foundation industries and so I have certainly been doing everything to make sure that filming doesn't continue to leave."
 - [03:49] Karen Bass: "We have over 119 new projects that have started in LA since the tax credits and these other initiatives have been put into place."
-- [05:12] Bloomberg Host: "You have called for the ouster of Casey Wasserman as the LA28 Olympic chair."
-- [06:07] Karen Bass: "My role is to make sure that the city of Los Angeles is ready to welcome thousands, tens of thousands of visitors from around the world."
-- [07:51] Karen Bass: "I ran because Los Angeles was the epicenter for the country in homelessness, especially street homelessness."
-- [08:11] Karen Bass: "We've had a decrease in street homelessness of 18%. This is a dysfunctional system that has been dysfunctional for at least the last three decades."
+- [05:12] Speaker A: "I have called for the ouster of Casey Wasserman as the LA28 Olympic chair."
+- [08:11] Karen Bass: "We've had a decrease in street homelessness of 18%."
+- [08:43] Karen Bass: "Crime has been reduced to levels going back to the 1960s."
 
 ## Full Transcript
 
