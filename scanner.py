@@ -1484,36 +1484,38 @@ def reprocess_failed_episodes(episodes_data):
                 episode["audio_url"] = episode["url"]
 
             # Try to load existing transcript from knowledge base
+            # (skip for transcript_unavailable — force fresh transcription)
             transcript_data = None
-            safe_title_kb = re.sub(r'[^\w\s-]', '', episode['title']).strip()
-            safe_show_kb = re.sub(r'[^\w\s-]', '', episode['show_name']).strip()
-            kb_pattern = f"*--{safe_show_kb}--{safe_title_kb}*"
-            kb_matches = list(KB_DIR.glob(kb_pattern))
-            if kb_matches:
-                kb_text = kb_matches[0].read_text(encoding="utf-8")
-                # Extract transcript section
-                tx_marker = "## Full Transcript"
-                if tx_marker in kb_text:
-                    tx_section = kb_text[kb_text.index(tx_marker) + len(tx_marker):].strip()
-                    utterances = []
-                    full_text_parts = []
-                    for line in tx_section.split("\n"):
-                        m = re.match(r'\[(\d+):(\d+)\] \*\*Speaker (\w+):\*\* (.+)', line)
-                        if m:
-                            mm, ss, speaker, text = m.groups()
-                            start_ms = (int(mm) * 60 + int(ss)) * 1000
-                            utterances.append({"start": start_ms, "end": start_ms + 1000, "text": text, "speaker": speaker})
-                            full_text_parts.append(text)
-                    if utterances:
-                        transcript_data = {
-                            "utterances": utterances,
-                            "text": " ".join(full_text_parts),
-                            "audio_duration": utterances[-1]["start"] // 1000,
-                            "source": "kb_file",
-                        }
-                        print(f"  Loaded existing transcript from KB ({len(utterances)} segments)")
+            if reason != "transcript_unavailable":
+                safe_title_kb = re.sub(r'[^\w\s-]', '', episode['title']).strip()
+                safe_show_kb = re.sub(r'[^\w\s-]', '', episode['show_name']).strip()
+                kb_pattern = f"*--{safe_show_kb}--{safe_title_kb}*"
+                kb_matches = list(KB_DIR.glob(kb_pattern))
+                if kb_matches:
+                    kb_text = kb_matches[0].read_text(encoding="utf-8")
+                    # Extract transcript section
+                    tx_marker = "## Full Transcript"
+                    if tx_marker in kb_text:
+                        tx_section = kb_text[kb_text.index(tx_marker) + len(tx_marker):].strip()
+                        utterances = []
+                        full_text_parts = []
+                        for line in tx_section.split("\n"):
+                            m = re.match(r'\[(\d+):(\d+)\] \*\*Speaker (\w+):\*\* (.+)', line)
+                            if m:
+                                mm, ss, speaker, text = m.groups()
+                                start_ms = (int(mm) * 60 + int(ss)) * 1000
+                                utterances.append({"start": start_ms, "end": start_ms + 1000, "text": text, "speaker": speaker})
+                                full_text_parts.append(text)
+                        if utterances:
+                            transcript_data = {
+                                "utterances": utterances,
+                                "text": " ".join(full_text_parts),
+                                "audio_duration": utterances[-1]["start"] // 1000,
+                                "source": "kb_file",
+                            }
+                            print(f"  Loaded existing transcript from KB ({len(utterances)} segments)")
 
-            # If no KB transcript, try fresh transcription
+            # If no KB transcript (or forced retranscription), try fresh transcription
             if not transcript_data:
                 transcript_data = transcribe_episode(episode)
             if not transcript_data:
