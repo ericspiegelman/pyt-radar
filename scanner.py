@@ -392,6 +392,12 @@ def download_youtube_audio(url):
     if cookie_args:
         print("  Using YouTube cookies for authentication")
 
+    proxy_args = []
+    if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
+        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
+        proxy_args = ["--proxy", proxy_url]
+        print("  Using Webshare proxy for yt-dlp")
+
     strategies = [
         {
             "name": "iOS client",
@@ -444,10 +450,10 @@ def download_youtube_audio(url):
             os.unlink(os.path.join(tmpdir, f))
         try:
             print(f"  yt-dlp strategy: {strategy['name']}")
-            full_args = strategy["args"][:-1] + cookie_args + [strategy["args"][-1]]
+            full_args = strategy["args"][:-1] + cookie_args + proxy_args + [strategy["args"][-1]]
             result = subprocess.run(
                 full_args,
-                capture_output=True, text=True, timeout=120
+                capture_output=True, text=True, timeout=180
             )
             if result.returncode == 0:
                 for f in os.listdir(tmpdir):
@@ -477,6 +483,10 @@ def get_youtube_audio_url(url):
     Returns the URL string if successful, None otherwise.
     This URL can be passed directly to AssemblyAI for transcription."""
     cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
+    proxy_args = []
+    if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
+        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
+        proxy_args = ["--proxy", proxy_url]
     strategies = [
         ["yt-dlp", "--js-runtimes", "node", "-g", "-f", "bestaudio/best",
          "--extractor-args", "youtube:player_client=web_creator",
@@ -489,8 +499,8 @@ def get_youtube_audio_url(url):
     ]
     for args in strategies:
         try:
-            full_args = args[:-1] + cookie_args + [args[-1]]
-            result = subprocess.run(full_args, capture_output=True, text=True, timeout=60)
+            full_args = args[:-1] + cookie_args + proxy_args + [args[-1]]
+            result = subprocess.run(full_args, capture_output=True, text=True, timeout=120)
             if result.returncode == 0 and result.stdout.strip():
                 audio_url = result.stdout.strip().split("\n")[0]
                 print(f"  Got direct audio URL via yt-dlp -g")
@@ -639,21 +649,16 @@ def get_youtube_transcript(video_id):
 def transcribe_episode(episode):
     """Full pipeline: get transcript for episode.
     For YouTube, tries in order:
-      1. YouTube captions via youtube-transcript-api (no download needed)
-      2. Download audio with yt-dlp, upload to AssemblyAI
-      3. Extract direct stream URL with yt-dlp -g, pass to AssemblyAI
+      1. Download audio with yt-dlp (via proxy), upload to AssemblyAI (best: speaker labels)
+      2. Extract direct stream URL with yt-dlp -g, pass to AssemblyAI
+      3. YouTube captions via youtube-transcript-api (no speaker labels)
+      4. Pass YouTube URL directly to AssemblyAI
     For podcasts, uses direct audio URL with AssemblyAI.
     """
     print(f"Transcribing: {episode['title']}")
 
     if episode.get("video_id"):
-        # Strategy 1: Try YouTube captions first (avoids bot detection entirely)
-        transcript_data = get_youtube_transcript(episode["video_id"])
-        if transcript_data:
-            print("  Using YouTube captions (no audio download needed)")
-            return transcript_data
-
-        # Strategy 2: Try yt-dlp download + AssemblyAI
+        # Strategy 1: Try yt-dlp download + AssemblyAI (best quality, has speaker labels)
         audio_url_for_aai = None
         try:
             audio_path = download_youtube_audio(episode["url"])
@@ -664,7 +669,7 @@ def transcribe_episode(episode):
                 os.rmdir(os.path.dirname(audio_path))
         except RuntimeError as e:
             print(f"  Download failed, trying direct URL extraction: {e}")
-            # Strategy 3: Try yt-dlp -g for direct URL
+            # Strategy 2: Try yt-dlp -g for direct URL
             direct_url = get_youtube_audio_url(episode["url"])
             if direct_url:
                 print(f"  Using direct stream URL for AssemblyAI")
@@ -673,8 +678,13 @@ def transcribe_episode(episode):
         if audio_url_for_aai:
             return transcribe(audio_url_for_aai)
 
+        # Strategy 3: YouTube captions (no speaker labels, but reliable via proxy)
+        transcript_data = get_youtube_transcript(episode["video_id"])
+        if transcript_data:
+            print("  Using YouTube captions (no speaker labels)")
+            return transcript_data
+
         # Strategy 4: Pass YouTube URL directly to AssemblyAI
-        # AssemblyAI can download from YouTube using their own infrastructure
         print(f"  Trying AssemblyAI direct YouTube URL transcription...")
         try:
             return transcribe(episode["url"])
