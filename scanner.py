@@ -1394,8 +1394,39 @@ def reprocess_failed_episodes(episodes_data):
             if not episode.get("video_id") and not episode.get("audio_url"):
                 episode["audio_url"] = episode["url"]
 
-            # Transcribe
-            transcript_data = transcribe_episode(episode)
+            # Try to load existing transcript from knowledge base
+            transcript_data = None
+            safe_title_kb = re.sub(r'[^\w\s-]', '', episode['title']).strip()
+            safe_show_kb = re.sub(r'[^\w\s-]', '', episode['show_name']).strip()
+            kb_pattern = f"*--{safe_show_kb}--{safe_title_kb}*"
+            kb_matches = list(KB_DIR.glob(kb_pattern))
+            if kb_matches:
+                kb_text = kb_matches[0].read_text(encoding="utf-8")
+                # Extract transcript section
+                tx_marker = "## Full Transcript"
+                if tx_marker in kb_text:
+                    tx_section = kb_text[kb_text.index(tx_marker) + len(tx_marker):].strip()
+                    utterances = []
+                    full_text_parts = []
+                    for line in tx_section.split("\n"):
+                        m = re.match(r'\[(\d+):(\d+)\] \*\*Speaker (\w+):\*\* (.+)', line)
+                        if m:
+                            mm, ss, speaker, text = m.groups()
+                            start_ms = (int(mm) * 60 + int(ss)) * 1000
+                            utterances.append({"start": start_ms, "end": start_ms + 1000, "text": text, "speaker": speaker})
+                            full_text_parts.append(text)
+                    if utterances:
+                        transcript_data = {
+                            "utterances": utterances,
+                            "text": " ".join(full_text_parts),
+                            "audio_duration": utterances[-1]["start"] // 1000,
+                            "source": "kb_file",
+                        }
+                        print(f"  Loaded existing transcript from KB ({len(utterances)} segments)")
+
+            # If no KB transcript, try fresh transcription
+            if not transcript_data:
+                transcript_data = transcribe_episode(episode)
             if not transcript_data:
                 print("  Still unable to transcribe. Skipping.")
                 continue
@@ -1435,6 +1466,11 @@ def reprocess_failed_episodes(episodes_data):
             # Update or add blog entry
             if reason == "transcript_unavailable":
                 # This episode never got a blog entry, so add one
+                entry_id = update_blog(episode, summary, dropbox_links)
+                if entry_id:
+                    update_rss(episode, summary, dropbox_links, entry_id)
+            elif transcript_data.get("source") == "kb_file":
+                # Had a transcript but bad summary — replace the blog entry
                 entry_id = update_blog(episode, summary, dropbox_links)
                 if entry_id:
                     update_rss(episode, summary, dropbox_links, entry_id)

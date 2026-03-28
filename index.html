@@ -546,8 +546,6 @@
         <label for="person">Person</label>
         <select id="person">
           <option value="">All People</option>
-          <option value="Karen Bass">Karen Bass</option>
-          <option value="Nithya Raman">Nithya Raman</option>
         </select>
       </div>
       <div class="filter-group">
@@ -804,6 +802,16 @@
     document.getElementById('sentiment').addEventListener('change', filterEpisodes);
     document.getElementById('source').addEventListener('change', filterEpisodes);
     document.getElementById('resetBtn').addEventListener('click', resetFilters);
+
+    // Populate person dropdown from episode data
+    const personSelect = document.getElementById('person');
+    const people = [...new Set(allEpisodes.flatMap(ep => ep.tags.filter(t => !['Mentioned', 'Guest', 'Guest Appearance', 'Podcast', 'Video'].includes(t))))].sort();
+    people.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p;
+      opt.textContent = p;
+      personSelect.appendChild(opt);
+    });
 
     // Initial render
     filterEpisodes();
