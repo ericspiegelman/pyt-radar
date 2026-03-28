@@ -23,6 +23,7 @@ from pathlib import Path
 
 try:
     from youtube_transcript_api import YouTubeTranscriptApi
+    from youtube_transcript_api.proxies import WebshareProxyConfig
     HAS_YT_TRANSCRIPT = True
 except ImportError:
     HAS_YT_TRANSCRIPT = False
@@ -48,6 +49,8 @@ INDEX_FILE = REPO_ROOT / "index.html"
 FEED_FILE = REPO_ROOT / "feed.xml"
 KB_DIR = REPO_ROOT / "kb"
 COOKIES_FILE = Path("cookies.txt")
+WEBSHARE_PROXY_USERNAME = os.environ.get("WEBSHARE_PROXY_USERNAME", "")
+WEBSHARE_PROXY_PASSWORD = os.environ.get("WEBSHARE_PROXY_PASSWORD", "")
 
 # Global flag for YouTube cookie expiry detection
 _youtube_cookies_expired = False
@@ -559,7 +562,14 @@ def get_youtube_transcript(video_id):
         print("  youtube-transcript-api not available")
         return None
     try:
-        ytt_api = YouTubeTranscriptApi()
+        proxy_config = None
+        if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
+            proxy_config = WebshareProxyConfig(
+                proxy_username=WEBSHARE_PROXY_USERNAME,
+                proxy_password=WEBSHARE_PROXY_PASSWORD,
+            )
+            print("  Using Webshare proxy for YouTube captions")
+        ytt_api = YouTubeTranscriptApi(proxy_config=proxy_config)
         transcript_list = ytt_api.fetch(video_id)
         # Convert to AssemblyAI-compatible format
         utterances = []

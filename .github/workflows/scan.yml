@@ -74,6 +74,8 @@ jobs:
           SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
           MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
           MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          WEBSHARE_PROXY_USERNAME: ${{ secrets.WEBSHARE_PROXY_USERNAME }}
+          WEBSHARE_PROXY_PASSWORD: ${{ secrets.WEBSHARE_PROXY_PASSWORD }}
         run: |
           REPROCESS_FLAG=""
           if [ "${{ github.event.inputs.reprocess }}" = "true" ]; then
@@ -143,6 +145,8 @@ jobs:
           SEARCH_TARGETS: ${{ secrets.SEARCH_TARGETS }}
           MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
           MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          WEBSHARE_PROXY_USERNAME: ${{ secrets.WEBSHARE_PROXY_USERNAME }}
+          WEBSHARE_PROXY_PASSWORD: ${{ secrets.WEBSHARE_PROXY_PASSWORD }}
         run: |
           REPROCESS_FLAG=""
           if [ "${{ github.event.inputs.reprocess }}" = "true" ]; then
