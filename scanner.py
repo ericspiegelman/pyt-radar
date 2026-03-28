@@ -571,22 +571,56 @@ def get_youtube_transcript(video_id):
             print("  Using Webshare proxy for YouTube captions")
         ytt_api = YouTubeTranscriptApi(proxy_config=proxy_config)
         transcript_list = ytt_api.fetch(video_id)
-        # Convert to AssemblyAI-compatible format
-        utterances = []
-        full_text_parts = []
+        # Convert to AssemblyAI-compatible format, merging short caption segments
+        # into longer utterances at sentence boundaries
+        raw_segments = []
         for entry in transcript_list:
-            start_ms = int(entry.start * 1000)
-            end_ms = int((entry.start + entry.duration) * 1000)
             text = entry.text.strip()
             if not text:
                 continue
-            utterances.append({
-                "start": start_ms,
-                "end": end_ms,
+            raw_segments.append({
+                "start_ms": int(entry.start * 1000),
+                "end_ms": int((entry.start + entry.duration) * 1000),
                 "text": text,
-                "speaker": "A",  # captions don't have speaker labels
             })
-            full_text_parts.append(text)
+
+        # Merge segments into sentence-level utterances
+        utterances = []
+        full_text_parts = []
+        if raw_segments:
+            current_start = raw_segments[0]["start_ms"]
+            current_end = raw_segments[0]["end_ms"]
+            current_text = raw_segments[0]["text"]
+
+            for seg in raw_segments[1:]:
+                # Check for time gap (>2s suggests a pause/speaker change)
+                time_gap = seg["start_ms"] - current_end > 2000
+                # Check if current text ends with sentence-ending punctuation
+                ends_sentence = current_text.rstrip().endswith(('.', '?', '!', '."', '?"', '!"'))
+                # Merge if no gap and no sentence boundary, or if text is very short
+                if not time_gap and (not ends_sentence or len(current_text) < 80):
+                    current_text += " " + seg["text"]
+                    current_end = seg["end_ms"]
+                else:
+                    utterances.append({
+                        "start": current_start,
+                        "end": current_end,
+                        "text": current_text,
+                        "speaker": "A",
+                    })
+                    full_text_parts.append(current_text)
+                    current_start = seg["start_ms"]
+                    current_end = seg["end_ms"]
+                    current_text = seg["text"]
+
+            # Don't forget the last segment
+            utterances.append({
+                "start": current_start,
+                "end": current_end,
+                "text": current_text,
+                "speaker": "A",
+            })
+            full_text_parts.append(current_text)
         if not utterances:
             print("  YouTube captions were empty")
             return None
