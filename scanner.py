@@ -394,7 +394,7 @@ def download_youtube_audio(url):
 
     proxy_args = []
     if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
-        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
+        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}-rotate:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
         proxy_args = ["--proxy", proxy_url]
         print("  Using Webshare proxy for yt-dlp")
 
@@ -485,7 +485,7 @@ def get_youtube_audio_url(url):
     cookie_args = ["--cookies", str(COOKIES_FILE)] if COOKIES_FILE.exists() else []
     proxy_args = []
     if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
-        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
+        proxy_url = f"http://{WEBSHARE_PROXY_USERNAME}-rotate:{WEBSHARE_PROXY_PASSWORD}@p.webshare.io:80"
         proxy_args = ["--proxy", proxy_url]
     strategies = [
         ["yt-dlp", "--js-runtimes", "node", "-g", "-f", "bestaudio/best",
