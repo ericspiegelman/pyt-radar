@@ -387,7 +387,7 @@
         "transcript": "/The John Phillips Show - Ashley Zavala confronts the lack of transparency at the Capitol Annex Project - Transcript.docx"
       },
       "dropbox_links": {
-        "summary": "#",
+        "summary": "https://www.dropbox.com/scl/fi/bx5qgcwrscq2n5vy7apar/The-John-Phillips-Show-Ashley-Zavala-confronts-the-lack-of-transparency-at-the-Capitol-Annex-Project-Summary.docx?rlkey=y514sms3cmreai5b75jht3vqm&dl=0",
         "transcript": "https://www.dropbox.com/scl/fi/fccpssvuvh72uemlwj19c/The-John-Phillips-Show-Ashley-Zavala-confronts-the-lack-of-transparency-at-the-Capitol-Annex-Project-Transcript.docx?rlkey=lkkk9813ogwfdxb9dr5op3fza&dl=0"
       }
     },
@@ -512,15 +512,20 @@
     },
     {
       "url": "https://www.youtube.com/watch?v=Qsnm9TT_UPk",
-      "video_id": "Qsnm9TT_UPk",
       "title": "Rap&#39;s dogpiling problem + Hannah Montana 20th anniversary, Spencer Pratt for LA mayor?",
       "show_name": "Freshly Pop'd",
+      "date_found": "2026-03-28",
       "date_published": "2026-03-24",
       "search_target": "Spencer Pratt",
       "match_type": "guest",
-      "duration": 2288,
-      "status": "transcript_unavailable",
-      "processed_date": "2026-03-27T22:21:07.443657"
+      "dropbox_paths": {
+        "summary": "/Freshly Popd - Rap39s dogpiling problem  Hannah Montana 20th anniversary Spencer Pratt for LA mayor - Summary.docx",
+        "transcript": "/Freshly Popd - Rap39s dogpiling problem  Hannah Montana 20th anniversary Spencer Pratt for LA mayor - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/gxbeip2c24d6laaho939h/Freshly-Popd-Rap39s-dogpiling-problem-Hannah-Montana-20th-anniversary-Spencer-Pratt-for-LA-mayor-Summary.docx?rlkey=l4zot0vfs8n3d3zjuu1nrhuh2&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/j3vwhqq3da3ml083q4ccp/Freshly-Popd-Rap39s-dogpiling-problem-Hannah-Montana-20th-anniversary-Spencer-Pratt-for-LA-mayor-Transcript.docx?rlkey=makzsilwip4e40u4e3fr6y2p4&dl=0"
+      }
     },
     {
       "url": "https://www.youtube.com/watch?v=fCUNquHGBkk",
