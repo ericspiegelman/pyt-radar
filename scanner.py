@@ -1849,6 +1849,8 @@ def main():
                         help="Search mode: youtube, podcast, or all (default: all)")
     parser.add_argument("--reprocess", action="store_true",
                         help="Reprocess failed episodes (retry transcription and Dropbox uploads)")
+    parser.add_argument("--send-digest", type=int, metavar="N",
+                        help="Send digest email for the N most recent episodes")
     args = parser.parse_args()
 
     print("=" * 60)
@@ -1862,6 +1864,53 @@ def main():
 
     # Refresh Dropbox token (gets a fresh short-lived token from the long-lived refresh token)
     refresh_dropbox_token()
+
+    # Handle send-digest mode
+    if args.send_digest:
+        recent = [ep for ep in episodes_data["episodes"] if ep.get("dropbox_links", {}).get("summary", "#") != "#"]
+        recent = recent[-args.send_digest:]
+        if not recent:
+            print("No episodes with completed summaries to send.")
+            return
+        digest_results = []
+        for ep in recent:
+            # Load summary from KB
+            safe_title = re.sub(r'[^\w\s-]', '', ep['title']).strip()
+            safe_show = re.sub(r'[^\w\s-]', '', ep['show_name']).strip()
+            kb_matches = list(KB_DIR.glob(f"*--{safe_show}--{safe_title}*"))
+            summary = generate_basic_summary(
+                {"search_target": ep["search_target"], "show_name": ep["show_name"], "title": ep["title"], "match_type": ep.get("match_type", "mentioned")},
+                {"utterances": [], "audio_duration": 0}
+            )
+            if kb_matches:
+                kb_text = kb_matches[0].read_text(encoding="utf-8")
+                # Try to extract overview from KB
+                for line in kb_text.split("\n"):
+                    if line.startswith("**Sentiment:**"):
+                        s = line.replace("**Sentiment:**", "").strip()
+                        summary["sentiment"] = s
+                # Extract key quotes
+                if "## Key Quotes" in kb_text:
+                    quotes_section = kb_text[kb_text.index("## Key Quotes"):].split("## ")[1] if "## Key Quotes" in kb_text else ""
+                    quotes = []
+                    for line in kb_text[kb_text.index("## Key Quotes"):].split("\n"):
+                        m = re.match(r'- \[(\d+:\d+)\] (.+?): "(.+)"', line)
+                        if m:
+                            ts, speaker, text = m.groups()
+                            mm, ss = ts.split(":")
+                            quotes.append({"text": text, "speaker": speaker, "timestamp_mm_ss": ts, "timestamp_seconds": int(mm)*60+int(ss)})
+                    if quotes:
+                        summary["key_quotes"] = quotes
+                        summary["key_moment"] = quotes[0]
+            episode = {
+                "url": ep["url"], "title": ep["title"], "show_name": ep["show_name"],
+                "video_id": ep.get("video_id", ""), "search_target": ep["search_target"],
+                "match_type": ep.get("match_type", "mentioned"),
+            }
+            digest_results.append({"episode": episode, "summary": summary, "dropbox_links": ep.get("dropbox_links", {})})
+        print(f"Sending digest email for {len(digest_results)} episode(s)...")
+        send_digest_email(digest_results)
+        return
 
     # Handle reprocess mode
     if args.reprocess:

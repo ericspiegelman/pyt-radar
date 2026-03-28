@@ -20,6 +20,11 @@ on:
         required: false
         default: false
         type: boolean
+      send_digest:
+        description: 'Send digest email for N most recent episodes (0 = skip)'
+        required: false
+        default: '0'
+        type: string
 
 permissions:
   contents: write
@@ -81,7 +86,11 @@ jobs:
           if [ "${{ github.event.inputs.reprocess }}" = "true" ]; then
             REPROCESS_FLAG="--reprocess"
           fi
-          python scanner.py --mode ${{ github.event.inputs.mode || 'youtube' }} $REPROCESS_FLAG
+          DIGEST_FLAG=""
+          if [ "${{ github.event.inputs.send_digest }}" != "0" ] && [ -n "${{ github.event.inputs.send_digest }}" ]; then
+            DIGEST_FLAG="--send-digest ${{ github.event.inputs.send_digest }}"
+          fi
+          python scanner.py --mode ${{ github.event.inputs.mode || 'youtube' }} $REPROCESS_FLAG $DIGEST_FLAG
 
       - name: Commit and push changes
         run: |
