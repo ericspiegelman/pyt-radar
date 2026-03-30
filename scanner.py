@@ -2037,11 +2037,12 @@ def main():
             print(f"\nERROR processing {episode['title']}: {e}")
             continue
 
-    # Create digest blog post and RSS entry for all episodes found in this scan
+    # Add each episode to the blog and RSS feed
     if digest_results:
-        entry_id = update_digest(digest_results)
-        if entry_id:
-            update_digest_rss(digest_results, entry_id)
+        for result in digest_results:
+            entry_id = update_blog(result["episode"], result["summary"], result["dropbox_links"])
+            if entry_id:
+                update_rss(result["episode"], result["summary"], result["dropbox_links"], entry_id)
         send_digest_email(digest_results)
 
     # Check for YouTube cookie issues and alert
