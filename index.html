@@ -548,6 +548,14 @@
         </select>
       </div>
       <div class="filter-group">
+        <label for="appearance">Appearance</label>
+        <select id="appearance">
+          <option value="">All Types</option>
+          <option value="Guest Appearance">Guest</option>
+          <option value="Mentioned">Mention</option>
+        </select>
+      </div>
+      <div class="filter-group">
         <label for="sentiment">Sentiment</label>
         <select id="sentiment">
           <option value="">All Sentiments</option>
@@ -647,6 +655,7 @@
     function filterEpisodes() {
       const searchTerm = document.getElementById('search').value.toLowerCase();
       const personFilter = document.getElementById('person').value;
+      const appearanceFilter = document.getElementById('appearance').value;
       const sentimentFilter = document.getElementById('sentiment').value;
       const sourceFilter = document.getElementById('source').value;
 
@@ -657,10 +666,11 @@
           ep.description.toLowerCase().includes(searchTerm);
 
         const matchPerson = !personFilter || ep.tags.includes(personFilter);
+        const matchAppearance = !appearanceFilter || ep.tags.includes(appearanceFilter);
         const matchSentiment = !sentimentFilter || ep.sentiment === sentimentFilter;
         const matchSource = !sourceFilter || ep.tags.includes(sourceFilter);
 
-        return matchSearch && matchPerson && matchSentiment && matchSource;
+        return matchSearch && matchPerson && matchAppearance && matchSentiment && matchSource;
       });
 
       currentPage = 1;
@@ -810,6 +820,7 @@
     function resetFilters() {
       document.getElementById('search').value = '';
       document.getElementById('person').value = '';
+      document.getElementById('appearance').value = '';
       document.getElementById('sentiment').value = '';
       document.getElementById('source').value = '';
       filterEpisodes();
@@ -818,6 +829,7 @@
     // Event listeners
     document.getElementById('search').addEventListener('input', filterEpisodes);
     document.getElementById('person').addEventListener('change', filterEpisodes);
+    document.getElementById('appearance').addEventListener('change', filterEpisodes);
     document.getElementById('sentiment').addEventListener('change', filterEpisodes);
     document.getElementById('source').addEventListener('change', filterEpisodes);
     document.getElementById('resetBtn').addEventListener('click', resetFilters);
