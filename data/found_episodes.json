@@ -992,6 +992,24 @@
         "transcript": "#"
       },
       "video_id": "E30QGokg0lU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6DUhu_naEFY",
+      "title": "Spencer Pratt makes case to be next LA Mayor",
+      "show_name": "FOX 11 Los Angeles",
+      "date_found": "2026-03-31",
+      "date_published": "2026-03-27",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/FOX 11 Los Angeles - Spencer Pratt makes case to be next LA Mayor - Summary.docx",
+        "transcript": "/FOX 11 Los Angeles - Spencer Pratt makes case to be next LA Mayor - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/2p4tg5zij4tggx2qr5v6h/FOX-11-Los-Angeles-Spencer-Pratt-makes-case-to-be-next-LA-Mayor-Summary.docx?rlkey=f39fzy0bfpr3xc69mbppmdy98&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/i9r041j23pmdbi8ynnhqh/FOX-11-Los-Angeles-Spencer-Pratt-makes-case-to-be-next-LA-Mayor-Transcript.docx?rlkey=i9lzegjyni9z6wg6l5v935z6i&dl=0"
+      },
+      "video_id": "6DUhu_naEFY"
     }
   ]
 }
