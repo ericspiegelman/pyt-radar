@@ -1058,7 +1058,7 @@ def update_blog(episode, summary, dropbox_links):
     km_speaker = km.get("speaker", "Unknown")
 
     sentiment = summary.get("sentiment", "neutral").title()
-    appearance = episode.get("match_type", "mentioned")
+    appearance = summary.get("appearance_type", episode.get("match_type", "mentioned"))
     match_label = "Guest Appearance" if appearance == "guest" else "Mentioned"
     source_label = "Video" if episode.get("video_id") else "Podcast"
 
