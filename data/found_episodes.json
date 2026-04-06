@@ -988,8 +988,8 @@
         "transcript": "/David Pakman Show - No Kings vs CPAC did not go well - Transcript.docx"
       },
       "dropbox_links": {
-        "summary": "#",
-        "transcript": "#"
+        "summary": "https://www.dropbox.com/scl/fi/9kglt44qsp3z1r7wiadvp/David-Pakman-Show-No-Kings-vs-CPAC-did-not-go-well-Summary.docx?rlkey=bnp39qjoh6jbhugz3ac0xvf0f&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/1uihi7hlcyv807ttj0j94/David-Pakman-Show-No-Kings-vs-CPAC-did-not-go-well-Transcript.docx?rlkey=y7ly3awoqq6djy63ieft2pvgc&dl=0"
       },
       "video_id": "E30QGokg0lU"
     },
@@ -1481,14 +1481,21 @@
     },
     {
       "url": "https://www.youtube.com/watch?v=cSuNANONtQs",
-      "video_id": "cSuNANONtQs",
       "title": "On the Record with Councilmember Nithya Raman",
       "show_name": "Pat Brown Institute at Cal State LA",
       "date_found": "2026-04-06",
       "date_published": "2026-04-04",
       "search_target": "Nithya Raman",
       "match_type": "guest",
-      "status": "transcript_unavailable"
+      "dropbox_paths": {
+        "summary": "/Pat Brown Institute at Cal State LA - On the Record with Councilmember Nithya Raman - Summary.docx",
+        "transcript": "/Pat Brown Institute at Cal State LA - On the Record with Councilmember Nithya Raman - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/d6gem14j20gmoetgmihke/Pat-Brown-Institute-at-Cal-State-LA-On-the-Record-with-Councilmember-Nithya-Raman-Summary.docx?rlkey=avc4ef3ap58qis2g9t0bdhh4f&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/ru2lgs4cbvcevqmtnjyfz/Pat-Brown-Institute-at-Cal-State-LA-On-the-Record-with-Councilmember-Nithya-Raman-Transcript.docx?rlkey=k2xgcuzqfgyke7t75oglm46rz&dl=0"
+      },
+      "video_id": "cSuNANONtQs"
     }
   ]
 }
