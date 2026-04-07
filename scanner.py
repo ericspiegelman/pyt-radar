@@ -896,7 +896,7 @@ def create_summary_docx(episode, summary, output_path):
         p.add_run(f'"{q["text"]}"')
 
     # Key Moment
-    km = summary.get("key_moment", {})
+    km = summary.get("key_moment") or {}
     if km:
         doc.add_heading("Key Moment", level=2)
         p = doc.add_paragraph()
@@ -1051,7 +1051,7 @@ def update_blog(episode, summary, dropbox_links):
     show_slug = make_slug(episode["show_name"])
     entry_id = f"{date_slug}-{show_slug}"
 
-    km = summary.get("key_moment", {})
+    km = summary.get("key_moment") or {}
     km_ts = km.get("timestamp_mm_ss", "0:00")
     km_secs = km.get("timestamp_seconds", 0)
     km_text = km.get("text", "")
@@ -1136,7 +1136,7 @@ def update_rss(episode, summary, dropbox_links, entry_id):
     now = datetime.now(timezone.utc)
     pub_date = now.strftime("%a, %d %b %Y %H:%M:%S +0000")
 
-    km = summary.get("key_moment", {})
+    km = summary.get("key_moment") or {}
     km_ts = km.get("timestamp_mm_ss", "0:00")
     km_secs = km.get("timestamp_seconds", 0)
 
@@ -1224,7 +1224,7 @@ def save_to_knowledge_base(episode, transcript_data, summary):
         lines.append("")
 
     # Key moment
-    km = summary.get("key_moment", {})
+    km = summary.get("key_moment") or {}
     if km:
         lines.append("## Key Moment")
         lines.append("")
@@ -1639,7 +1639,7 @@ def update_digest(digest_results):
 
         # Build multiple quotes HTML (limit 8)
         key_quotes = summary.get("key_quotes", [])[:8]
-        km = summary.get("key_moment", {})
+        km = summary.get("key_moment") or {}
         if not key_quotes and km.get("text"):
             key_quotes = [km]
 
@@ -1716,7 +1716,7 @@ def update_digest_rss(digest_results, entry_id):
         summary = result["summary"]
         dropbox_links = result["dropbox_links"]
 
-        km = summary.get("key_moment", {})
+        km = summary.get("key_moment") or {}
         km_ts = km.get("timestamp_mm_ss", "0:00")
         km_secs = km.get("timestamp_seconds", 0)
 
@@ -1861,7 +1861,7 @@ def send_digest_email(digest_results):
 
         # Build quotes HTML (multiple quotes, limit 8)
         key_quotes = summary.get("key_quotes", [])[:8]
-        km = summary.get("key_moment", {})
+        km = summary.get("key_moment") or {}
         if not key_quotes and km.get("text"):
             key_quotes = [km]
 
