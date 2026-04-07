@@ -733,6 +733,8 @@ TRANSCRIPT:
 
 Generate a JSON response with this exact structure:
 {{
+  "relevant": true,
+  "relevant_explanation": "Is {episode['search_target']} actually discussed, mentioned by name, or present in this episode? Set to false if {episode['search_target']} does not appear in the transcript at all.",
   "overview": "2-3 sentence overview of what the episode is about and why the search target is relevant",
   "appearance_type": "guest|mentioned",
   "appearance_type_explanation": "Is {episode['search_target']} actually ON the show as a guest/interviewee, or are they just being discussed/mentioned by others? 'guest' means they are speaking on the episode. 'mentioned' means others are talking about them.",
@@ -1326,10 +1328,31 @@ def process_episode(episode, episodes_data):
         print(f"  Episode logged: {episode['title']} (summary failed, transcript saved)")
         return True
 
-    # 3. Save to knowledge base
+    # 3. Check if the target is actually relevant to this episode
+    if not summary.get("relevant", True):
+        print(f"  SKIPPING: {episode['search_target']} not relevant to this episode")
+        ep_record = {
+            "url": episode["url"],
+            "title": episode["title"],
+            "show_name": episode["show_name"],
+            "date_found": datetime.now().strftime("%Y-%m-%d"),
+            "date_published": episode.get("date_published", ""),
+            "search_target": episode["search_target"],
+            "match_type": episode["match_type"],
+            "status": "not_relevant",
+        }
+        if episode.get("video_id"):
+            ep_record["video_id"] = episode["video_id"]
+        if episode.get("audio_url"):
+            ep_record["audio_url"] = episode["audio_url"]
+        episodes_data["episodes"].append(ep_record)
+        save_episodes(episodes_data)
+        return True  # counts as processed (for dedup) but won't be in digest_results
+
+    # 4. Save to knowledge base
     save_to_knowledge_base(episode, transcript_data, summary)
 
-    # 4. Create .docx files
+    # 5. Create .docx files
     safe_title = re.sub(r'[^\w\s-]', '', episode['title']).strip()
     safe_show = re.sub(r'[^\w\s-]', '', episode['show_name']).strip()
     base_name = f"{safe_show} - {safe_title}"
@@ -1341,7 +1364,7 @@ def process_episode(episode, episodes_data):
     create_summary_docx(episode, summary, summary_path)
     create_transcript_docx(episode, transcript_data, transcript_path)
 
-    # 5. Upload to Dropbox (non-fatal – blog still updates if this fails)
+    # 6. Upload to Dropbox (non-fatal – blog still updates if this fails)
     dbx_summary = f"/{base_name} - Summary.docx"
     dbx_transcript = f"/{base_name} - Transcript.docx"
 
