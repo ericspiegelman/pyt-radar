@@ -2700,6 +2700,24 @@
       "match_type": "guest",
       "status": "not_relevant",
       "audio_url": "https://audio.listennotes.com/e/p/3a803fb7d6384ef3babf51c8a01f52b4/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qSYuyvowxuI",
+      "title": "How LA Times Criticism Put Karen Bass\u2019s Endorsement Under Fire | Adam Carolla Show News",
+      "show_name": "Fan Of Adam Carolla",
+      "date_found": "2026-04-12",
+      "date_published": "2026-04-12",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Fan Of Adam Carolla - How LA Times Criticism Put Karen Basss Endorsement Under Fire  Adam Carolla Show News - Summary.docx",
+        "transcript": "/Fan Of Adam Carolla - How LA Times Criticism Put Karen Basss Endorsement Under Fire  Adam Carolla Show News - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/j1f2eni5jugh8b0zrc1pg/Fan-Of-Adam-Carolla-How-LA-Times-Criticism-Put-Karen-Basss-Endorsement-Under-Fire-Adam-Carolla-Show-News-Summary.docx?rlkey=keviwdz8vwlh603e07rsclqss&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/8pvvmxpqtqod7yd7uoudp/Fan-Of-Adam-Carolla-How-LA-Times-Criticism-Put-Karen-Basss-Endorsement-Under-Fire-Adam-Carolla-Show-News-Transcript.docx?rlkey=87dsbveo6o37ord2yu7okticv&dl=0"
+      },
+      "video_id": "qSYuyvowxuI"
     }
   ]
 }
