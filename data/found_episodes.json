@@ -2718,6 +2718,57 @@
         "transcript": "https://www.dropbox.com/scl/fi/8pvvmxpqtqod7yd7uoudp/Fan-Of-Adam-Carolla-How-LA-Times-Criticism-Put-Karen-Basss-Endorsement-Under-Fire-Adam-Carolla-Show-News-Transcript.docx?rlkey=87dsbveo6o37ord2yu7okticv&dl=0"
       },
       "video_id": "qSYuyvowxuI"
+    },
+    {
+      "url": "https://rss.com/podcasts/a-day-in-the-life-of-jared-at-l-a-metro/2730325?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "title": "A special board meeting for April 15, 2026",
+      "show_name": "A Day in the life of Jared at L.A. Metro",
+      "date_found": "2026-04-13",
+      "date_published": "2026-04-13",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/A Day in the life of Jared at LA Metro - A special board meeting for April 15 2026 - Summary.docx",
+        "transcript": "/A Day in the life of Jared at LA Metro - A special board meeting for April 15 2026 - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/s20u0bu0nftj766yoqlmz/A-Day-in-the-life-of-Jared-at-LA-Metro-A-special-board-meeting-for-April-15-2026-Summary.docx?rlkey=eoaxemconj8vvd5qvmvs7083q&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/n5g1ors7u0y58r2cj4f6d/A-Day-in-the-life-of-Jared-at-LA-Metro-A-special-board-meeting-for-April-15-2026-Transcript.docx?rlkey=md03hqlr46ssb4qiuemwx65nf&dl=0"
+      },
+      "audio_url": "https://audio.listennotes.com/e/p/e08a1d84603b473cbc8f69fcefd232cd/"
+    },
+    {
+      "url": "https://rss.com/podcasts/the-podcvst-by-mvtt-blvc/2729487?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "title": "Public Power, Private Incentives",
+      "show_name": "THE PODCVST by MVTT BLVC",
+      "date_found": "2026-04-13",
+      "date_published": "2026-04-12",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/THE PODCVST by MVTT BLVC - Public Power Private Incentives - Summary.docx",
+        "transcript": "/THE PODCVST by MVTT BLVC - Public Power Private Incentives - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/gnm439vtg09uzui03v96p/THE-PODCVST-by-MVTT-BLVC-Public-Power-Private-Incentives-Summary.docx?rlkey=daqnyk0dpygfzarfpowf6h76u&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/u8xduz7ogn6ye7fjn1ynm/THE-PODCVST-by-MVTT-BLVC-Public-Power-Private-Incentives-Transcript.docx?rlkey=pqge3hepu0afd1i1zfyj50rnn&dl=0"
+      },
+      "audio_url": "https://audio.listennotes.com/e/p/391b5c57b954480cb2fc6073ec0fc206/"
+    },
+    {
+      "url": "https://art19.com/shows/good-guys?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "title": "Spencer Pratt for LA MAYOR",
+      "show_name": "Good Guys",
+      "date_found": "2026-04-13",
+      "date_published": "2026-04-13",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "audio_url": "https://audio.listennotes.com/e/p/7dd37968f0e34874822292e9975702be/"
     }
   ]
 }
