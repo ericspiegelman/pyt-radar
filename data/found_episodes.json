@@ -2769,6 +2769,42 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/7dd37968f0e34874822292e9975702be/"
+    },
+    {
+      "url": "https://art19.com/shows/maryhoulihanslilpodcast?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "title": "TMHS Episode 22 - Rae Huang",
+      "show_name": "The Mary Houlihan Show",
+      "date_found": "2026-04-13",
+      "date_published": "2026-04-13",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/The Mary Houlihan Show - TMHS Episode 22 - Rae Huang - Summary.docx",
+        "transcript": "/The Mary Houlihan Show - TMHS Episode 22 - Rae Huang - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/7s7vxlzliv59dak45whzg/The-Mary-Houlihan-Show-TMHS-Episode-22-Rae-Huang-Summary.docx?rlkey=mcwx5lxhjgmjmr502tx9wto9v&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/3d1l3cgg143huggv6bu8n/The-Mary-Houlihan-Show-TMHS-Episode-22-Rae-Huang-Transcript.docx?rlkey=uerx38sxrv70ki9pmjt2px8we&dl=0"
+      },
+      "audio_url": "https://audio.listennotes.com/e/p/3af5e29884164528a49f078ddbb5b1f4/"
+    },
+    {
+      "url": "https://omny.fm/shows/tell-me-something-messy-with-brandon-kyle-goodman/messy-bonus-speaking-up-for-yourself?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "title": "MESSY BONUS: Speaking Up For Yourself",
+      "show_name": "Tell Me Something Messy with Brandon Kyle Goodman",
+      "date_found": "2026-04-13",
+      "date_published": "2026-04-13",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "dropbox_paths": {
+        "summary": "/Tell Me Something Messy with Brandon Kyle Goodman - MESSY BONUS Speaking Up For Yourself - Summary.docx",
+        "transcript": "/Tell Me Something Messy with Brandon Kyle Goodman - MESSY BONUS Speaking Up For Yourself - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/x6ujnpjhdi0ar5sb4g3a5/Tell-Me-Something-Messy-with-Brandon-Kyle-Goodman-MESSY-BONUS-Speaking-Up-For-Yourself-Summary.docx?rlkey=ix8ty83u3tcze2p62lseprp9h&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/gm49vvx44d8m8f7hcvpg3/Tell-Me-Something-Messy-with-Brandon-Kyle-Goodman-MESSY-BONUS-Speaking-Up-For-Yourself-Transcript.docx?rlkey=pmqochmad3e4h2scebua24l0d&dl=0"
+      },
+      "audio_url": "https://audio.listennotes.com/e/p/c1fb2c55f49d4ae5a0555e44e93da4ab/"
     }
   ]
 }
