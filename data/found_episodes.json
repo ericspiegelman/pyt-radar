@@ -3133,6 +3133,57 @@
         "transcript": "https://www.dropbox.com/scl/fi/d7taajhbcbqfn44bzirvj/AirTalk-Larry-talks-in-depth-with-LA-Mayor-candidate-Adam-Miller-Transcript.docx?rlkey=3twx8zu793ven7g6hgcrpkffd&dl=0"
       },
       "audio_url": "https://audio.listennotes.com/e/p/283d196233294328823159bb555053e5/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DEnRg5mFPv8",
+      "title": "Rae Huang: The People&#39;s Candidate for LA Mayor",
+      "show_name": "The Mary Houlihan Show",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-13",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/The Mary Houlihan Show - Rae Huang The People39s Candidate for LA Mayor - Summary.docx",
+        "transcript": "/The Mary Houlihan Show - Rae Huang The People39s Candidate for LA Mayor - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/skwnlni13s4uskykadknw/The-Mary-Houlihan-Show-Rae-Huang-The-People39s-Candidate-for-LA-Mayor-Summary.docx?rlkey=pbjc6aybk3pjnjrapkd586mi1&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/371dli3oer7h9lz01tb2f/The-Mary-Houlihan-Show-Rae-Huang-The-People39s-Candidate-for-LA-Mayor-Transcript.docx?rlkey=22mh7mbzk46ltrhpsr12202l1&dl=0"
+      },
+      "video_id": "DEnRg5mFPv8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ccEgqI4_PmY",
+      "title": "Spencer Pratt for LA MAYOR",
+      "show_name": "Josh Peck",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-13",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ccEgqI4_PmY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9L5f5fQCgdM",
+      "title": "Monks &amp; Merrill Talk to Spencer Pratt",
+      "show_name": "KFI AM 640",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-08",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "9L5f5fQCgdM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zpd0GSi8I9I",
+      "title": "Trump FIGHTS the Pope, Posts INSANE Image of Himself as Jesus",
+      "show_name": "Pod Save America",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-14",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "zpd0GSi8I9I"
     }
   ]
 }
