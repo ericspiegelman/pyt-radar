@@ -1855,12 +1855,12 @@ def send_cookie_expiry_alert():
         resp = requests.post(
             f"https://api.mailgun.net/v3/{mailgun_domain}/messages",
             auth=("api", mailgun_api_key),
-            data={{
+            data={
                 "from": f"PYT Radar <pyt-radar@{mailgun_domain}>",
                 "to": recipients,
                 "subject": "PYT Radar Alert: YouTube cookies expired",
                 "html": email_html,
-            }},
+            },
         )
         if resp.status_code == 200:
             print("  Cookie expiry alert sent")

@@ -108,10 +108,15 @@ jobs:
   podcast-scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    # Run after youtube-scan so both jobs don't race to push the same
+    # aggregate files (index.html, feed.xml, found_episodes.json).
+    # `needs` with `always()` ensures we still run even if youtube-scan fails.
+    needs: youtube-scan
     if: >-
-      github.event_name == 'schedule' ||
-      (github.event_name == 'workflow_dispatch' &&
-       (github.event.inputs.mode == 'all' || github.event.inputs.mode == 'podcast'))
+      always() &&
+      (github.event_name == 'schedule' ||
+       (github.event_name == 'workflow_dispatch' &&
+        (github.event.inputs.mode == 'all' || github.event.inputs.mode == 'podcast')))
 
     steps:
       - name: Checkout repo
