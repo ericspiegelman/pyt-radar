@@ -79,9 +79,37 @@ _MOJIBAKE_FIXES = {
     "\u00c2\u00a0": "\u00a0",
 }
 
+def _mojibake_score(s: str) -> int:
+    """Higher score = more likely mojibake. Counts C1 control chars and the
+    classic giveaway characters that appear when UTF-8 was decoded as Latin-1."""
+    score = 0
+    for ch in s:
+        o = ord(ch)
+        if 0x80 <= o <= 0x9f:
+            score += 2
+        elif ch in "\u00c3\u00c2\u00e2\u00f0":  # Ã Â â ð
+            score += 1
+    return score
+
 def fix_mojibake(text: str) -> str:
-    if not text:
+    """Repair Latin-1/UTF-8 cycle damage, including double-encoded cases.
+    Idempotent: applies the inverse cycle as long as it reduces mojibake
+    signal, so a single or double cycle both collapse to the correct UTF-8."""
+    if not text or _mojibake_score(text) == 0:
         return text
+    # Up to 3 rounds handles double-encoding; stops early when no improvement.
+    for _ in range(3):
+        try:
+            candidate = text.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            break
+        if _mojibake_score(candidate) >= _mojibake_score(text):
+            break
+        text = candidate
+        if _mojibake_score(text) == 0:
+            break
+    # Also apply exact replacements for any remaining single-char targets
+    # (handles partial mojibake where only a fragment is corrupt).
     for bad, good in _MOJIBAKE_FIXES.items():
         if bad in text:
             text = text.replace(bad, good)
