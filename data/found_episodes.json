@@ -3154,6 +3154,50 @@
         "transcript": "https://www.dropbox.com/scl/fi/hh4wand4g8ggr7hp89jej/Whats-Next-Los-Angeles-with-Mike-Bonin-TOM-STEYER-Gubernatorial-Candidate-Spotlight-Transcript.docx?rlkey=5f1eo0a7rnnzkxozjine685e9&dl=0"
       },
       "audio_url": "https://www.buzzsprout.com/1414123/episodes/19011973-tom-steyer-gubernatorial-candidate-spotlight.mp3"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DEnRg5mFPv8",
+      "title": "Rae Huang: The People&#39;s Candidate for LA Mayor",
+      "show_name": "The Mary Houlihan Show",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-13",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "DEnRg5mFPv8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=pDfm9RaIIv4",
+      "title": "Joe Rogan Experience #2483 - Spencer Pratt",
+      "show_name": "PowerfulJRE",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-15",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "pDfm9RaIIv4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ccEgqI4_PmY",
+      "title": "Spencer Pratt for LA MAYOR",
+      "show_name": "Josh Peck",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-13",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ccEgqI4_PmY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zpd0GSi8I9I",
+      "title": "Trump FIGHTS the Pope, Posts INSANE Image of Himself as Jesus",
+      "show_name": "Pod Save America",
+      "date_found": "2026-04-15",
+      "date_published": "2026-04-14",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "zpd0GSi8I9I"
     }
   ]
 }
