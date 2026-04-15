@@ -678,6 +678,120 @@ def get_youtube_transcript(video_id):
         print(f"  YouTube captions not available: {e}")
         return None
 
+def identify_speakers(transcript_data, episode):
+    """Ask Claude to map Speaker A/B/C... labels to real names.
+
+    Returns a dict like {"A": "John Kobylt", "B": "Spencer Pratt", "C": None}.
+    Uses episode metadata (show, search target) plus sample utterances per
+    speaker to infer identities from context (intros, cross-references, etc.).
+    Unmapped speakers return None and should fall back to "Speaker X" labels.
+    """
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return {}
+
+    utterances = transcript_data.get("utterances", [])
+    if not utterances:
+        return {}
+
+    # Collect sample utterances per speaker letter. Prioritize longer early
+    # utterances (intros/sign-ons are most identifying) but also include some
+    # later samples in case names come up mid-episode.
+    by_speaker = {}
+    for u in utterances:
+        sp = u.get("speaker")
+        if not sp:
+            continue
+        by_speaker.setdefault(sp, []).append(u)
+
+    if len(by_speaker) < 2:
+        # Only one speaker identified — no need for mapping
+        return {}
+
+    samples_text_parts = []
+    for sp, utts in sorted(by_speaker.items()):
+        # Take up to 6 samples per speaker: first 3 + 3 from mid/late portions
+        early = utts[:3]
+        later = utts[max(3, len(utts)//2):max(3, len(utts)//2)+3] if len(utts) > 6 else []
+        picked = early + later
+        samples_text_parts.append(f"\n--- Speaker {sp} ({len(utts)} total utterances) ---")
+        for u in picked:
+            start_sec = u["start"] // 1000
+            mm, ss = divmod(start_sec, 60)
+            text = u["text"].strip()
+            if len(text) > 400:
+                text = text[:400] + "..."
+            samples_text_parts.append(f"[{mm:02d}:{ss:02d}] {text}")
+    samples = "\n".join(samples_text_parts)
+
+    speaker_letters = sorted(by_speaker.keys())
+    prompt = f"""You are analyzing a transcript to identify who each speaker is.
+
+EPISODE:
+- Title: {episode['title']}
+- Show: {episode['show_name']}
+- Person being searched for: {episode['search_target']} ({episode['match_type']})
+
+The transcript has {len(speaker_letters)} distinct speakers labeled {', '.join('Speaker ' + s for s in speaker_letters)}. Use context clues (hosts introducing themselves, guests being named, cross-references like "as John said", intros/outros, callers identifying themselves, advertisements/station IDs) to identify each speaker by their real name.
+
+SAMPLE UTTERANCES:
+{samples}
+
+Respond with ONLY a JSON object mapping each speaker letter to a real name or null if you cannot confidently identify them. Be conservative — if you're not sure, use null. Do not guess.
+
+Format:
+{{
+{chr(10).join(f'  "{s}": "Real Name or null",' for s in speaker_letters).rstrip(',')}
+}}
+
+Notes:
+- Use the person's real name (e.g., "John Kobylt", not "Host" or "Speaker 1").
+- For hosts, prefer the name actually spoken in the transcript.
+- For ads/station IDs/commercials where no person is really speaking, use "Commercial" or "Station ID".
+- Return null (not a string "null") if unsure.
+"""
+
+    try:
+        resp = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 1024,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=60,
+        )
+        resp.raise_for_status()
+        content = resp.json()["content"][0]["text"]
+        json_match = re.search(r'\{[\s\S]*\}', content)
+        if not json_match:
+            return {}
+        mapping = json.loads(json_match.group())
+        # Filter out null/empty values and non-string keys
+        cleaned = {}
+        for k, v in mapping.items():
+            if isinstance(v, str) and v.strip() and v.strip().lower() != "null":
+                cleaned[k] = v.strip()
+        if cleaned:
+            print(f"  Identified speakers: {cleaned}")
+        return cleaned
+    except Exception as e:
+        print(f"  WARNING: speaker identification failed: {e}")
+        return {}
+
+
+def speaker_label(letter, speaker_names):
+    """Return the real name for a speaker letter, or 'Speaker X' fallback."""
+    if speaker_names and letter in speaker_names:
+        return speaker_names[letter]
+    return f"Speaker {letter}"
+
+
 def transcribe_episode(episode):
     """Full pipeline: get transcript for episode.
     For YouTube, tries in order:
@@ -741,11 +855,13 @@ def generate_summary_with_claude(episode, transcript_data):
 
     # Build a condensed version of the transcript for Claude
     utterances = transcript_data.get("utterances", [])
+    speaker_names = transcript_data.get("speaker_names", {})
     transcript_text = ""
     for u in utterances:
         start_sec = u["start"] // 1000
         mm, ss = divmod(start_sec, 60)
-        transcript_text += f"[{mm:02d}:{ss:02d}] Speaker {u['speaker']}: {u['text']}\n"
+        label = speaker_label(u['speaker'], speaker_names)
+        transcript_text += f"[{mm:02d}:{ss:02d}] {label}: {u['text']}\n"
 
     # Truncate if too long (keep first and last portions)
     if len(transcript_text) > 80000:
@@ -835,6 +951,7 @@ def generate_basic_summary(episode, transcript_data):
 
     # Find utterances mentioning the search target
     target = episode["search_target"].lower()
+    speaker_names = transcript_data.get("speaker_names", {})
     matching = []
     for u in utterances:
         if target in u["text"].lower():
@@ -842,7 +959,7 @@ def generate_basic_summary(episode, transcript_data):
             mm, ss = divmod(start_sec, 60)
             matching.append({
                 "text": u["text"],
-                "speaker": f"Speaker {u['speaker']}",
+                "speaker": speaker_label(u['speaker'], speaker_names),
                 "timestamp_mm_ss": f"{mm:02d}:{ss:02d}",
                 "timestamp_seconds": start_sec,
             })
@@ -984,6 +1101,7 @@ def create_transcript_docx(episode, transcript_data, output_path):
     doc.add_heading("Transcript", level=2)
     doc.add_paragraph("")
 
+    speaker_names = transcript_data.get("speaker_names", {})
     for u in transcript_data.get("utterances", []):
         start_sec = u["start"] // 1000
         mm, ss = divmod(start_sec, 60)
@@ -991,7 +1109,7 @@ def create_transcript_docx(episode, transcript_data, output_path):
         ts_run = p.add_run(f"[{mm:02d}:{ss:02d}] ")
         ts_run.font.color.rgb = RGBColor(128, 128, 128)
         ts_run.font.size = Pt(9)
-        speaker_run = p.add_run(f"Speaker {u['speaker']}: ")
+        speaker_run = p.add_run(f"{speaker_label(u['speaker'], speaker_names)}: ")
         speaker_run.bold = True
         p.add_run(u["text"])
 
@@ -1282,10 +1400,11 @@ def save_to_knowledge_base(episode, transcript_data, summary):
     # Full transcript
     lines.append("## Full Transcript")
     lines.append("")
+    speaker_names = transcript_data.get("speaker_names", {})
     for u in transcript_data.get("utterances", []):
         start_sec = u["start"] // 1000
         mm, ss = divmod(start_sec, 60)
-        lines.append(f"[{mm:02d}:{ss:02d}] **Speaker {u['speaker']}:** {u['text']}")
+        lines.append(f"[{mm:02d}:{ss:02d}] **{speaker_label(u['speaker'], speaker_names)}:** {u['text']}")
         lines.append("")
 
     kb_path = KB_DIR / filename
@@ -1308,6 +1427,10 @@ def process_episode(episode, episodes_data):
 
     # 1. Transcribe
     transcript_data = transcribe_episode(episode)
+
+    if transcript_data:
+        # 1a. Identify speakers by name (best-effort; empty dict on failure)
+        transcript_data["speaker_names"] = identify_speakers(transcript_data, episode)
 
     if not transcript_data:
         print("  WARNING: All transcription methods failed for this episode")
