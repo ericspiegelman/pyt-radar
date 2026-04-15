@@ -19,7 +19,7 @@ This is a solo episode where host Matt Black discusses various topics including 
 ## Key Moment
 
 > "This woman was hunted by the LAPD, and now she's in charge of the LAPD."
-> â Speaker B at 14:03
+> — Speaker B at 14:03
 > *This quote encapsulates the host's fascination with Karen Bass's transformation from alleged LAPD target to mayor who oversees the department.*
 
 ## Key Quotes

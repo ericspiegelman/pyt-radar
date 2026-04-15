@@ -19,7 +19,7 @@ This episode focuses on Democratic Socialist council members trying to take cont
 ## Key Moment
 
 > "Karen Bass let his house burn to the ground."
-> â John Kobelt at 40:18
+> — John Kobelt at 40:18
 > *Host blames Bass for the LA fires that forced Spencer Pratt to relocate, affecting his mayoral campaign eligibility.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode covers reality TV gossip including Duggar family updates and Real H
 ## Key Moment
 
 > "Hey, I've already said it, he's got my vote 110%."
-> â Sarah Fraser at 45:04
+> — Sarah Fraser at 45:04
 > *Sarah Fraser explicitly endorses Spencer Pratt's mayoral candidacy during a discussion about Los Angeles politics.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ Randy Wang's KABC News Blitz covers various California political stories, with K
 ## Key Moment
 
 > "Inside Safe has clearly failed both with regard to keeping people off the street. You have a revolving door with Inside Safe."
-> â Adam Miller at 24:47
+> — Adam Miller at 24:47
 > *Mayoral candidate Adam Miller directly criticizes Karen Bass's signature homelessness program as a failure with people returning to the streets.*
 
 ## Key Quotes

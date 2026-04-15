@@ -19,7 +19,7 @@ This episode of The KABC News Blitz covers various Los Angeles political issues,
 ## Key Moment
 
 > "The city knew about this, and the city, including Karen Bass, knew about this, and they did nothing until they were forced to because of the overwhelming embarrassment."
-> â Randy Wang at 12:32
+> — Randy Wang at 12:32
 > *This quote captures the host's central criticism that Bass only responds to crises when publicly shamed, not proactively.*
 
 ## Key Quotes

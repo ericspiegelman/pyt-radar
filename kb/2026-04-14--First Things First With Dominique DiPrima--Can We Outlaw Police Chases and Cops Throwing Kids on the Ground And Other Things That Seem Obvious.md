@@ -19,7 +19,7 @@ This is a talk show episode covering various topics including AI in music, hip-h
 ## Key Moment
 
 > "The reality TV star Spencer Pratt, who's now in somewhat in doubt because his residency is in doubt."
-> â Dominique DiPrima at 40:29
+> — Dominique DiPrima at 40:29
 > *This introduces the main issue affecting Spencer Pratt's mayoral candidacy - questions about his legal residency in Los Angeles.*
 
 ## Key Quotes

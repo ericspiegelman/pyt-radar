@@ -19,7 +19,7 @@ Jesse Kelly discusses political projections and concerns about Democrats potenti
 ## Key Moment
 
 > "Karen Bass was in Ghana while this place was burning to the ground because she's interested in going to Ghana and being involved with ceremonies."
-> â Adam Carolla at 33:39
+> — Adam Carolla at 33:39
 > *This quote encapsulates the main criticism of Bass - that she prioritizes international activities over managing Los Angeles during a crisis.*
 
 ## Key Quotes

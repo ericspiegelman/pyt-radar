@@ -19,7 +19,7 @@ This is an in-depth interview with Adam Miller, a tech entrepreneur and nonprofi
 ## Key Moment
 
 > "I come in with no favors to repay, no alliances that have to be upheld. I can come in focused on only one thing, improving the lives of all Angelenos."
-> â Adam Miller at 22:08
+> — Adam Miller at 22:08
 > *This encapsulates Miller's core campaign message positioning himself as an outsider candidate unbeholden to special interests.*
 
 ## Key Quotes

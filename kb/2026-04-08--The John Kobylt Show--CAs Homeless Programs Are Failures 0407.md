@@ -19,7 +19,7 @@ The episode heavily criticizes LA Mayor Karen Bass's homeless policies, particul
 ## Key Moment
 
 > "Karen Bass's Inside Safe program, they've spent $300 million to house 1,200 people. 40% of them have left that housing within a year, and another 10% have died of drug overdose."
-> â Tom Wolfe at 06:15
+> — Tom Wolfe at 06:15
 > *This quote encapsulates the episode's main criticism of Bass's signature homeless program, providing specific failure statistics.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is Wayne Allyn Root's conservative political show covering various topics i
 ## Key Moment
 
 > "Blue states have done this themselves by electing evil communist madmen like LA Mayor Karen Bass, Chicago Mayor Brandon Johnson, and New York City Mayor Zoran Mondame."
-> â Wayne Allyn Root at 50:45
+> — Wayne Allyn Root at 50:45
 > *Root blames mayors like Bass for accelerating the exodus from blue states during his commentary on the 'great American national divorce.'*
 
 ## Key Quotes

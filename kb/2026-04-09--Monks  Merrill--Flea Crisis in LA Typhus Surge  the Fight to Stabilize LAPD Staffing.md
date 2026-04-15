@@ -19,7 +19,7 @@ This episode covers LA's flea-borne typhus crisis and LAPD staffing challenges. 
 ## Key Moment
 
 > "She's lost officers since she's been in office, even though she said she was going to grow the size of the department"
-> â Speaker D at 24:50
+> — Speaker D at 24:50
 > *This quote encapsulates the hosts' main criticism that Bass has failed to deliver on her core campaign promise regarding LAPD expansion.*
 
 ## Key Quotes

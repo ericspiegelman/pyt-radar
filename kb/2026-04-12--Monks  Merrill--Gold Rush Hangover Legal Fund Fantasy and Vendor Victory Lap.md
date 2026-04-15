@@ -19,7 +19,7 @@ This episode focuses on LA Olympics financial concerns and homeless policy debat
 ## Key Moment
 
 > "But also, if you're looking at Mayor Bass and Councilwoman Rahman as the leading candidates, with Spencer Pratt kind of surging, you've got to be a bit depressed"
-> â Michael Monks at 17:07
+> — Michael Monks at 17:07
 > *Host Michael Monks mentions Spencer Pratt as a surging mayoral candidate while discussing the homeless crisis with Councilwoman Rodriguez.*
 
 ## Key Quotes

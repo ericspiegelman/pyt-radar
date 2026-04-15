@@ -19,7 +19,7 @@ This Pod Save America episode features an interview with LA City Council member 
 ## Key Moment
 
 > "I kept trying to push back against it and kept hitting a wall. And I think I got increasingly frustrated and I'm not a traditional politician in that this is what I want to be doing for the rest of my life."
-> â Nithya Raman at 70:32
+> — Nithya Raman at 70:32
 > *This quote captures her core motivation for challenging her former ally Karen Bass - frustration with city hall dysfunction and her outsider political identity.*
 
 ## Key Quotes

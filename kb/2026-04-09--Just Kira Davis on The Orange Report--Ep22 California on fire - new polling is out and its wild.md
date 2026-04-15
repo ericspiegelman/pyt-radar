@@ -19,7 +19,7 @@ This episode focuses on California politics, including polling data for gubernat
 ## Key Moment
 
 > "I think Spencer's weakness is that he comes across as a one-issue mayor or mayoral candidate, and of course he is because it was the Palisades that got him into the race."
-> â Kira Davis at 39:42
+> — Kira Davis at 39:42
 > *The host identifies Spencer Pratt's main campaign weakness while acknowledging the fire disaster that motivated his candidacy.*
 
 ## Key Quotes

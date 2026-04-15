@@ -19,7 +19,7 @@ This episode of Culture Shock Radio discusses the LA fires and criticizes Mayor 
 ## Key Moment
 
 > "Karen Bass gave a speech explaining that the homeless problem was caused by income inequality which is batshit crazy."
-> â Speaker A at 08:05
+> — Speaker A at 08:05
 > *This represents the host's core criticism of Bass as ideologically driven rather than pragmatic in addressing LA's problems.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is a weekly video compilation show where host JD shares clips he found duri
 ## Key Moment
 
 > "Mayor Karen Bass goes right after her."
-> â Speaker C at 20:36
+> — Speaker C at 20:36
 > *Host describes how Spencer Pratt is willing to fight against powerful Democrats including current LA Mayor Karen Bass in his mayoral campaign.*
 
 ## Key Quotes

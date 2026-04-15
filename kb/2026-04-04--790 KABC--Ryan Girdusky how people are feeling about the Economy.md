@@ -19,7 +19,7 @@ This episode of The John Phillips Show focuses on economic issues, population sh
 ## Key Moment
 
 > "And the fact that we have a typhus outbreak shows you that all the nonsense that Karen Bass says about the homeless numbers going down are a bunch of BS."
-> â Randy Wang at 00:18
+> — Randy Wang at 00:18
 > *This quote directly challenges Karen Bass's claims about reducing homelessness by using the typhus outbreak as contradictory evidence.*
 
 ## Key Quotes

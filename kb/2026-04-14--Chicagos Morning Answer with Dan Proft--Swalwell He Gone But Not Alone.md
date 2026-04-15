@@ -19,7 +19,7 @@ This episode covers various political topics including Eric Swalwell's resignati
 ## Key Moment
 
 > "based on Spencer Pratt's attitude, he seems kinda growing on me. Better than anything we've come up with in Chicago"
-> â Dan Proft at 25:18
+> — Dan Proft at 25:18
 > *This represents the host's overall positive assessment of Pratt's mayoral campaign and political approach.*
 
 ## Key Quotes

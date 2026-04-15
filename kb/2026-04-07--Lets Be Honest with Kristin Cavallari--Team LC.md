@@ -19,7 +19,7 @@ This is an episode of 'Let's Be Honest with Kristin Cavallari' featuring Lauren 
 ## Key Moment
 
 > "The fact that we both wore blue to Heidi and Spencer's wedding."
-> â Kristin Cavallari at 27:07
+> — Kristin Cavallari at 27:07
 > *This moment highlights the coincidental wardrobe choice that both Lauren and Kristin made at Spencer and Heidi's wedding filming.*
 
 ## Key Quotes

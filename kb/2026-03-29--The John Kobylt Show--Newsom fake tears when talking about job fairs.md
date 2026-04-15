@@ -19,7 +19,7 @@ Host John Kobylt strongly endorses Spencer Pratt's mayoral candidacy for Los Ang
 ## Key Moment
 
 > "There isn't a thing he said that I wouldn't say myself. and, and that's who I'm voting for, and that's who you have to vote for."
-> â John Kobylt at 04:44
+> — John Kobylt at 04:44
 > *This represents the host's complete endorsement of Spencer Pratt, stating total agreement with his positions and urging listeners to vote for him.*
 
 ## Key Quotes

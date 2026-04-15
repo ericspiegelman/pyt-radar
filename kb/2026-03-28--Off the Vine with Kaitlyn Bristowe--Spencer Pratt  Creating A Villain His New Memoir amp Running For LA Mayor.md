@@ -19,7 +19,7 @@ Spencer Pratt appears as a guest on Kaitlyn Bristowe's podcast to discuss his ne
 ## Key Moment
 
 > "I would rather have my house and my hummingbirds back than this book and running for mayor."
-> â Spencer Pratt at 52:26
+> — Spencer Pratt at 52:26
 > *Spencer emphasizes that despite his book's success and mayor campaign, he would trade it all to have back what he lost in the house fire.*
 
 ## Key Quotes

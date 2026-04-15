@@ -19,7 +19,7 @@ This is a weekly recap episode of the Three Martini Lunch political commentary s
 ## Key Moment
 
 > "If we look at what Karen Bass was doing 20 years ago, she was in Cuba learning how to make bombs with the people that would then go bomb Capitol Hill."
-> â Spencer Pratt at 12:43
+> — Spencer Pratt at 12:43
 > *This is Spencer Pratt defending his reality TV background against Karen Bass's political history in his mayoral challenge.*
 
 ## Key Quotes

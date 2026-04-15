@@ -12,14 +12,14 @@
 This 33-minute episode of The John Kobylt Show mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, The John Kobylt Show
 
 ## Key Moment
 
 > "You can put it down there. Uh, yeah, you're not going to get an answer from the mayor's office. People had been, uh, reporting her for quite some time, and, uh, the mayor's office never responded. Nobody responded. And you heard them explain, police come, they go right by, they're stealing water. They're stealing electricity. If you see the video, all these disgusting RVs all parked up and down the block, it's been like that forever. And they dump all their waste out onto the street. You know, when you have an RV, eventually you have to dump all your toilet waste somewhere. And you go to an RV park, they've got a way of handling that. You're doing it out in the middle of residential street, there is nowhere else to go but just let it rip. And then it goes into the sewer, right? Eventually gets washed into the sewer. On top of this woman. No wonder she can't speak anymore. She gets covered over with human feces every few hours, mumbling to herself, whacked on drugs, insane. They do nothing. They let people rot and die. That's what Karen Bass does. Let them rot. She ought to put up billboards for her new mayoral campaign. Let them rot and die and have this woman pictured as the poster child. All right, we come back, Royal Oaks is from ABC News, the legal analyst, and we're going to talk about, uh, Meta for Facebook and Instagram and, uh, Google, which has YouTube. They're getting whacked financially by a jury who says they're liable for screwing up this girl's life. She's 20, her name's Kayla. Since she was 6, she was addicted to social media. We'll tell you all."
-> â Speaker A at 14:31
+> — Speaker A at 14:31
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

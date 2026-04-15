@@ -19,7 +19,7 @@ This episode discusses LA Mayor Karen Bass's announcement of $1 million in fundi
 ## Key Moment
 
 > "This woman is from our lineage but not helping out the lineage. She helping out Asian folks."
-> â Speaker A at 20:37
+> — Speaker A at 20:37
 > *This captures the host's core criticism that Karen Bass, despite being Black American herself, is prioritizing other communities over Black Americans who have higher homelessness rates.*
 
 ## Key Quotes

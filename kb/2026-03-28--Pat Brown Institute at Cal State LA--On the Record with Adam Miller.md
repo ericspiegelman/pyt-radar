@@ -19,7 +19,7 @@ This is an in-depth interview with Adam Miller, a mayoral candidate for Los Ange
 ## Key Moment
 
 > "The city needs to be fixed and we need a builder to fix it. And I'm that builder."
-> â Adam Miller at 05:02
+> — Adam Miller at 05:02
 > *This encapsulates Miller's core campaign message and positioning as someone with business experience who can fix LA's problems.*
 
 ## Key Quotes

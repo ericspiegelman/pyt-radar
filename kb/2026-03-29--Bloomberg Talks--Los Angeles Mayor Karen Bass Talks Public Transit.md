@@ -19,7 +19,7 @@ This episode features Los Angeles Mayor Karen Bass as a guest discussing key cha
 ## Key Moment
 
 > "We've had a decrease in street homelessness of 18%. This is a dysfunctional system that has been dysfunctional for at least the last 3 decades."
-> â Karen Bass at 08:18
+> — Karen Bass at 08:18
 > *Bass highlights her signature achievement in reversing decades of increasing homelessness, which was her main campaign issue when running for mayor.*
 
 ## Key Quotes

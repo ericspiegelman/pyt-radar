@@ -19,7 +19,7 @@ This episode of Monks & Merrill discusses LA's homelessness crisis, underground 
 ## Key Moment
 
 > "Nithya Raman set Karen Bass up to look like the person who was overseeing the destruction of Los Angeles."
-> â Chris Merrill at 14:01
+> — Chris Merrill at 14:01
 > *This represents the hosts' view that Bass is being politically outmaneuvered by a potential mayoral challenger who is positioning Bass as responsible for LA's problems.*
 
 ## Key Quotes

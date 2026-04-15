@@ -19,7 +19,7 @@ This episode focuses on allegations against Eric Swalwell and Prop 50's impact o
 ## Key Moment
 
 > "what would it sound like if Karen Bass, Katie Porter, and Stephen Klubek all met on a street corner in Reseda and witnessed somebody getting their Rolex stolen?"
-> â Randy Wang at 00:10
+> — Randy Wang at 00:10
 > *This is the only mention of Karen Bass in the entire episode, used as part of a hypothetical comedic scenario.*
 
 ## Key Quotes

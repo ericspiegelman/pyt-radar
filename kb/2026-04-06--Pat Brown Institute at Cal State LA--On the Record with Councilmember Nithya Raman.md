@@ -19,7 +19,7 @@ This episode features Los Angeles City Councilwoman Nithya Raman as a guest in a
 ## Key Moment
 
 > "I stepped into this race because I had a feeling about leadership at City Hall that I don't think I was alone in feeling."
-> â Nithya Raman at 03:23
+> — Nithya Raman at 03:23
 > *Raman explains her core motivation for running for mayor, setting up her critique of current city leadership.*
 
 ## Key Quotes

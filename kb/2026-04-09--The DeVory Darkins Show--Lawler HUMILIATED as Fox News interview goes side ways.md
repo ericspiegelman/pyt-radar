@@ -19,7 +19,7 @@ This episode covers three main stories, with substantial focus on LA Mayor Karen
 ## Key Moment
 
 > "Well, it is a great percentage."
-> â Karen Bass at 13:45
+> — Karen Bass at 13:45
 > *Bass defending her 60% success rate when challenged by CNN that it's not a great percentage, highlighting the contentious nature of her program's results.*
 
 ## Key Quotes

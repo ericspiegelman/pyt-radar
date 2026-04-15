@@ -19,7 +19,7 @@ This is a highlights episode from the JLP show covering various topics including
 ## Key Moment
 
 > "Even Karen Bass, the so-called mayor of LA, signed a proclamation on Thursday to rename the last day of the month Farmers Workers instead of Cesar Chavez Day."
-> â Speaker A at 15:32
+> — Speaker A at 15:32
 > *This quote establishes Bass's role in the official response to the Cesar Chavez sexual assault allegations by renaming the holiday.*
 
 ## Key Quotes

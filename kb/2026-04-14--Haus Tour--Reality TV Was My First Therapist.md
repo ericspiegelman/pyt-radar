@@ -19,7 +19,7 @@ This is an episode of Haus Tour where hosts John and Dakota discuss their favori
 ## Key Moment
 
 > "Also, who's Spencer Pratt?"
-> â Dakota at 28:15
+> — Dakota at 28:15
 > *Dakota asks who Spencer Pratt is after being given a choice between him and Christine Quinn in a comparison game.*
 
 ## Key Quotes

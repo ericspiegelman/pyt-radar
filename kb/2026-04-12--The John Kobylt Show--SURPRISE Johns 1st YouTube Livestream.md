@@ -19,7 +19,7 @@ This is John Kobylt's first YouTube livestream where he discusses political scan
 ## Key Moment
 
 > "I think it was pretty clear that she was not qualified to have an executive position, not qualified to run a large city, and she didn't."
-> â Speaker D (John Kobylt) at 66:15
+> — Speaker D (John Kobylt) at 66:15
 > *Kobylt argues Bass was unqualified from the start and her incompetence has now been proven through her mayoral performance.*
 
 ## Key Quotes

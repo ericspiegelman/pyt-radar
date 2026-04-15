@@ -19,7 +19,7 @@ This episode of Gary and Shannon discusses LA mayoral race polling showing Nithy
 ## Key Moment
 
 > "She is one of those defund the police, get rid of any law and order."
-> â Speaker B at 04:50
+> — Speaker B at 04:50
 > *This quote encapsulates the hosts' main criticism of Raman's political positions and their concerns about her mayoral candidacy.*
 
 ## Key Quotes

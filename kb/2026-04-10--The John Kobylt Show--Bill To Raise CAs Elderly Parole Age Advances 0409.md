@@ -19,7 +19,7 @@ This episode focuses on California's elderly parole system and violent crime, fe
 ## Key Moment
 
 > "Bass. Bass ought to be going to prison too."
-> â John Kobelt at 25:10
+> — John Kobelt at 25:10
 > *This represents the host's most extreme criticism of Karen Bass, suggesting she should face criminal charges for her handling of homeless encampments endangering school children.*
 
 ## Key Quotes

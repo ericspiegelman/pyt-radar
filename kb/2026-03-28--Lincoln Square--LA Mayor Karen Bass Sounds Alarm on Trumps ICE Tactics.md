@@ -19,7 +19,7 @@ LA Mayor Karen Bass discusses her administration's response to Trump-era ICE enf
 ## Key Moment
 
 > "I would have never imagined that I have to protect myself from my own government."
-> â Karen Bass at 03:54
+> — Karen Bass at 03:54
 > *Bass expresses the unprecedented nature of having to shield her city from federal immigration enforcement under Trump.*
 
 ## Key Quotes

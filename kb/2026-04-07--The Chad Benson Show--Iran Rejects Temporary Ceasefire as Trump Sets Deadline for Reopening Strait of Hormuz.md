@@ -19,7 +19,7 @@ This episode of The Chad Benson Show covers Iran-US tensions, military rescue op
 ## Key Moment
 
 > "You've got Spencer Pratt, who's a Republican, and everybody who says, 'I hate Spencer Pratt,' hates him because he voted for Trump."
-> â Jim Kennedy at 112:49
+> — Jim Kennedy at 112:49
 > *Kennedy explains the challenges facing Republican candidates in California, using Pratt as an example of how Trump association hurts candidates in the state.*
 
 ## Key Quotes

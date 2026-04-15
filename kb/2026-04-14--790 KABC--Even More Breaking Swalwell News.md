@@ -19,7 +19,7 @@ This episode primarily discusses breaking news about Eric Swalwell's sexual assa
 ## Key Moment
 
 > "that one got the attention of the wealthy donors, which is why all of a sudden, after 4 years, Karen Bass was paying attention to it"
-> â Speaker B at 36:34
+> — Speaker B at 36:34
 > *This quote encapsulates the hosts' criticism that Bass only responds to crime issues when they affect wealthy constituents.*
 
 ## Key Quotes

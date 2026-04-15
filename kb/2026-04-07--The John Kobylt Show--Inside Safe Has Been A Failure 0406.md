@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses heavily on criticizing California G
 ## Key Moment
 
 > "She's so incompetent, she's in over her head, and this is the only thing she's been trying to brag about."
-> â John Kobylt at 28:55
+> — John Kobylt at 28:55
 > *This represents the host's overall assessment of Karen Bass's performance as mayor, focusing on her flagship homelessness program.*
 
 ## Key Quotes

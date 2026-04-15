@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses on criticizing California political
 ## Key Moment
 
 > "Nice job, Karen Bass. You have turned Los Angeles into a post-apocalyptic zombie city, and your only focus is on the Olympic Games."
-> â Caller at 18:31
+> — Caller at 18:31
 > *This caller's comment encapsulates the show's primary criticism of Bass - that she has failed the city while prioritizing international events.*
 
 ## Key Quotes

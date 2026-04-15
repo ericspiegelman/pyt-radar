@@ -19,7 +19,7 @@ The episode focuses on Spencer Pratt defending his LA mayoral candidacy against 
 ## Key Moment
 
 > "12 of my neighbors burned alive due to the negligence of our city leaders and Karen Bass, who was in Ghana knowing this wind red weather event was coming."
-> â Spencer Pratt at 10:20
+> — Spencer Pratt at 10:20
 > *This is Spencer Pratt's most damning accusation against Karen Bass, directly blaming her for fire deaths due to her absence during the crisis.*
 
 ## Key Quotes

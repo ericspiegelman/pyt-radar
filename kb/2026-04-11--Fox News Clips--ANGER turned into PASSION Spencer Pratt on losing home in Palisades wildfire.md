@@ -19,7 +19,7 @@ Spencer Pratt is interviewed about losing his home in the Palisades wildfire and
 ## Key Moment
 
 > "But for me, I flipped it from being a victim to now I'm a fighter. And so it's empowering."
-> â Spencer Pratt at 01:25
+> — Spencer Pratt at 01:25
 > *This quote encapsulates Pratt's transformation from wildfire victim to political candidate and the motivation behind his mayoral campaign.*
 
 ## Key Quotes

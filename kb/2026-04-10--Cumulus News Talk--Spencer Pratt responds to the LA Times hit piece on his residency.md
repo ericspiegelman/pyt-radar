@@ -19,7 +19,7 @@ This episode features Spencer Pratt defending himself against an LA Times articl
 ## Key Moment
 
 > "They want to attack me for not living in the Palisades while running for mayor? Hey, brain surgeon, my house burned down."
-> â Spencer Pratt at 03:41
+> — Spencer Pratt at 03:41
 > *This is Pratt's direct response to the LA Times residency attack, which forms the central theme of the entire discussion.*
 
 ## Key Quotes

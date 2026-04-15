@@ -19,7 +19,7 @@ Adam Carolla reacts to LA Mayor Karen Bass blaming a heat wave on climate change
 ## Key Moment
 
 > "She let the city burnt down, but we're going with it. Which I it's insane."
-> â Speaker A at 06:02
+> — Speaker A at 06:02
 > *This captures Carolla's central criticism of Bass's leadership during the LA fires and his disbelief at her continued political viability.*
 
 ## Key Quotes

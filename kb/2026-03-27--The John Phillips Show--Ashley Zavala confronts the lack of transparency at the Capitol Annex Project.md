@@ -12,14 +12,14 @@
 This 41-minute episode of The John Phillips Show mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, The John Phillips Show
 
 ## Key Moment
 
 > "This is a story that was broken by Matthew Seedorf of Fox 11 when he got a tip from his buddy and our buddy Juan Naula, the Clean LA with Me guy. He was cleaning up a street in South LA and saw a woman open up what was a doghouse on top of a manhole and crawl into a storm drain. And at that point, Seedorf went out there, filmed this. That video went everywhere. We made sure to cover it. It embarrassed the city so much that immediately sanitation crews were sent out there and it was declared a hazmat scene, a hot zone. They sealed the manhole with concrete because the manhole cover was stolen and sold for scrap. And now, finally, days later, the current mayor of Los Angeles, Karen Bass— if you're feeling down, if you're feeling blue, let's get help for you— is reacting to the saga of Sewer Lady. And once again, we are joined by Fox 11's Matthew Seedorf. Welcome to Good Night LA."
-> â Speaker A at 21:20
+> — Speaker A at 21:20
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

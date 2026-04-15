@@ -19,7 +19,7 @@ This episode of Adam Carolla's show discusses the LA Times owner's statement tha
 ## Key Moment
 
 > "The LA Times owner says endorsing Karen Bass was a mistake due to incompetence."
-> â Speaker A at 05:50
+> — Speaker A at 05:50
 > *This represents the main news story being discussed - that even Karen Bass's former supporters are now admitting she was the wrong choice for mayor.*
 
 ## Key Quotes

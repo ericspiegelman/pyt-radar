@@ -19,7 +19,7 @@ This episode covers various topics including Iran blockade, Catholic Church cont
 ## Key Moment
 
 > "What about Spencer Pratt? Are we feeling that there's any possibility that he could surprise us?"
-> â Andrew at 32:34
+> — Andrew at 32:34
 > *This is when Spencer Pratt is introduced into the conversation as a potential political candidate for Los Angeles mayor.*
 
 ## Key Quotes

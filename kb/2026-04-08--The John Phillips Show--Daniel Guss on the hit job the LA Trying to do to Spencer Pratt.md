@@ -19,7 +19,7 @@ The episode discusses Spencer Pratt's mayoral campaign and defends him against L
 ## Key Moment
 
 > "when you are Karen Bass and you make a moron like Antonio Villaraigosa seem steady, if not competent, and Eric Garcetti seem intelligent, if not reliable"
-> â Daniel Guss at 11:35
+> — Daniel Guss at 11:35
 > *This harsh comparison illustrates how negatively the guest views Karen Bass's performance as mayor compared to previous LA mayors.*
 
 ## Key Quotes

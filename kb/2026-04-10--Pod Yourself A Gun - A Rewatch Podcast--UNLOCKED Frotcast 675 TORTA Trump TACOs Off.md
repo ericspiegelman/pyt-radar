@@ -19,7 +19,7 @@ This is episode 675 of the Frotcast podcast where hosts discuss various news top
 ## Key Moment
 
 > "Karen Bass says this is OK."
-> â Speaker B at 89:13
+> — Speaker B at 89:13
 > *This was part of a NextDoor post blaming the LA mayor for homelessness issues after a man was found dead near the LA River.*
 
 ## Key Quotes

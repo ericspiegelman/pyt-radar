@@ -19,7 +19,7 @@ This episode focuses primarily on Eric Swalwell's resignation from Congress amid
 ## Key Moment
 
 > "that one got the attention of the wealthy donors, which is why all of a sudden, after 4 years, Karen Bass was paying attention to it."
-> â Speaker B at 35:33
+> — Speaker B at 35:33
 > *This quote encapsulates the hosts' main criticism that Bass only responded to street takeovers when wealthy constituents were affected.*
 
 ## Key Quotes

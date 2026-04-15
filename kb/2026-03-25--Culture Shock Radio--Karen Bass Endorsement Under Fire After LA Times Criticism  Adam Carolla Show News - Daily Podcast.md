@@ -12,14 +12,14 @@
 This 92-minute episode of Culture Shock Radio mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, Culture Shock Radio
 
 ## Key Moment
 
 > "Well, this is— I mean, this is sort of what we're talking about, which is The politicians, Sidney nut job we just saw, and Karen Bass, this isn't something they're interested in. They're not interested in it. It's not sexy, it's not fun. They don't get to accuse people of being racist. You know, it's nothing they're interested in. Like, honestly, I am interested in it. So if I was a politician, I wouldn't do the racial hustling. I'd be a dog with a bone and burying these wires. You know, that's all I would talk about. They are a bunch of dingbat chicks who have no interest in this. So of course we don't get the wires buried. And we have a bunch of politicians that are much more interested in saving the milk thistle weed than we do burying the wires."
-> â Speaker B at 04:44
+> — Speaker B at 04:44
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

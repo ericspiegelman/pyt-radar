@@ -19,7 +19,7 @@ This episode of The John Phillips Show focuses on government transparency issues
 ## Key Moment
 
 > "You're the mayor. This is your number one issue. Number one, not two, not three, not four. Number one. And you failed."
-> â Speaker B at 27:29
+> — Speaker B at 27:29
 > *Host John Phillips directly criticizes Karen Bass for failing on homelessness, which he identifies as her primary responsibility as mayor.*
 
 ## Key Quotes

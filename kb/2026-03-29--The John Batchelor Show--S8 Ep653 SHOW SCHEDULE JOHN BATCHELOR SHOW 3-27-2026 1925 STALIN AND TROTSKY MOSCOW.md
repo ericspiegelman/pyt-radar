@@ -19,7 +19,7 @@ This episode of The John Batchelor Show covers various topics including nuclear 
 ## Key Moment
 
 > ""
-> â  at 
+> —  at 
 > *No key moment exists as Karen Bass is not mentioned in this episode.*
 
 ## Full Transcript

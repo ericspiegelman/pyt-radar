@@ -19,7 +19,7 @@ This episode features LA Mayor Karen Bass as a guest discussing her reelection c
 ## Key Moment
 
 > "So while homelessness went up by 18% in the nation, it went down by just about that amount in the city of Los Angeles, for 2 years in a row."
-> â Karen Bass at 15:37
+> — Karen Bass at 15:37
 > *Bass highlights her administration's key accomplishment in reducing homelessness, which is a major issue she campaigned on and a central focus of her mayoral tenure.*
 
 ## Key Quotes

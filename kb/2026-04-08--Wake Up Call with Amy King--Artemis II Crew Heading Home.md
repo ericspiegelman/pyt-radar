@@ -19,7 +19,7 @@ This is a morning news show covering various topics including the Artemis II mis
 ## Key Moment
 
 > "Democrat tech entrepreneur Adam Miller doesn't understand how they're changemakers."
-> â Mark Ronner at 24:13
+> — Mark Ronner at 24:13
 > *This is the only mention of Adam Miller in the episode, identifying his position in the LA mayoral race as someone questioning other candidates' claims to be agents of change.*
 
 ## Key Quotes

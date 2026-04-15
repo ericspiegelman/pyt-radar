@@ -12,14 +12,14 @@
 This 55-minute episode of Locatora Radio [A Radiophonic Novela] mentions Nithya Raman.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Nithya Raman, Locatora Radio [A Radiophonic Novela]
 
 ## Key Moment
 
 > "Hey, locamores, this is Diosa and you're listening to LocaTora Radio. In this week's episode, we interview mayoral race candidate Nithya Raman. She currently holds a seat in LA City Council and represents District 4. Councilmember Nithya Raman filed her candidacy for the mayor's race on the final day in February, shocking every Politico across Los Angeles. She's running against Democratic incumbent Mayor Karen Bass. In this interview, Councilmember Nithya Raman shares the days leading up to her filing."
-> â Speaker F at 03:26
+> — Speaker F at 03:26
 > *Nithya Raman was discussed in this episode*
 
 ## Key Quotes

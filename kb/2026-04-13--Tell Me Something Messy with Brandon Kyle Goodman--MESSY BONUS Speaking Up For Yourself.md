@@ -19,7 +19,7 @@ This is a bonus episode featuring an interview with Nithya Raman, LA City Counci
 ## Key Moment
 
 > "I was really excited that last year we actually lowered the allowable rent increase for the first time in 40 years."
-> â Nithya Raman at 17:30
+> — Nithya Raman at 17:30
 > *This represents her major policy achievement in rent control that directly helps LA residents avoid displacement.*
 
 ## Key Quotes

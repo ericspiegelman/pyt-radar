@@ -12,14 +12,14 @@
 This 44-minute episode of The John Kobylt Show mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, The John Kobylt Show
 
 ## Key Moment
 
 > "KFI AM 640. You're listening to the Jon Cobelt Podcast on the iHeartRadio app. We're going to get right into it. Because Spencer Pratt is here for the hour. Spencer Pratt running for mayor of Los Angeles against Karen Bass and Nithya Raman, and he's got some good support already, and you can definitely get into the runoff for sure. Uh, and he's got a campaign going, uh, in all directions. Uh, I want to start— well, first of all, I'm surprised you're here because you're missing Janice Canonio's farewell party at the DWP. They're, they're giving her a big A big celebration for destroying the Palisades."
-> â Speaker F at 03:20
+> — Speaker F at 03:20
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

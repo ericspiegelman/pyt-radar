@@ -19,7 +19,7 @@ This episode of Turning Point Tonight covers various political topics including 
 ## Key Moment
 
 > "The mayor of Los Angeles said this is great. It's a great— this is a great percentage."
-> â Speaker C at 30:45
+> — Speaker C at 30:45
 > *The host is criticizing Karen Bass for defending a 40% failure rate in LA's homeless housing program as a positive outcome.*
 
 ## Key Quotes

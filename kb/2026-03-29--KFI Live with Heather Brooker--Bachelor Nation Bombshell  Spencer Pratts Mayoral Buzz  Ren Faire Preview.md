@@ -19,7 +19,7 @@ This episode discusses Spencer Pratt's campaign for Los Angeles mayor, with host
 ## Key Moment
 
 > "Spencer is I think he has been very, like, ahead of the curve with media, uh, and he, he's similar to Kim Kardashian. They're just really good at marketing."
-> â Kate Casey at 23:55
+> — Kate Casey at 23:55
 > *This quote captures the main thesis of why Pratt might be a viable candidate despite his reality TV background.*
 
 ## Key Quotes

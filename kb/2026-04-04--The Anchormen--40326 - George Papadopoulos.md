@@ -19,7 +19,7 @@ The Anchormen podcast hosts Dan Ball and Riley Lewis interview George Papadopoul
 ## Key Moment
 
 > "I actually had a chance recently to meet the guy running against her, the Republican candidate, Spencer Pratt. Actually, he's an impressive guy."
-> â George Papadopoulos at 07:43
+> — George Papadopoulos at 07:43
 > *This is Papadopoulos's main endorsement of Pratt as a viable Republican candidate who could potentially turn LA around.*
 
 ## Key Quotes

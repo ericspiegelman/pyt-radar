@@ -12,14 +12,14 @@
 This 14-minute episode of Adam Carolla mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, Adam Carolla
 
 ## Key Moment
 
 > "I have a clip that made me laugh, which was our mayor Karen Bass was talking about how hot it was. I always laugh that it's unseasonably hot in LA and they have to give these PSAs about what to do when it's hot."
-> â Speaker A at 00:00
+> — Speaker A at 00:00
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

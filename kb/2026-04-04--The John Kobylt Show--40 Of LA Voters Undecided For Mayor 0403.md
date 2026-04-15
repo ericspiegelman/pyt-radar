@@ -19,7 +19,7 @@ This episode of The John Kobylt Show discusses polling data for the LA mayoral r
 ## Key Moment
 
 > "Most normal people think she's just, uh, a box of turds. I mean, she's just awful for obvious reasons."
-> â John Kobylt at 09:00
+> — John Kobylt at 09:00
 > *This represents the host's most direct and harsh criticism of Karen Bass's performance as mayor.*
 
 ## Key Quotes

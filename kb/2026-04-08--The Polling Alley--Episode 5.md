@@ -19,7 +19,7 @@ This episode of The Polling Alley covers various political races and polling top
 ## Key Moment
 
 > "Spencer Pratt becomes the next mayor of Los Angeles and beats incumbent Karen Bass to do that"
-> â Speaker A at 44:05
+> — Speaker A at 44:05
 > *This is Mark's bold prediction that reality TV personality Spencer Pratt will upset incumbent mayor Karen Bass in the upcoming election.*
 
 ## Key Quotes

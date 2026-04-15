@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses primarily on Steve Hilton's guberna
 ## Key Moment
 
 > "Could you run for reelection after allowing a big chunk of the city to burn?"
-> â John Kobylt at 40:28
+> — John Kobylt at 40:28
 > *This encapsulates the host's central criticism of Bass's handling of the Palisades fires and his disbelief at her re-election campaign.*
 
 ## Key Quotes

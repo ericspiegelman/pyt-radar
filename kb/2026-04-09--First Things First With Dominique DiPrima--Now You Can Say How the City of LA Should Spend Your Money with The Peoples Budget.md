@@ -19,7 +19,7 @@ This episode focuses on LA's People's Budget initiative, a community-driven surv
 ## Key Moment
 
 > "She hasn't been very communicative other than saying it doesn't matter what day or time we set it for, she's not coming."
-> â Dr. Melina Abdullah at 13:17
+> — Dr. Melina Abdullah at 13:17
 > *This quote highlights Mayor Bass's outright refusal to engage with the People's Budget process, contrasting with previous mayors who participated.*
 
 ## Key Quotes

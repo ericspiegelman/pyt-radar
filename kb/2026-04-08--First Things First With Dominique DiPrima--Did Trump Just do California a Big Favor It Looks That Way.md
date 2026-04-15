@@ -19,7 +19,7 @@ This episode of 'First Things First' covers California politics including the go
 ## Key Moment
 
 > "It may mean that he's not eligible to run for mayor. So that would be a game changer, because he's been moving up in the polls."
-> â Dominique DiPrima at 29:30
+> — Dominique DiPrima at 29:30
 > *This captures the central issue - Spencer Pratt's potential disqualification despite his rising campaign momentum.*
 
 ## Key Quotes

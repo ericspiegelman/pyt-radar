@@ -19,7 +19,7 @@ Host Jon Kobylt discusses California's political problems, criticizing Governor 
 ## Key Moment
 
 > "Karen Bass's response was to run around like her hair was on fire, screaming, outraged, upset."
-> â Jon Kobylt at 25:30
+> — Jon Kobylt at 25:30
 > *This represents the host's main criticism of Bass's reaction to federal immigration enforcement removing criminals from Los Angeles.*
 
 ## Key Quotes

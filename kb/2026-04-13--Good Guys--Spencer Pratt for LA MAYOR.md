@@ -12,14 +12,14 @@
 This 72-minute episode of Good Guys mentions Spencer Pratt.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Spencer Pratt, Good Guys
 
 ## Key Moment
 
 > "Well, speaking of a fire, Josh, we have an insane guest today. You might not think he's insane when you hear that we have Spencer Pratt on, but you're forgetting that we don't have The Hills Spencer Pratt on. We don't have Hummingbird Spencer Pratt on. We don't even have Heidi Montag's number one fan Spencer Pratt on. We have future mayor of Los Angeles Spencer Pratt on, and let me tell you, it's insane. Go to the intro."
-> â Speaker B at 01:19
+> — Speaker B at 01:19
 > *Spencer Pratt was discussed in this episode*
 
 ## Key Quotes

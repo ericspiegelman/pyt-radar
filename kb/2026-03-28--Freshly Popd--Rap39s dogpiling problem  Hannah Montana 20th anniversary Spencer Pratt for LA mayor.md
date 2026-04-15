@@ -19,7 +19,7 @@ This episode of Freshly Pop'd discusses Spencer Pratt's mayoral campaign for Los
 ## Key Moment
 
 > "Spencer Pratt is a villain."
-> â Sequoia Holmes at 00:56
+> — Sequoia Holmes at 00:56
 > *This sets the tone for the entire discussion, establishing the hosts' fundamental distrust of Spencer Pratt's character and political ambitions.*
 
 ## Key Quotes

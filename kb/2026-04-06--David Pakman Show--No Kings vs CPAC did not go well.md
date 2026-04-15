@@ -19,7 +19,7 @@ This episode of the David Pakman Show features an extended interview with Los An
 ## Key Moment
 
 > "On day one when I took office, I actually didn't even begin at City Hall. I went straight to our emergency management department and declared the city to be in a state of emergency because of homelessness."
-> â Karen Bass at 36:53
+> — Karen Bass at 36:53
 > *This quote establishes Bass's immediate prioritization of the homelessness crisis and her hands-on approach to governance from day one as mayor.*
 
 ## Key Quotes

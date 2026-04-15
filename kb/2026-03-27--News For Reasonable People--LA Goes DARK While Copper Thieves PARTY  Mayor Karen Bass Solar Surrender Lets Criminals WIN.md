@@ -19,7 +19,7 @@ This episode criticizes Los Angeles Mayor Karen Bass's announcement of a $125 mi
 ## Key Moment
 
 > "This is such a backwards solution. It's actually mind-numbing that this is what they came up with."
-> â Speaker A at 05:45
+> — Speaker A at 05:45
 > *This quote encapsulates the host's central criticism of Mayor Bass's solar streetlight initiative as fundamentally flawed policy.*
 
 ## Key Quotes

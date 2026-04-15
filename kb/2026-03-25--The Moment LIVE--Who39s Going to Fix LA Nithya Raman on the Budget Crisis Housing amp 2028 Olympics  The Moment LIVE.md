@@ -12,14 +12,14 @@
 This 19-minute episode of The Moment LIVE mentions Nithya Raman.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Nithya Raman, The Moment LIVE
 
 ## Key Moment
 
 > "We have with us City Councilmember Nithya Raman, who is running for mayor of Los Angeles. Nithya is a Los Angeles City Council member representing District 4. She's first elected in 2020. She has focused on housing affordability, tenant protections, and unhoused folks. She's an urban planner by training and the co-founder of SELA— maybe it's SELA, or do you think we say the letters? Neighborhood Homeless Coalition. I think, I think we have her."
-> â Speaker A at 00:00
+> — Speaker A at 00:00
 > *Nithya Raman was discussed in this episode*
 
 ## Key Quotes

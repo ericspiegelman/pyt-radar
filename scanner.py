@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PYT Radar â Automated podcast & YouTube episode scanner.
+PYT Radar — Automated podcast & YouTube episode scanner.
 Runs as a GitHub Action on a cron schedule.
 
 Searches for new episodes, transcribes via AssemblyAI,
@@ -54,6 +54,38 @@ WEBSHARE_PROXY_PASSWORD = os.environ.get("WEBSHARE_PROXY_PASSWORD", "")
 
 # Global flag for YouTube cookie expiry detection
 _youtube_cookies_expired = False
+
+
+# ────────────────────────────────────────────────────────
+# Text helpers
+# ────────────────────────────────────────────────────────
+
+# Mojibake: UTF-8 bytes that were decoded as Latin-1 once, yielding multi-char
+# sequences like "â\x80\x94" where the original was "—" (U+2014). YouTube caption
+# data occasionally comes back this way; normalize it at the source.
+_MOJIBAKE_FIXES = {
+    "\u00e2\u0080\u0099": "\u2019",  # '
+    "\u00e2\u0080\u0098": "\u2018",  # '
+    "\u00e2\u0080\u009c": "\u201c",  # "
+    "\u00e2\u0080\u009d": "\u201d",  # "
+    "\u00e2\u0080\u0094": "\u2014",  # —
+    "\u00e2\u0080\u0093": "\u2013",  # –
+    "\u00e2\u0080\u00a6": "\u2026",  # …
+    "\u00e2\u0080\u00a2": "\u2022",  # •
+    "\u00c3\u00a9": "\u00e9", "\u00c3\u00a8": "\u00e8",
+    "\u00c3\u00a1": "\u00e1", "\u00c3\u00ad": "\u00ed",
+    "\u00c3\u00b3": "\u00f3", "\u00c3\u00ba": "\u00fa",
+    "\u00c3\u00b1": "\u00f1", "\u00c3\u00a7": "\u00e7",
+    "\u00c2\u00a0": "\u00a0",
+}
+
+def fix_mojibake(text: str) -> str:
+    if not text:
+        return text
+    for bad, good in _MOJIBAKE_FIXES.items():
+        if bad in text:
+            text = text.replace(bad, good)
+    return text
 
 
 # ────────────────────────────────────────────────────────
@@ -258,7 +290,7 @@ def find_youtube_episodes(episodes_data):
 def search_listen_notes(query, published_after=None):
     """Search Listen Notes for podcast episodes matching a query."""
     if not LISTENNOTES_API_KEY:
-        print("  WARNING: No LISTENNOTES_API_KEY â skipping podcast search")
+        print("  WARNING: No LISTENNOTES_API_KEY — skipping podcast search")
         return []
 
     url = "https://listen-api.listennotes.com/api/v2/search"
@@ -282,7 +314,7 @@ def search_listen_notes(query, published_after=None):
     data = resp.json()
     results = []
     for item in data.get("results", []):
-        # Build a URL â prefer the Listen Notes link, but also store the audio
+        # Build a URL — prefer the Listen Notes link, but also store the audio
         ln_url = item.get("listennotes_url", "")
         audio_url = item.get("audio", "")
         episode_url = item.get("link", ln_url)  # original episode link if available
@@ -561,7 +593,7 @@ def transcribe(audio_url):
         elif status == "error":
             raise RuntimeError(f"Transcription failed: {data.get('error', 'Unknown')}")
 
-        print(f"  Status: {status} â waiting 15s...")
+        print(f"  Status: {status} — waiting 15s...")
         time.sleep(15)
 
 
@@ -585,7 +617,7 @@ def get_youtube_transcript(video_id):
         # into longer utterances at sentence boundaries
         raw_segments = []
         for entry in transcript_list:
-            text = entry.text.strip()
+            text = fix_mojibake(entry.text.strip())
             if not text:
                 continue
             raw_segments.append({
@@ -704,7 +736,7 @@ def generate_summary_with_claude(episode, transcript_data):
     """Use Claude API to generate a structured summary of the transcript."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("  WARNING: No ANTHROPIC_API_KEY â generating basic summary")
+        print("  WARNING: No ANTHROPIC_API_KEY — generating basic summary")
         return generate_basic_summary(episode, transcript_data)
 
     # Build a condensed version of the transcript for Claude
@@ -820,7 +852,7 @@ def generate_basic_summary(episode, transcript_data):
         "speaker": "Unknown",
         "timestamp_mm_ss": "00:00",
         "timestamp_seconds": 0,
-        "context": "Automated detection â review recommended",
+        "context": "Automated detection — review recommended",
     }
     if "context" not in key_moment:
         key_moment["context"] = f"{episode['search_target']} was discussed in this episode"
@@ -830,7 +862,7 @@ def generate_basic_summary(episode, transcript_data):
         "appearance_type": "mentioned",  # Default to mentioned without AI analysis
         "topics": [episode["search_target"], episode["show_name"]],
         "sentiment": "neutral",
-        "sentiment_explanation": "Automated analysis â sentiment could not be determined without Claude API.",
+        "sentiment_explanation": "Automated analysis — sentiment could not be determined without Claude API.",
         "key_quotes": matching[:5],
         "key_moment": key_moment,
         "sections": [{"start": "00:00", "end": f"{duration_min}:00", "description": "Full episode"}],
@@ -850,7 +882,7 @@ def create_summary_docx(episode, summary, output_path):
     doc = Document()
 
     # Title
-    doc.add_heading("PYT Radar â Episode Summary", level=1)
+    doc.add_heading("PYT Radar — Episode Summary", level=1)
     doc.add_paragraph("")
 
     # Metadata
@@ -1231,7 +1263,7 @@ def save_to_knowledge_base(episode, transcript_data, summary):
         lines.append("## Key Moment")
         lines.append("")
         lines.append(f"> \"{km.get('text', '')}\"")
-        lines.append(f"> â {km.get('speaker', 'Unknown')} at {km.get('timestamp_mm_ss', '??:??')}")
+        lines.append(f"> — {km.get('speaker', 'Unknown')} at {km.get('timestamp_mm_ss', '??:??')}")
         if km.get("context"):
             lines.append(f"> *{km['context']}*")
         lines.append("")
@@ -1973,7 +2005,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 60)
-    print(f"PYT Radar â Scan starting (mode: {args.mode})")
+    print(f"PYT Radar — Scan starting (mode: {args.mode})")
     print(f"Time: {datetime.now().isoformat()}")
     print("=" * 60)
 

@@ -19,7 +19,7 @@ This episode of The Alex Marlow Show covers various political topics including I
 ## Key Moment
 
 > "Karen Bass just hanging out, Gavin Newsom running for president."
-> â Alex Marlow at 39:04
+> — Alex Marlow at 39:04
 > *Marlow criticizes Bass for not prioritizing LA wildfire rebuilding efforts while dismissing her as distracted.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is Rae Huang's own podcast episode where she hosts Nick Caputo to discuss L
 ## Key Moment
 
 > "A lot of folks recently saw me go viral. I was going to give public comment to the Charter Reform Commission and I got cut off immediately"
-> â Rae Huang at 01:24
+> — Rae Huang at 01:24
 > *Rae explains the viral incident that prompted this educational podcast episode, positioning herself as someone fighting for transparency in government.*
 
 ## Key Quotes

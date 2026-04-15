@@ -19,7 +19,7 @@ This is an episode where hosts Jen and Chris Fenton discuss their recent trip to
 ## Key Moment
 
 > "I'm gonna give a total record scratch to Karen Bass."
-> â Speaker A (Chris) at 40:01
+> — Speaker A (Chris) at 40:01
 > *This represents the host's direct criticism of Karen Bass when discussing poor LAX airport design they encountered.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ Spencer Pratt, former reality TV star from The Hills, appears as a guest to disc
 ## Key Moment
 
 > "I'm an angry taxpayer that wants L.A. to get fixed."
-> â Spencer Pratt at 07:26
+> — Spencer Pratt at 07:26
 > *This quote encapsulates Pratt's entire campaign positioning as an outsider focused on practical solutions rather than traditional politics.*
 
 ## Key Quotes

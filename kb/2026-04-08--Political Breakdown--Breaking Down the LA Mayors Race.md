@@ -19,7 +19,7 @@ This episode analyzes the 2026 Los Angeles mayoral race where incumbent Karen Ba
 ## Key Moment
 
 > "Spencer Pratt has filled that gap and has really become the Palisades fire thorn in Karen Bass's side."
-> â Noah Goldberg at 05:30
+> — Noah Goldberg at 05:30
 > *This quote captures Pratt's central role in the race as the candidate who keeps the fire response controversy alive against the incumbent mayor.*
 
 ## Key Quotes

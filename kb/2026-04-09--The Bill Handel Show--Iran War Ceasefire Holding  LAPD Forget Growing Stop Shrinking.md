@@ -19,7 +19,7 @@ This episode of The Bill Handel Show covers international tensions with Iran and
 ## Key Moment
 
 > "Well, one of the tunes is she thinks she's going to win, and that's not going to happen."
-> â Bill Handel at 16:48
+> — Bill Handel at 16:48
 > *This quote captures the host's direct prediction that Karen Bass will lose her re-election bid as LA mayor.*
 
 ## Key Quotes

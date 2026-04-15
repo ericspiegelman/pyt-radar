@@ -19,7 +19,7 @@ This episode of Gary and Shannon covers various news topics including political 
 ## Key Moment
 
 > "Mayor Karen Bass has been on all the local TV stations today talking about it."
-> â Speaker B at 05:33
+> — Speaker B at 05:33
 > *This is the only mention of Karen Bass in the episode, noting her media appearances regarding the LA schools strike resolution.*
 
 ## Key Quotes

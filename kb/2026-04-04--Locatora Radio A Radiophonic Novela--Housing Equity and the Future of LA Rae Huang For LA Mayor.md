@@ -19,7 +19,7 @@ This episode features an in-depth interview with Rae Huang, a mayoral candidate 
 ## Key Moment
 
 > "I'm running for office to represent those who are not typically centered in City Hall, whose voices have been silenced."
-> â Rae Huang at 59:25
+> — Rae Huang at 59:25
 > *This quote encapsulates Rae Huang's core campaign message of centering marginalized communities and transforming city governance.*
 
 ## Key Quotes

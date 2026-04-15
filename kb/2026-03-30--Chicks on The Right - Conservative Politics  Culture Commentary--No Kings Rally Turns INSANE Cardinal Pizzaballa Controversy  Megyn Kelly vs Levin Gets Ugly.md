@@ -17,7 +17,7 @@ This episode of 'Chicks on The Right' covers various conservative political topi
 ## Key Moment
 
 > ""
-> â  at 
+> —  at 
 
 ## Full Transcript
 

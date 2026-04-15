@@ -19,7 +19,7 @@ This episode of Pointers for Life features hosts Katie and Connor discussing var
 ## Key Moment
 
 > "And everyone's like, this is so interesting because one, he probably might not do a terrible job, and two, we have elected way worse into office than Spencer Pratt from The Hills."
-> â Katie at 41:26
+> — Katie at 41:26
 > *This captures the hosts' overall assessment that Spencer Pratt's political candidacy, while surprising, isn't necessarily a bad thing given the current political landscape.*
 
 ## Key Quotes

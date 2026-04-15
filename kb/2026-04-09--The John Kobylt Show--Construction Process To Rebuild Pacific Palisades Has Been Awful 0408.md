@@ -19,7 +19,7 @@ This episode discusses the slow reconstruction process in Pacific Palisades afte
 ## Key Moment
 
 > "Mayor Bass did step up and brought DWP to the table. So I do give her credit for that."
-> â Reza Akef at 21:47
+> — Reza Akef at 21:47
 > *This represents the most significant positive acknowledgment of Bass's leadership in facilitating cooperation between city agencies and reconstruction efforts.*
 
 ## Key Quotes

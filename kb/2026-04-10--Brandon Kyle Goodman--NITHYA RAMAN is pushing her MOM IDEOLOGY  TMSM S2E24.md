@@ -19,7 +19,7 @@ LA City Council member and mayoral candidate Nithya Raman appears as the main gu
 ## Key Moment
 
 > "I would say that I'm more driven by mom ideology."
-> â Nithya Raman at 00:03
+> — Nithya Raman at 00:03
 > *This quote encapsulates Raman's political philosophy and approach to governance, distinguishing her from traditional progressive ideology.*
 
 ## Key Quotes

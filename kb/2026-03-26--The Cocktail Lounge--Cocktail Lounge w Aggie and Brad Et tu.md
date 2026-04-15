@@ -12,14 +12,14 @@
 This 98-minute episode of The Cocktail Lounge mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, The Cocktail Lounge
 
 ## Key Moment
 
 > "Well, this is why it was so, um, interesting to me to see a— I believe it was Karen Bass or mayor in— I don't know, it was, it was on one of the parentheses, you know, East Coast or West Coast, but the mayor was saying that they had passed a resolution to not allow ICE on, um, near polling places, you know, because they don't want to, uh, scare anybody who would be coming in to vote. And I'm like, I'm sorry, if I'm a legal person and I'm Hispanic, seeing ICE at a polling station is not going to scare me. Yeah, so what exactly are you telling me here?"
-> â Speaker D at 74:08
+> — Speaker D at 74:08
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

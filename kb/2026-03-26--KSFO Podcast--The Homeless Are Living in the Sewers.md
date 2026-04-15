@@ -12,14 +12,14 @@
 This 40-minute episode of KSFO Podcast mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, KSFO Podcast
 
 ## Key Moment
 
 > "800-222-5222 is the telephone number. 1-800-222-5222. We'll have an update for you on the state of the gubernatorial race coming up later on in the program. But first, we're going to give you an update on a story we brought you yesterday. LA Mayor Karen Bass said that she was going to get the homeless off the streets in Los Angeles. They're not exactly moving into housing, but now we know she's kind of keeping her promise because she's moving them off the streets and into the sewers."
-> â Speaker B at 02:32
+> — Speaker B at 02:32
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

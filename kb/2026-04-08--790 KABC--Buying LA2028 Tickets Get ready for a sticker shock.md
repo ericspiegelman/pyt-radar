@@ -19,7 +19,7 @@ This is a news commentary show discussing LA 2028 Olympics ticket prices and var
 ## Key Moment
 
 > "If we give Karen Bass another 4 years, it's going to be another 4 years of this failed policy."
-> â Randy Wang at 12:15
+> — Randy Wang at 12:15
 > *This represents the host's central criticism of Bass's leadership and his argument against her re-election based on homelessness policy failures.*
 
 ## Key Quotes

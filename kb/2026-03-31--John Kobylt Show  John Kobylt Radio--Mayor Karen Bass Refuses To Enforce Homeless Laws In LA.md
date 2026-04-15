@@ -19,7 +19,7 @@ This episode of the John Kobylt Show focuses on criticizing Los Angeles Mayor Ka
 ## Key Moment
 
 > "Sick psycho. Karen Bass is a sick psycho."
-> â John Kobylt at 09:30
+> — John Kobylt at 09:30
 > *This represents the host's most direct and harsh condemnation of the mayor's handling of the homeless crisis.*
 
 ## Key Quotes

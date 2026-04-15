@@ -19,7 +19,7 @@ This episode of Monks & Merrill covers LA mayoral polling, Olympic security cost
 ## Key Moment
 
 > "Tech exec Adam Miller, 13%, and reality TV star and Palisades advocate Spencer Pratt in 5th place with 12."
-> â Speaker D at 02:58
+> — Speaker D at 02:58
 > *This is the only substantive mention of Adam Miller in the episode, identifying him as a tech executive polling at 13% in the mayoral race.*
 
 ## Key Quotes

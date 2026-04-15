@@ -19,7 +19,7 @@ This episode discusses California politics, criticizing Governor Gavin Newsom's 
 ## Key Moment
 
 > "When I'm mayor, all the laws that exist will be enforced. Period."
-> â Spencer Pratt at 20:37
+> — Spencer Pratt at 20:37
 > *This quote encapsulates Spencer Pratt's core campaign message of law and order that has gained him political support.*
 
 ## Key Quotes

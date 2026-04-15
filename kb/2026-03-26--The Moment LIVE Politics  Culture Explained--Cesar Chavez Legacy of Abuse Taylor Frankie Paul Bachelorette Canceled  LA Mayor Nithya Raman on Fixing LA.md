@@ -12,14 +12,14 @@
 This 52-minute episode of The Moment LIVE! Politics & Culture, Explained mentions Nithya Raman.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Nithya Raman, The Moment LIVE! Politics & Culture, Explained
 
 ## Key Moment
 
 > "So it's like, I don't wanna do it anyway. Well, well, we're here. We're alive. I'm happy to be alive, you know? Um, let's— there's, uh, a story that blew my mind this week. I think it blew a lot of people's minds. You and I were in the room together when we found out. The New York Times— well, actually, first let me tell you, today we're going to talk about The New York Times' Cesar Chavez investigation, which has upended years of history and opened all sorts of questions about leftist spaces and women and Dolores Huertas. Then we're going to talk about Taylor Frankie Paul, who was supposed to be The Bachelorette this season. That season got canceled on ABC 3 days before air because of domestic violence videos that were leaked. It was harrowing. And then we're going to talk to Nithya Raman, who is a council member here in LA running for mayor. And she's sort of LA's Zoran, maybe some are saying. And she— we're really excited to talk to her about the campaign that she's running. I think there's a lot of people who are frustrated with how things are going on in LA. And, you know, Nithya versus Spencer Pratt. So we're going to get into it with her."
-> â Speaker A at 01:42
+> — Speaker A at 01:42
 > *Nithya Raman was discussed in this episode*
 
 ## Key Quotes

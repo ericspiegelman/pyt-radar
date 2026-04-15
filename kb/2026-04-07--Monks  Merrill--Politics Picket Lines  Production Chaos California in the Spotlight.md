@@ -19,7 +19,7 @@ This episode of Monks & Merrill discusses California politics, including Trump's
 ## Key Moment
 
 > "Spencer Pratt goes, hey, here's something I can jump on here. I mean, that's politically smart. Gotta give him credit."
-> â Chris Merrill at 32:13
+> — Chris Merrill at 32:13
 > *This captures the hosts' assessment of Pratt's savvy political instincts in capitalizing on the Baywatch controversy.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode analyzes pop star Chappell Roan through a conspiracy theory lens, f
 ## Key Moment
 
 > "LA Mayor Karen Bass and all these Los Angeles political types"
-> â Speaker A at 49:38
+> — Speaker A at 49:38
 > *This is the only mention of Karen Bass in the episode, grouping her with other LA politicians who called for Wasserman's resignation.*
 
 ## Key Quotes

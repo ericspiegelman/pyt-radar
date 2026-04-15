@@ -19,7 +19,7 @@ This episode of The JV Show discusses Spencer Pratt's surprising success in his 
 ## Key Moment
 
 > "The most recent poll shows that Spencer Pratt currently in second place in the polling for race for mayor in LA."
-> â Graham at 20:14
+> — Graham at 20:14
 > *This is the key revelation that surprises the hosts and drives the entire discussion about Spencer Pratt's unexpected political success.*
 
 ## Key Quotes

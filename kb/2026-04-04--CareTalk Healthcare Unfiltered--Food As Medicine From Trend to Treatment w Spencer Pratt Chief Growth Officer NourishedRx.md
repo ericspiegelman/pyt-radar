@@ -19,7 +19,7 @@ This episode features Spencer Pratt, Chief Growth Officer at NourishedRx, discus
 ## Key Moment
 
 > "We're seeing a 1.5-point reduction in HbA1c within 3 to 4 months... that's more effective than most diabetes medications."
-> â Spencer Pratt at 08:46
+> — Spencer Pratt at 08:46
 > *This demonstrates the clinical effectiveness of NourishedRx's food-as-medicine approach, showing measurable results that outperform traditional pharmaceutical interventions.*
 
 ## Key Quotes

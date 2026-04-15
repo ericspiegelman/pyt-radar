@@ -19,7 +19,7 @@ This episode features an extensive interview with Rae Huang, who is running for 
 ## Key Moment
 
 > "We gotta abolish ICE."
-> â Rae Huang at 00:00
+> — Rae Huang at 00:00
 > *This opening statement immediately establishes Rae Huang's progressive stance and sets the tone for her bold policy positions throughout the interview.*
 
 ## Key Quotes

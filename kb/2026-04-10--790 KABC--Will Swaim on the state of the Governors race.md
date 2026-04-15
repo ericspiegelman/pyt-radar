@@ -19,7 +19,7 @@ This episode discusses California's gubernatorial race and various state politic
 ## Key Moment
 
 > "She gets into office in LA and then just proves you really do need an expert. She can't balance the budget. She can't reduce homelessness."
-> â Will Swaim at 16:40
+> — Will Swaim at 16:40
 > *This encapsulates the guest's main criticism of Bass as an example of incompetent Democratic leadership that lacks management skills.*
 
 ## Key Quotes

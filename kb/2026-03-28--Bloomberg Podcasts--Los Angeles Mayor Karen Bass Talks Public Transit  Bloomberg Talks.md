@@ -19,7 +19,7 @@ Los Angeles Mayor Karen Bass appears as a guest on Bloomberg Talks to discuss he
 ## Key Moment
 
 > "I am proud to say that after year after year of homelessness increasing in the national trend, frankly, was an increase in homelessness of 18%. We've had the exact opposite in Los Angeles, where we've had a decrease in street homelessness of 18%."
-> â Karen Bass at 07:48
+> — Karen Bass at 07:48
 > *This represents Mayor Bass's key achievement claim as she discusses her reelection campaign and what she's accomplished during her first term.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of Monks & Merrill focuses on surveillance cameras and government o
 ## Key Moment
 
 > "But Councilwoman Nithya Raman and businessman Adam Miller and leftist advocate, uh, activist Reverend Ray Huang."
-> â Michael Monks at 38:23
+> — Michael Monks at 38:23
 > *This is the only mention of Adam Miller in the episode, identifying him as a businessman participating in the mayoral debate.*
 
 ## Key Quotes

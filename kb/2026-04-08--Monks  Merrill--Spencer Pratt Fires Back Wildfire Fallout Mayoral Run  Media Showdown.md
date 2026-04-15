@@ -19,7 +19,7 @@ Spencer Pratt appears as a guest to defend his mayoral candidacy after an LA Tim
 ## Key Moment
 
 > "My house burned down. You guys left my entire neighborhood burned down, remember?"
-> â Spencer Pratt at 13:33
+> — Spencer Pratt at 13:33
 > *This encapsulates Pratt's core campaign message as a fire victim running against the officials he blames for the disaster.*
 
 ## Key Quotes

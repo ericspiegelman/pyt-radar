@@ -19,7 +19,7 @@ This episode of the 790 KABC show focuses on the hazmat cleanup of a homeless wo
 ## Key Moment
 
 > "Every single response, it didn't matter what the question was, this guy Adam Miller, who owns a nonprofit, would get no applause."
-> â Speaker B at 01:39
+> — Speaker B at 01:39
 > *This moment reveals Adam Miller's poor debate performance compared to his opponents who received audience support.*
 
 ## Key Quotes

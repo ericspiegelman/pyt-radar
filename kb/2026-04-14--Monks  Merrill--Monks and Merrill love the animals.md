@@ -19,7 +19,7 @@ This episode of Monks & Merrill focuses on animal welfare issues in Los Angeles,
 ## Key Moment
 
 > "Look, I was a Karen Bass voter. I'm not afraid to say it, but I have felt let down and disappointed because we're ignored."
-> â Jackie Pignol at 04:58
+> — Jackie Pignol at 04:58
 > *A nonprofit founder who voted for Bass expresses disappointment with the mayor's handling of community needs, specifically regarding animal services.*
 
 ## Key Quotes

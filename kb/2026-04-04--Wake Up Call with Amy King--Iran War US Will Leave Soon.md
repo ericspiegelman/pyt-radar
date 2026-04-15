@@ -19,7 +19,7 @@ This is a morning radio show covering various news topics, including local LA po
 ## Key Moment
 
 > "Tech executive Adam Miller is in fourth place, and former reality TV personality and Palisades wildfire survivor Spencer Pratt is in 5th."
-> â Amy King at 07:45
+> — Amy King at 07:45
 > *This is the only mention of Adam Miller in the entire episode, identifying him as a tech executive running fourth in the mayoral race poll.*
 
 ## Key Quotes

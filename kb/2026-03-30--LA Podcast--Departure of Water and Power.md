@@ -19,7 +19,7 @@ This episode of LA Podcast discusses the departure of Los Angeles Department of 
 ## Key Moment
 
 > "The thing about Bass with climate... it seemed pretty obvious that like climate was just not a priority for her."
-> â Speaker C at 34:34
+> — Speaker C at 34:34
 > *This quote encapsulates the hosts' main criticism that Mayor Bass lacks genuine commitment to climate issues despite holding one of the most important climate policy positions in the world.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of Monks & Merrill focuses entirely on Los Angeles' homelessness cr
 ## Key Moment
 
 > "We'll have Spencer Pratt on the program."
-> â Chris Merrill at 34:36
+> — Chris Merrill at 34:36
 > *This is the only mention of Spencer Pratt in the entire episode, as hosts preview tomorrow's guest lineup.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode focuses on defending Spencer Pratt against what the host calls a 's
 ## Key Moment
 
 > "we found out that Karen Bass has blown $300 million on the failed Inside Safe program"
-> â Speaker A at 29:02
+> — Speaker A at 29:02
 > *This represents the host's central criticism of Bass's signature homelessness program as a massive financial failure.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of Tony Katz Today focuses on Trump Derangement Syndrome, with host
 ## Key Moment
 
 > "he was a huge, huge contributor, huge contributor to Karen Bass, the current mayor of Los Angeles, and now he's moving out of LA."
-> â Tony Katz at 24:45
+> — Tony Katz at 24:45
 > *This moment highlights the irony of wealthy donors supporting progressive politicians like Bass while leaving the cities they helped create policies for.*
 
 ## Key Quotes

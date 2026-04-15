@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses on a canceled California gubernator
 ## Key Moment
 
 > "tech entrepreneur Adam Miller at 6%"
-> â Josh Haskell (ABC 7 reporter) at 35:45
+> — Josh Haskell (ABC 7 reporter) at 35:45
 > *This is the only mention of Adam Miller in the entire episode, identifying him as one of the candidates in the LA mayor's race polling numbers.*
 
 ## Key Quotes

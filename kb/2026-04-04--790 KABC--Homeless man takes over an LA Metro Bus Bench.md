@@ -19,7 +19,7 @@ This episode of The John Phillips Show focuses on homelessness issues in Los Ang
 ## Key Moment
 
 > "If in that election for mayor you vote for anyone other than Spencer Pratt, you're voting for this."
-> â Speaker A (John Phillips) at 14:13
+> — Speaker A (John Phillips) at 14:13
 > *Host John Phillips positions Spencer Pratt as the only viable alternative to continued homelessness problems in LA.*
 
 ## Key Quotes

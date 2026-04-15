@@ -12,14 +12,14 @@
 This 32-minute episode of Monks & Merrill mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, Monks & Merrill
 
 ## Key Moment
 
 > "ABC 7 was in Venice when one of the most notorious homeless encampments was cleared by Mayor Karen Bass and Councilwoman Tracy Park. The city's second—"
-> â Speaker A at 13:43
+> — Speaker A at 13:43
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

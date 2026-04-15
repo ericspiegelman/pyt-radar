@@ -19,7 +19,7 @@ This episode covers a special LA Metro board meeting scheduled for April 15, 202
 ## Key Moment
 
 > "The board of directors: Fernando Dutra, chair; Karen Bass, Vice Chair"
-> â Jared Reimer at 03:45
+> — Jared Reimer at 03:45
 > *This is the only mention of Karen Bass in the episode, identifying her official role on the LA Metro Board.*
 
 ## Key Quotes

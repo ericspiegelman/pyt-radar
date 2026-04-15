@@ -19,7 +19,7 @@ This episode focuses on widespread fraud and lack of oversight in California gov
 ## Key Moment
 
 > "Karen Bass has created like this underground city that none of us are aware of."
-> â John Kobelt at 38:44
+> — John Kobelt at 38:44
 > *Host's reaction to reports of homeless people living in tunnels and sewers under Los Angeles streets.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of Gary and Shannon Overtime discusses various topics including res
 ## Key Moment
 
 > "Karen Bass got sandbagged by her ridiculous behavior for this fires, for the fires, her lack of preparation, her lack of just being here, and the coverup that ensued."
-> â Speaker D at 22:01
+> — Speaker D at 22:01
 > *This quote encapsulates the hosts' view that Bass's poor fire response directly led to her political vulnerability and Raman's challenge.*
 
 ## Key Quotes

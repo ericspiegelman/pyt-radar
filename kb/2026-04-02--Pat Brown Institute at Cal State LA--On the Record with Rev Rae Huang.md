@@ -19,7 +19,7 @@ This is an in-depth interview with Rev. Rae Huang, a candidate for Mayor of Los 
 ## Key Moment
 
 > "I'm running because we need real courageous, moral, and grounded leadership, especially in this moment in our city and in our country when we are regularly under attack."
-> â Rae Huang at 03:38
+> — Rae Huang at 03:38
 > *This opening statement encapsulates Huang's core campaign message and rationale for running for mayor.*
 
 ## Key Quotes

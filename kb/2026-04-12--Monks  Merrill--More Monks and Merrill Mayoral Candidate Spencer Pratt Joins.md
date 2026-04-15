@@ -19,7 +19,7 @@ Spencer Pratt, reality TV star turned mayoral candidate, appears on the show to 
 ## Key Moment
 
 > "Mayor Karen Bass let my house burn down, my parents' house burn down, all my neighbors, 7,000 of them, their houses burned down, and 12 of my neighbors burn alive."
-> â Spencer Pratt at 03:51
+> — Spencer Pratt at 03:51
 > *This is Pratt's central attack on Bass, directly blaming her for the Palisades fire tragedy that destroyed his home and community.*
 
 ## Key Quotes

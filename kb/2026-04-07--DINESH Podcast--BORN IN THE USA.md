@@ -19,7 +19,7 @@ This episode focuses on birthright citizenship law and mass deportations, with h
 ## Key Moment
 
 > "That's why you saw Karen Bass absolutely beside herself."
-> â Greg Bovino at 45:32
+> — Greg Bovino at 45:32
 > *Bovino describes how ICE's counter-narrative strategy during Los Angeles operations caught Mayor Karen Bass off guard.*
 
 ## Key Quotes

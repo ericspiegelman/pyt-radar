@@ -19,7 +19,7 @@ This episode of the Ralph Nader Radio Hour focuses on international conflicts an
 ## Key Moment
 
 > "incumbent Mayor Karen Bass trailing at 17%, statistically tied with another insurgent progressive candidate, Ray Huang"
-> â Francesco DeSantis at 107:05
+> — Francesco DeSantis at 107:05
 > *This represents potentially concerning polling data for the incumbent mayor's re-election campaign.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of The Bill Handel Show covers various political topics including T
 ## Key Moment
 
 > "I've said it before, I'll say it again, Nithya Raman is the only person that could make me vote for Karen Bass."
-> â Neil at 17:34
+> — Neil at 17:34
 > *This quote demonstrates the host's strong negative view of Nithya Raman, suggesting she's so undesirable that she would make him vote for someone he apparently also dislikes.*
 
 ## Key Quotes

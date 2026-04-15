@@ -12,14 +12,14 @@
 This 41-minute episode of 790 KABC mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, 790 KABC
 
 ## Key Moment
 
 > "We're getting a lot of emails about the sewer lady. Mary writes in at johnnydontlikeshow@gmail.com. Hey John and Randy, a lady interviewed by KTLA this morning said she called several times about that woman living in the sewer and nothing was done, but she thinks that Karen Bass is doing a great job and doesn't want to blame her."
-> â Speaker C at 00:35
+> — Speaker C at 00:35
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode features LA City Council member Nithya Raman discussing her decisio
 ## Key Moment
 
 > "I have a lot of respect for her and what she's done. So it was a very tough moment and a tough decision."
-> â Nithya Raman at 40:14
+> — Nithya Raman at 40:14
 > *Raman explains the personal difficulty of running against Karen Bass despite their previous relationship and her respect for the mayor.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is a travel podcast episode where hosts Chris and Jen Fenton discuss their 
 ## Key Moment
 
 > "I'm going to give a total record scratch to Karen Bass."
-> â Chris Fenton at 39:57
+> — Chris Fenton at 39:57
 > *This moment signals Fenton's intent to criticize Bass for poor LAX construction planning that affects travelers.*
 
 ## Key Quotes

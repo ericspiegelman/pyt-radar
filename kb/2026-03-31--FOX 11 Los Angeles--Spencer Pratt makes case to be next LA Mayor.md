@@ -19,7 +19,7 @@ Spencer Pratt appears as a guest on FOX 11 Los Angeles to discuss his candidacy 
 ## Key Moment
 
 > "I'm deadly serious. I had 12 neighbors die in my neighborhood across the street from my house."
-> â Spencer Pratt at 14:37
+> — Spencer Pratt at 14:37
 > *Pratt addresses misconceptions about his seriousness as a candidate by referencing the personal tragedy that motivated his run.*
 
 ## Key Quotes

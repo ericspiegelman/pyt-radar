@@ -19,7 +19,7 @@ This is the final episode of season 2 of 'Two Guys, Five Rings' where hosts Matt
 ## Key Moment
 
 > "Well, okay, so they've walked back, uh, no cars Olympics or whatever the heck Miss Karen Bass was saying."
-> â Matt Rogers at 10:09
+> — Matt Rogers at 10:09
 > *This dismissive comment captures the hosts' skeptical view of Karen Bass's Olympic transportation planning.*
 
 ## Key Quotes

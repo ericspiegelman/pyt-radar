@@ -19,7 +19,7 @@ This episode of Monks & Merrill focuses on LA's Oceanwide Plaza graffiti towers 
 ## Key Moment
 
 > "The latest poll shows he's in second place ahead of Councilwoman Nithya Raman but still behind incumbent Mayor Karen Bass."
-> â Michael Monks at 09:54
+> — Michael Monks at 09:54
 > *This establishes Spencer Pratt's competitive position in the mayoral race as a legitimate contender.*
 
 ## Key Quotes

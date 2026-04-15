@@ -19,7 +19,7 @@ This episode of 790 KABC's John Phillips Show discusses LA mayoral polling and C
 ## Key Moment
 
 > "Adam Miller at 13%"
-> â Speaker B at 00:33
+> — Speaker B at 00:33
 > *This is the only mention of Adam Miller in the entire episode, cited as polling data showing his position in the LA mayoral race.*
 
 ## Key Quotes

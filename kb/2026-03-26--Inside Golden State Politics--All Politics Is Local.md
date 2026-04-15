@@ -12,14 +12,14 @@
 This 36-minute episode of Inside Golden State Politics  mentions Nithya Raman.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Nithya Raman, Inside Golden State Politics 
 
 ## Key Moment
 
 > "It's absolutely terrible for a horse, but she's still at the top of the field. You know, the person who I have with the second odds at this time is Council Member Nithya Raman from the 4th District, the late entry into the race. Given her political leanings, I've given her the horse name of Here Comes Lefty, and we've got, we've got Here Comes Lefty starting at, at 6-1. If you're looking for a I was going to say, if you're looking for a third candidate, you know, third person at the starting gate, I would say we'd look at Adam Miller. The horse name I've got for him is The Owl. Odds 25 to 1. And as I wrote, why is he The Owl? Because if you ask most Angelenos what they think of Adam Miller, the response will be, who? Who? But he is running for it. We've got a couple others. We've got Reverend Ray Wang, one of the left-leaning candidates. I'm calling her Ray of Light. Odd 70 to 1. And then our 5th main candidate, Spencer Pratt, the Republican reality TV star running, you know, out of the Palisades. Often we see him wearing gear for his wife Heidi Montag. He's selling merchandise on his website. So at 95 to 1, he is the merchant of Heidiwood. So that's how I break down the race."
-> â Speaker C at 04:24
+> — Speaker C at 04:24
 > *Nithya Raman was discussed in this episode*
 
 ## Key Quotes

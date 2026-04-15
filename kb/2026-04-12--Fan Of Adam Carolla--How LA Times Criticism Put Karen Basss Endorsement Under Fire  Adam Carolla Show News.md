@@ -19,7 +19,7 @@ This Adam Carolla Show episode discusses LA's wildfire crisis and heavily critic
 ## Key Moment
 
 > "Karen Bass gave a speech explaining that the homeless problem was caused by income inequality, which is batshit crazy."
-> â Speaker B at 07:38
+> — Speaker B at 07:38
 > *This represents the hosts' core criticism of Bass as being ideologically driven rather than pragmatic in her approach to LA's problems.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses on TSA funding issues and transgend
 ## Key Moment
 
 > "Who helped burn down the Pacific Palisades. She wouldn't fill up a reservoir, wouldn't turn on a water hose and fill the 117 million gallon hole in the ground."
-> â John Kobylt at 03:09
+> — John Kobylt at 03:09
 > *Kobylt blames Bass for the Pacific Palisades fire disaster due to her alleged failure to maintain water infrastructure.*
 
 ## Key Quotes

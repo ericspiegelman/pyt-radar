@@ -12,14 +12,14 @@
 This 55-minute episode of Real America’s Voice mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, Real America’s Voice
 
 ## Key Moment
 
 > "Absolutely. All right, folks, as our CPAC Dallas coverage begins to ramp up here on RAV, we want to thank Birch Gold for being a proud sponsor of our CPAC coverage. At Birch Gold Group, see how easy it is to diversify your IRA or 401(k) with gold. Get a free info kit from Birch Gold right now by texting the word America to the number 989898. That's America to the number 989898. 99898. All right, polls have come out for the Los Angeles mayoral race. You know, Karen Bass out there, they're not happy with her, but wait till you see who's in second place. You think she's bad? It's next. All right, welcome back, everyone. We know that California is the breeding ground of all things bad ideas. We know LA is probably the capital of that breeding ground for bad ideas. So we got a mayor's race out there. You know, Karen Bass, the former congresswoman, she's a radical leftist. She's awful. She has no business running a city or anything the size of LA. She has no business running a freaking church choir. Much less a city the size of LA. Polls are out. She's at 25%. Nithya Raman is a radical leftist on the city council, is at 17%. And Spencer Pratt, the reality TV star who seems to be a conservative, is at 14%. Let me explain to you. No, no, no, I won't explain it. I'll let Karen Bass tell you why she's at 25%. Okay, rolling."
-> â Speaker C at 23:28
+> — Speaker C at 23:28
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

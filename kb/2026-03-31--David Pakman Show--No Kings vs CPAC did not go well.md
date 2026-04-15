@@ -19,7 +19,7 @@ This episode covers various political topics including CPAC vs No Kings protests
 ## Key Moment
 
 > "Street homelessness has decreased by 17%."
-> â Karen Bass at 45:48
+> — Karen Bass at 45:48
 > *Bass cites this concrete achievement as evidence of her administration's success in addressing LA's homelessness crisis through practical housing-first policies.*
 
 ## Key Quotes

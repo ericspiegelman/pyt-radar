@@ -19,7 +19,7 @@ This episode of Monks & Merrill discusses various LA issues including homelessne
 ## Key Moment
 
 > "Spencer Pratt is the hardest line on it, probably closer to the position I've expressed on our program here"
-> â Speaker G at 10:25
+> — Speaker G at 10:25
 > *This establishes Spencer Pratt's positioning as a hardline candidate on homelessness issues, aligning with one of the host's views.*
 
 ## Key Quotes

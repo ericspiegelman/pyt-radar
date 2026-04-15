@@ -19,7 +19,7 @@ This episode of the Ellen K Morning Show focuses on relationship advice and ente
 ## Key Moment
 
 > "Reality star Spencer Pratt is in second with 11% of voters"
-> â Ellen K at 22:14
+> — Ellen K at 22:14
 > *This is the only mention of Spencer Pratt in the episode, reporting his surprising second-place position in LA mayoral polling.*
 
 ## Key Quotes

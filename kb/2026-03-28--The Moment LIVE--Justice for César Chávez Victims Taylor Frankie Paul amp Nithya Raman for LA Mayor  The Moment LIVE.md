@@ -19,7 +19,7 @@ This episode of The Moment LIVE covers multiple topics including a New York Time
 ## Key Moment
 
 > "We should expect that the government can work and we should expect that the government can be a positive presence in our lives."
-> â Nithya Raman at 39:42
+> — Nithya Raman at 39:42
 > *This encapsulates Raman's core governing philosophy and vision for what city government should accomplish for residents.*
 
 ## Key Quotes

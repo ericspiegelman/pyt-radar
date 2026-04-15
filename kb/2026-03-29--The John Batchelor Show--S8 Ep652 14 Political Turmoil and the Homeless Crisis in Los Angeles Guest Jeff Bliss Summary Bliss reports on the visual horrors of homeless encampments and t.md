@@ -19,7 +19,7 @@ This episode of The John Batchelor Show discusses political challenges in Los An
 ## Key Moment
 
 > "She's really slipped in the polls to really dangerous levels if she wants to run for reelection."
-> â Jeff Bliss at 02:14
+> — Jeff Bliss at 02:14
 > *This quote captures the core criticism that Mayor Bass's political standing has deteriorated significantly due to her handling of major city crises.*
 
 ## Key Quotes

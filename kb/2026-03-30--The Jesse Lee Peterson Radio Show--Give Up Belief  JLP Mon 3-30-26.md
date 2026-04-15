@@ -19,7 +19,7 @@ This episode of Jesse Lee Peterson's radio show focuses on giving up belief syst
 ## Key Moment
 
 > "And what Karen Bass gonna do? She monitoring. Oh, I'm so scared now. I'm concerned, I'm worried. Mama is in charge."
-> â Speaker A at 50:00
+> — Speaker A at 50:00
 > *Peterson mocks Bass's response to protests, using it as an example of ineffective female leadership.*
 
 ## Key Quotes

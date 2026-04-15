@@ -19,7 +19,7 @@ This CaliBased podcast episode focuses heavily on criticizing Los Angeles Mayor 
 ## Key Moment
 
 > "She is a coward. She's fake and she's a liar."
-> â Speaker E at 07:00
+> — Speaker E at 07:00
 > *This quote from animal rescuer Joey Tuccio represents the harshest direct personal attack on Karen Bass in the episode, encapsulating the overall negative sentiment.*
 
 ## Key Quotes

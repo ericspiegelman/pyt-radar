@@ -19,7 +19,7 @@ This episode covers the Artemis II spacecraft splashdown and Eric Swalwell's pol
 ## Key Moment
 
 > "That's Karen Bass for you. She's the worst."
-> â Caller at 21:15
+> — Caller at 21:15
 > *This encapsulates the overall negative sentiment toward Bass expressed throughout the episode by callers and hosts.*
 
 ## Key Quotes

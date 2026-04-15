@@ -19,7 +19,7 @@ This is a conservative talk radio show '50 Plus' hosted by Doug Pike covering va
 ## Key Moment
 
 > "Mayor Karen Bass out there in LA said, yeah, you know what, what do they know?"
-> â Doug Pike (Speaker D) at 17:43
+> — Doug Pike (Speaker D) at 17:43
 > *This quote captures the host's characterization of Bass as dismissive toward industry experts who warned about negative consequences of wage increases.*
 
 ## Key Quotes

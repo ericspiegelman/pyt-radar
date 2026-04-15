@@ -19,7 +19,7 @@ This episode of The John Kobylt Show focuses heavily on criticizing a controvers
 ## Key Moment
 
 > "Adam Miller, who's a tech executive from the West Side that hardly anybody knows, has 13%"
-> â Speaker C (John Kobylt) at 12:57
+> — Speaker C (John Kobylt) at 12:57
 > *This quote encapsulates Kobylt's main criticism - that Miller's polling numbers are suspect because he lacks name recognition among LA voters.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ Spencer Pratt appears on CBS LA to defend his Los Angeles mayoral candidacy afte
 ## Key Moment
 
 > "12 of my neighbors burned alive due to the negligence of our city leaders and Karen Bass, who was in Ghana knowing this wind-red weather event was coming."
-> â Spencer Pratt at 02:40
+> — Spencer Pratt at 02:40
 > *This represents Pratt's core motivation for running and his most serious accusation against the current mayor.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode discusses the LA wildfires response and upcoming mayoral race, with
 ## Key Moment
 
 > "If we look at what Karen Bass was doing 20 years ago, she was in Cuba learning how to make bombs with the people that would then go bomb Capitol Hill."
-> â Spencer Pratt at 07:48
+> — Spencer Pratt at 07:48
 > *This is Spencer Pratt's key attack against Karen Bass in defending his mayoral candidacy, highlighting her alleged communist connections.*
 
 ## Key Quotes

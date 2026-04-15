@@ -19,7 +19,7 @@ This episode of Monks & Merrill focuses on the challenges facing downtown Los An
 ## Key Moment
 
 > "He has expanded his issue list and seemed to speak pretty well about some of his concerns in the city."
-> â Michael Monks at 18:22
+> — Michael Monks at 18:22
 > *This represents the host's surprisingly positive assessment of Spencer Pratt's evolution as a serious mayoral candidate.*
 
 ## Key Quotes

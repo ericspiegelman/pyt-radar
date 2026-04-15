@@ -19,7 +19,7 @@ This episode features Los Angeles City Council member Nithya Raman as the main g
 ## Key Moment
 
 > "The elected representative for the area that I lived in didn't meet with us, and I got really frustrated, and I knew that there was a lot that the city could do."
-> â Nithya Raman at 00:01
+> — Nithya Raman at 00:01
 > *This quote captures the origin story of Raman's political career - her frustration with an unresponsive incumbent led her to run for city council herself.*
 
 ## Key Quotes

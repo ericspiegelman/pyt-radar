@@ -19,7 +19,7 @@ This episode discusses the cancellation of a USC gubernatorial debate and covers
 ## Key Moment
 
 > "And then tech entrepreneur Adam Miller at 6% also doesn't surprise me."
-> â Dominique DiPrima at 45:35
+> — Dominique DiPrima at 45:35
 > *This is when the host introduces Adam Miller while reviewing new mayoral polling results.*
 
 ## Key Quotes

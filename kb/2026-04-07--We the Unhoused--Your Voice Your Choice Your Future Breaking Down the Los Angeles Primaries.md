@@ -19,7 +19,7 @@ This episode of 'We the Unhoused' features interviews with Los Angeles political
 ## Key Moment
 
 > "Many of the unhoused that was taken at Venice Beach have returned from Inside Safe. So it's not going as well as she's purporting."
-> â Theo Henderson at 89:59
+> — Theo Henderson at 89:59
 > *This quote directly challenges the effectiveness of Mayor Bass's signature homelessness program, suggesting it's failing to provide lasting solutions.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode focuses on California politics, particularly discussing sexual hara
 ## Key Moment
 
 > "Any of the voters that are looking at Nithya, they're looking at Spencer, they're looking at Ray Huang or Adam Miller or undecided, they are all a vote against Karen Bass."
-> â Speaker B at 28:04
+> — Speaker B at 28:04
 > *This is the only substantive mention of Adam Miller, positioning him as one of the anti-incumbent candidates in the LA mayor's race.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode discusses various political topics including protests against Trump
 ## Key Moment
 
 > "And what Karen Bass gonna do? She monitoring. Oh, I'm so scared now. I'm concerned. I'm worried. Mama is in charge."
-> â Speaker A at 25:07
+> — Speaker A at 25:07
 > *The host mocks Karen Bass's response to the LA protests, using her as an example of ineffective female leadership.*
 
 ## Key Quotes

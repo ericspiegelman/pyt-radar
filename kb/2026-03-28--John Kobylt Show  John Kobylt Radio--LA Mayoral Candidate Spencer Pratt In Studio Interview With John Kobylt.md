@@ -19,7 +19,7 @@ Spencer Pratt appears as an in-studio guest for the full hour on the John Kobylt
 ## Key Moment
 
 > "I'm so excited to be running for mayor because I'm going to show them there are consequences and there are enough angry taxpayers, they're going to say, 'No more. You're done, Mayor Bass.'"
-> â Spencer Pratt at 03:12
+> — Spencer Pratt at 03:12
 > *This quote encapsulates Pratt's campaign message of accountability and his confidence in defeating the incumbent mayor through voter anger.*
 
 ## Key Quotes

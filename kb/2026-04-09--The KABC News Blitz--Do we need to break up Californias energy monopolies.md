@@ -19,7 +19,7 @@ This is a California-focused news show covering various local issues including e
 ## Key Moment
 
 > "Who did we put in charge of the DWP? Karen Bass? A former executive at PG&E, Janice Quiñones."
-> â Randy Wang at 14:48
+> — Randy Wang at 14:48
 > *The host criticizes Karen Bass for appointing a former PG&E executive to lead LA's Department of Water and Power while discussing problems with energy monopolies.*
 
 ## Key Quotes

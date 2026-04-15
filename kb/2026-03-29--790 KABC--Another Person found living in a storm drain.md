@@ -19,7 +19,7 @@ This is a California news and politics show where host Randy Wang discusses loca
 ## Key Moment
 
 > "How did Kohl's close under your watch? How is it that Langer's keeps threatening to close?"
-> â Randy Wang at 44:30
+> — Randy Wang at 44:30
 > *The host suggests this will be a line of attack against Karen Bass from mayoral opponents regarding the closure of historic LA establishments.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of The Bill Handel Show covers various topics including a fictional
 ## Key Moment
 
 > "This is another one I think that's going to be the nail in her coffin, uh, that she is going to lose the election."
-> â Bill Handel at 12:59
+> — Bill Handel at 12:59
 > *Handel predicts the Olympics ticket pricing controversy will end Karen Bass's political career.*
 
 ## Key Quotes

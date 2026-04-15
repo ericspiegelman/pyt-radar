@@ -19,7 +19,7 @@ This episode of Tim Conway Jr.'s radio show focuses primarily on moon landing co
 ## Key Moment
 
 > "You can say Karen Bass, and you can say Belio ate a whole chicken, but you can't say Bass and then the chicken because it's too close to a-hole, the word, the entire word."
-> â Tim Conway Jr. at 67:45
+> — Tim Conway Jr. at 67:45
 > *This is the only mention of Karen Bass in the entire episode, used as an example of acceptable political terminology on radio.*
 
 ## Key Quotes

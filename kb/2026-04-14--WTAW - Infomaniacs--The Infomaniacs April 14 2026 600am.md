@@ -19,7 +19,7 @@ This is a morning radio show episode covering local news, sports, and general to
 ## Key Moment
 
 > "The Hotel Worker Minimum Wage Ordinance was signed by Mayor Karen Bass in September."
-> â Speaker A at 24:32
+> — Speaker A at 24:32
 > *This identifies Karen Bass as the mayor who signed the controversial minimum wage policy that is reportedly causing job losses in LA hotels.*
 
 ## Key Quotes

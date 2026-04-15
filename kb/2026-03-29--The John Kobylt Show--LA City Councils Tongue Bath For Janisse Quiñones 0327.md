@@ -19,7 +19,7 @@ The episode heavily criticizes LA Mayor Karen Bass's handling of the Palisades f
 ## Key Moment
 
 > "It's Karen Bass, Janice Quinonez, and Kristin Crowley. Boy, that's a real diverse group, huh? 3 women, all 3 incompetent, and they teamed up to burn down the Palisades."
-> â John Kobylt at 16:40
+> — John Kobylt at 16:40
 > *This quote encapsulates the host's central thesis blaming Karen Bass and two other women leaders for the Palisades fire disaster.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is an Easter-themed episode of Venice Pulse featuring wide-ranging discussi
 ## Key Moment
 
 > "That's what Karen Bass should do when people—"
-> â Speaker B at 44:56
+> — Speaker B at 44:56
 > *This comes during a discussion about how politicians should handle constituent inquiries, suggesting Bass should send autographed photos like they joked about with other politicians.*
 
 ## Key Quotes

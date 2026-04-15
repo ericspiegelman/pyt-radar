@@ -19,7 +19,7 @@ This is a talk radio show episode primarily announcing Antonio Villaraigosa's up
 ## Key Moment
 
 > "Since Karen Bass left for Africa, since she defunded the fire department, since her protégé Janice Quinones never filled up the Santa Ynez Reservoir, much of the Palisades burned, including his home."
-> â John Kobelt at 16:45
+> — John Kobelt at 16:45
 > *This quote encapsulates the host's main criticisms of Bass regarding the fire response failures and infrastructure neglect.*
 
 ## Key Quotes

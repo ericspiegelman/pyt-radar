@@ -12,14 +12,14 @@
 This 43-minute episode of The John Kobylt Show mentions Karen Bass.
 
 **Sentiment:** neutral
-**Sentiment Detail:** Automated analysis â sentiment could not be determined without Claude API.
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
 
 **Topics:** Karen Bass, The John Kobylt Show
 
 ## Key Moment
 
 > "KFI AM 640, you're listening to the Jon Cobell Podcast on the iHeartRadio app. Uh, we had Spencer Pratt on the first hour of the show, whole hour. Spencer Pratt gave a great pitch, uh, to be mayor of Los Angeles. You listen to this and tell me what you disagree with. Tell me if you see anything differently than the way he lays out not only what's going on in LA but what he's going to do to fix it and why it would work. It's not that complicated. So I want you to listen to Spencer Pratt coming up, uh, on the podcast. Released after 6 o'clock on the iHeart app. It's hour number 1. Now, in this moment— that sounds like something Newsom would say— in this moment we have Susan Shelley. Susan Shelley writes columns for the Southern California News Group, like the Orange County Register and LA Daily News. She's also with the Howard Jarvis Taxpayers Association, and she has a column on taxes, uh, because, uh, Karen Bass has lost control of the city. Uh, all kinds of goons, hooligans, criminals, mental patients, homeless people are running around stealing enormous amounts of copper wire, and they have caused 60,000 streetlights to go dark. And Bass now wants to buy solar lights. She needs $125 million, so she wants to tax homeowners. Because she let the criminals and mental patients run free. You know, as Spencer Pratt pointed out, how do you think all the crazy people on the street get their money to buy their drugs? They steal copper, copper wire. $125 million in property taxes. Susan Shelley, welcome. How are you?"
-> â Speaker G at 03:22
+> — Speaker G at 03:22
 > *Karen Bass was discussed in this episode*
 
 ## Key Quotes

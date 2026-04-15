@@ -19,7 +19,7 @@ This episode features Nithya Raman, Los Angeles City Council member for District
 ## Key Moment
 
 > "Mayor Bass gave the union more money than they were asking for, which never happens in negotiations."
-> â Nithya Raman at 05:36
+> — Nithya Raman at 05:36
 > *This quote crystallizes Raman's central criticism of Bass's leadership and provides a concrete example of the budget mismanagement driving her campaign.*
 
 ## Key Quotes

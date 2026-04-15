@@ -19,7 +19,7 @@ This episode features Pastor Edward Anderson discussing prayer, politics, and LA
 ## Key Moment
 
 > "In the final analysis in the primary, I imagine he'll get around 9%."
-> â Pastor Edward Anderson at 17:39
+> — Pastor Edward Anderson at 17:39
 > *This represents Pastor Anderson's prediction that despite Spencer Pratt's polling numbers, he won't be a serious contender in the LA mayoral race.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This is Hour 2 of the Petros and Money Show focusing on sports talk, particularl
 ## Key Moment
 
 > "Is that Karen Bass over there, here in, uh, Cuba?"
-> â Petros Papadakis at 37:27
+> — Petros Papadakis at 37:27
 > *This is the only mention of Karen Bass in the entire episode, made as a throwaway comedic comment during a segment about a Jamaican-Canadian reggae artist.*
 
 ## Key Quotes

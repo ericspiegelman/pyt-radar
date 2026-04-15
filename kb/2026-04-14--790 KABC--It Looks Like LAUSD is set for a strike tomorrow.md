@@ -19,7 +19,7 @@ This is a California news show covering various local issues including an upcomi
 ## Key Moment
 
 > "maybe because Monica has pointed that out is one of the reasons that Karen Bass has never done an inside safe encampment resolution operation in Council District 7"
-> â Randy Wang at 11:58
+> — Randy Wang at 11:58
 > *The host suggests Karen Bass may be avoiding political opponents' districts when implementing her homelessness programs.*
 
 ## Key Quotes

@@ -19,7 +19,7 @@ This episode of the KSFO Podcast discusses California government transparency is
 ## Key Moment
 
 > "You're the mayor. This is your number one issue. Number one, not two, not three, not four. Number one. And you failed."
-> â Speaker C at 27:13
+> — Speaker C at 27:13
 > *This represents the hosts' harsh assessment of Bass's performance on homelessness after the sewer lady story broke.*
 
 ## Key Quotes

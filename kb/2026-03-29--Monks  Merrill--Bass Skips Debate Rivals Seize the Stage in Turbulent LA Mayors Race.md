@@ -19,7 +19,7 @@ This episode discusses the LA mayoral race, focusing on a recent debate where Ma
 ## Key Moment
 
 > "When I interviewed him shortly after his campaign was announced, I kind of left a little bit disappointed that his policy positions weren't better spelled out."
-> â Michael Monks at 06:49
+> — Michael Monks at 06:49
 > *This represents the host's main critique of Miller as a candidate - that despite his professional presentation, he lacks detailed policy substance.*
 
 ## Key Quotes

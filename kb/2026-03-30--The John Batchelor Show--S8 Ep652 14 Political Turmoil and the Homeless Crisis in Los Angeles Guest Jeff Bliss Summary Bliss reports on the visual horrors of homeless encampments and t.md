@@ -19,7 +19,7 @@ The episode discusses political challenges facing Los Angeles, particularly the 
 ## Key Moment
 
 > "She's really slipped in the polls to really dangerous levels if she wants to run for reelection."
-> â Jeff Bliss at 02:20
+> — Jeff Bliss at 02:20
 > *This quote captures the central political challenge facing Mayor Bass according to the discussion.*
 
 ## Key Quotes

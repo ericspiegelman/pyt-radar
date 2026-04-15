@@ -19,7 +19,7 @@ This episode of Monks & Merrill discusses space missions, rising fuel costs, and
 ## Key Moment
 
 > "She looked extraordinarily damaged at this time last year, like unrecoverable."
-> â Michael Monks at 30:59
+> — Michael Monks at 30:59
 > *This captures the hosts' assessment of Karen Bass's political vulnerability heading into the mayoral race.*
 
 ## Key Quotes

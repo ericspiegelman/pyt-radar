@@ -19,7 +19,7 @@ This episode covers Catholic Cardinals criticizing Trump's immigration policies,
 ## Key Moment
 
 > "What about Spencer Pratt? Are we feeling like there's any possibility that he could surprise us?"
-> â Charlie Kirk at 23:02
+> — Charlie Kirk at 23:02
 > *Charlie Kirk asks about Spencer Pratt's potential as a mayoral candidate amid discussion of challenging Democratic candidates in Los Angeles.*
 
 ## Key Quotes

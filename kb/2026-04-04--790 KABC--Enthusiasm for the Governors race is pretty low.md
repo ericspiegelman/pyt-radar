@@ -19,7 +19,7 @@ This episode discusses polling data showing LA Mayor Karen Bass trailing signifi
 ## Key Moment
 
 > "No, that is so unbelievably pathetic. She deserves every bit of it."
-> â Speaker A at 00:34
+> — Speaker A at 00:34
 > *This harsh reaction to Bass polling at only 25% as an incumbent mayor encapsulates the hosts' strongly negative view of her performance.*
 
 ## Key Quotes

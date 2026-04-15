@@ -19,7 +19,7 @@ This episode of The Calcio Guys features Rafa from Napoli Rant discussing his ex
 ## Key Moment
 
 > "I think it all kind of came together. Like they made a call to the LA mayor, Karen Bass, who decided, you know what, let's recognize this."
-> â Speaker C at 17:28
+> — Speaker C at 17:28
 > *Rafa explains how various connections including the LA mayor helped make the Napoli movie premiere event possible.*
 
 ## Key Quotes

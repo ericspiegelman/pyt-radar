@@ -19,7 +19,7 @@ This episode focuses on Spencer Pratt's mayoral campaign for Los Angeles, with e
 ## Key Moment
 
 > "He, along with Mayor Bass, Councilwoman Nithya Raman, entrepreneur Adam Miller, leftist activist Ray Huang— they're trying to break through to an electorate where nearly half are unsure of what they want from these guys."
-> â Chris Merrill at 26:08
+> — Chris Merrill at 26:08
 > *This is the only mention of Adam Miller in the entire episode, identifying him as an entrepreneur and mayoral candidate.*
 
 ## Key Quotes
