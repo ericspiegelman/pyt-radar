@@ -3246,6 +3246,28 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "DMIJJzgwbJ0"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fG09-ubUDAM",
+      "title": "Spencer Pratt - Bringing Common Sense to LA",
+      "show_name": "The Prevailing Narrative Podcast by Matt Bilinsky",
+      "date_found": "2026-04-16",
+      "date_published": "2026-04-16",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "fG09-ubUDAM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mZQ588dpk-U",
+      "title": "They Knew The Palisades Fire Was Coming But Ignored The Warning Signs | Joe Rogan &amp; Spencer Pratt",
+      "show_name": "JOEPEDIA",
+      "date_found": "2026-04-16",
+      "date_published": "2026-04-16",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "mZQ588dpk-U"
     }
   ]
 }
