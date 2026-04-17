@@ -3279,6 +3279,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "Hs2cSBgiMZE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_aR6VlVImXw",
+      "title": "Karen Bass Talks \u201cFinishing the Job\u201d at South LA Campaign HQ Opening    Los Angeles",
+      "show_name": "DiversityNewsTV",
+      "date_found": "2026-04-17",
+      "date_published": "2026-04-11",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "_aR6VlVImXw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=P8B3We0Idvg",
+      "title": "Joe Rogan Experience #2483 - Spencer Pratt | Podcast Summary",
+      "show_name": "Podcast Summaries",
+      "date_found": "2026-04-17",
+      "date_published": "2026-04-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "P8B3We0Idvg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rU-uGnEUQcg",
+      "title": "Nithya Raman opposes cleaning homeless encampments in Traci Park&#39;s District",
+      "show_name": "Cumulus News Talk",
+      "date_found": "2026-04-17",
+      "date_published": "2026-04-17",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "rU-uGnEUQcg"
     }
   ]
 }
