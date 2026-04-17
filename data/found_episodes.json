@@ -3268,6 +3268,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "mZQ588dpk-U"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Hs2cSBgiMZE",
+      "title": "Joe Rogan Experiencia #2483 - Spencer Pratt (En Espa\u00f1ol)",
+      "show_name": "Res\u00famenes de Podcast",
+      "date_found": "2026-04-17",
+      "date_published": "2026-04-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "Hs2cSBgiMZE"
     }
   ]
 }
