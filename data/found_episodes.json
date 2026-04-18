@@ -3323,6 +3323,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "5bLQ2wE8bsY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-unV_DMG6i4",
+      "title": "Spencer Pratt for LA Mayor! Ryan Gosling is Handsome AF in Project Hail Mary, &amp; Chris&#39;s 100% Made...",
+      "show_name": "Chris Fenton",
+      "date_found": "2026-04-18",
+      "date_published": "2026-04-18",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "-unV_DMG6i4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TsoNNAqWbKQ",
+      "title": "Joe Rogan Just Endorsed Reality TV Psychopath Spencer Pratt For LA Mayor",
+      "show_name": "LionMeows",
+      "date_found": "2026-04-18",
+      "date_published": "2026-04-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "TsoNNAqWbKQ"
     }
   ]
 }
