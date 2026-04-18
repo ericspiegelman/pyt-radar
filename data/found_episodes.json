@@ -3312,6 +3312,17 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "rU-uGnEUQcg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5bLQ2wE8bsY",
+      "title": "How LA Politicians Caused the Palisades Fire | Spencer Pratt @ Joe Rogan Experience",
+      "show_name": "Podcast Clips",
+      "date_found": "2026-04-18",
+      "date_published": "2026-04-18",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "5bLQ2wE8bsY"
     }
   ]
 }
