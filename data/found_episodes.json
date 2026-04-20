@@ -3356,6 +3356,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "JRFYNAkWnYE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tgQn0xgnxGk",
+      "title": "Joe Rogan Backs Spencer Pratt for LA Mayor + Rosie O\u2019Donnell Compares Swalwell to Clinton",
+      "show_name": "Adam Carolla",
+      "date_found": "2026-04-20",
+      "date_published": "2026-04-20",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "tgQn0xgnxGk"
     }
   ]
 }
