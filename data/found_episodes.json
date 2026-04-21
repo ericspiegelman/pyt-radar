@@ -3367,6 +3367,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "tgQn0xgnxGk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9oUNpCIS1xM",
+      "title": "S5 EP 15 - A complete unknown bc she in the trenches Rae Huang",
+      "show_name": "Propaganda",
+      "date_found": "2026-04-21",
+      "date_published": "2026-04-15",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "9oUNpCIS1xM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=YJBNTaaV588",
+      "title": "The Laguna Reunion and Spencer Pratt for Mayor!",
+      "show_name": "Let's Be Honest with Kristin Cavallari",
+      "date_found": "2026-04-21",
+      "date_published": "2026-04-21",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "YJBNTaaV588"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=u2tPfFDmVhs",
+      "title": "Fires, Fraud, and Homelessness: Why Spencer Pratt Is Running for Mayor of LA",
+      "show_name": "JRE Clips",
+      "date_found": "2026-04-21",
+      "date_published": "2026-04-15",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "u2tPfFDmVhs"
     }
   ]
 }
