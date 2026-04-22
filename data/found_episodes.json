@@ -3400,6 +3400,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "u2tPfFDmVhs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3V2d56VfJUg",
+      "title": "Kristin Cavallari Reacts To Spencer Pratt Running For Mayor | WWHL",
+      "show_name": "Watch What Happens Live with Andy Cohen",
+      "date_found": "2026-04-22",
+      "date_published": "2026-04-22",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "3V2d56VfJUg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=b9kLAcel2PQ",
+      "title": "Spencer Pratt Gets Adam Carolla\u2019s Endorsement for LA Mayor!",
+      "show_name": "Adam Carolla",
+      "date_found": "2026-04-22",
+      "date_published": "2026-04-22",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "b9kLAcel2PQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Sk4RDePu7C0",
+      "title": "Kennedy Says Spencer Pratt Can Be A &quot;Rational Disruptor&quot; For California Governor (4.21.26)",
+      "show_name": "Diamond Joe",
+      "date_found": "2026-04-22",
+      "date_published": "2026-04-21",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "Sk4RDePu7C0"
     }
   ]
 }
