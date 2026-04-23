@@ -3444,6 +3444,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "B50_6Qaehkk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_hgpCX72GO4",
+      "title": "Mayor Karen Bass Has Failed Los Angeles",
+      "show_name": "John Kobylt Show & John Kobylt Radio",
+      "date_found": "2026-04-23",
+      "date_published": "2026-04-22",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "_hgpCX72GO4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TxKPrKFKNpI",
+      "title": "Rico Charges - Government Coverup",
+      "show_name": "The Freedom Fighters Podcast",
+      "date_found": "2026-04-23",
+      "date_published": "2026-04-22",
+      "search_target": "Adam Miller",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "TxKPrKFKNpI"
     }
   ]
 }
