@@ -3466,6 +3466,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "TxKPrKFKNpI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1RZ4-Ka5K3g",
+      "title": "Spencer Pratt for Mayor?  Please No. ",
+      "show_name": "Robert Shane",
+      "date_found": "2026-04-23",
+      "date_published": "2026-04-22",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "1RZ4-Ka5K3g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0B20Qomh6Bk",
+      "title": "S3 - E12 Mayor Candidate Adam Miller",
+      "show_name": "Three Homeless Guys Podcast",
+      "date_found": "2026-04-23",
+      "date_published": "2026-04-23",
+      "search_target": "Adam Miller",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "0B20Qomh6Bk"
     }
   ]
 }
