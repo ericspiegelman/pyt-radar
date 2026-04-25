@@ -3499,6 +3499,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "txVvechicVg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4mZhQd7YNOI",
+      "title": "Spencer Pratt Wins Adam Carolla Endorsement in Bold LA Mayor Run",
+      "show_name": "Carolla Fan Archive",
+      "date_found": "2026-04-25",
+      "date_published": "2026-04-25",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "4mZhQd7YNOI"
     }
   ]
 }
