@@ -3510,6 +3510,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "4mZhQd7YNOI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mlTD6KTQjTk",
+      "title": "Spencer Pratt interview at Barkery",
+      "show_name": "Tim Pingel",
+      "date_found": "2026-04-26",
+      "date_published": "2026-04-26",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "mlTD6KTQjTk"
     }
   ]
 }
