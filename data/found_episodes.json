@@ -3521,6 +3521,35 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "mlTD6KTQjTk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GZida251iBs",
+      "title": "Los Angeles Mayor Karen Bass on Grounded!",
+      "show_name": "Grounded Podcast: Jon Tester & Maritsa Georgiou ",
+      "date_found": "2026-04-27",
+      "date_published": "2026-04-27",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Grounded Podcast Jon Tester  Maritsa Georgiou - Los Angeles Mayor Karen Bass on Grounded - Summary.docx",
+        "transcript": "/Grounded Podcast Jon Tester  Maritsa Georgiou - Los Angeles Mayor Karen Bass on Grounded - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/6irnasfvn4w6ox4o5v68g/Grounded-Podcast-Jon-Tester-Maritsa-Georgiou-Los-Angeles-Mayor-Karen-Bass-on-Grounded-Summary.docx?rlkey=lcf8r8bg6hreki7h4124v0mcr&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/l3hlypasx3xe24wag1ast/Grounded-Podcast-Jon-Tester-Maritsa-Georgiou-Los-Angeles-Mayor-Karen-Bass-on-Grounded-Transcript.docx?rlkey=7b3dixym6wi8sac5dkonx564e&dl=0"
+      },
+      "video_id": "GZida251iBs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=08s07G9V0Mg",
+      "title": "The LA Mayoral Race: Rae Huang and Andrew Kim",
+      "show_name": "Gurvey's Law",
+      "date_found": "2026-04-27",
+      "date_published": "2026-04-27",
+      "search_target": "Rae Huang",
+      "match_type": "guest",
+      "status": "not_relevant",
+      "video_id": "08s07G9V0Mg"
     }
   ]
 }
