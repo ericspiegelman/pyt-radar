@@ -3550,6 +3550,42 @@
       "match_type": "guest",
       "status": "not_relevant",
       "video_id": "08s07G9V0Mg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Po5vJMxPubs",
+      "title": "LA Mayor Karen Bass LIVE on Grounded!",
+      "show_name": "Grounded Podcast: Jon Tester & Maritsa Georgiou ",
+      "date_found": "2026-04-28",
+      "date_published": "2026-04-28",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Grounded Podcast Jon Tester  Maritsa Georgiou - LA Mayor Karen Bass LIVE on Grounded - Summary.docx",
+        "transcript": "/Grounded Podcast Jon Tester  Maritsa Georgiou - LA Mayor Karen Bass LIVE on Grounded - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/is833wg2t8w451v0dohzb/Grounded-Podcast-Jon-Tester-Maritsa-Georgiou-LA-Mayor-Karen-Bass-LIVE-on-Grounded-Summary.docx?rlkey=hsgrb5gsbqnlageepzbt7stuj&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/0nosz6wed0ykgds8aamz1/Grounded-Podcast-Jon-Tester-Maritsa-Georgiou-LA-Mayor-Karen-Bass-LIVE-on-Grounded-Transcript.docx?rlkey=rorzzlsuybohyos4xu90z1kqn&dl=0"
+      },
+      "video_id": "Po5vJMxPubs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DE_5wg9XNv0",
+      "title": "From The Hills Villain to MAYOR?! Spencer Pratt\u2019s Wild Comeback",
+      "show_name": "Wilko & Courts",
+      "date_found": "2026-04-28",
+      "date_published": "2026-04-28",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "dropbox_paths": {
+        "summary": "/Wilko  Courts - From The Hills Villain to MAYOR Spencer Pratts Wild Comeback - Summary.docx",
+        "transcript": "/Wilko  Courts - From The Hills Villain to MAYOR Spencer Pratts Wild Comeback - Transcript.docx"
+      },
+      "dropbox_links": {
+        "summary": "https://www.dropbox.com/scl/fi/1rcj83iygkaqvfuy6by17/Wilko-Courts-From-The-Hills-Villain-to-MAYOR-Spencer-Pratts-Wild-Comeback-Summary.docx?rlkey=6n53jam8hpshqks3ipm55hige&dl=0",
+        "transcript": "https://www.dropbox.com/scl/fi/j4li392ptg5sndvtiuy2b/Wilko-Courts-From-The-Hills-Villain-to-MAYOR-Spencer-Pratts-Wild-Comeback-Transcript.docx?rlkey=bq411s8icid7lyo753szvx9qb&dl=0"
+      },
+      "video_id": "DE_5wg9XNv0"
     }
   ]
 }
