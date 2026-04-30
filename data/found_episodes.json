@@ -4081,6 +4081,36 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/06b26b2125c14c37ac825b59803fda4d/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-cgSwOBLPSY",
+      "title": "The Arrington Gavin Show Ep. 575 &quot;SPENCER PRATT OUT RAISING KAREN BASS! WHAT DOES THIS MEAN LA?&quot;",
+      "show_name": "The Arrington Gavin Show ",
+      "date_found": "2026-04-30",
+      "date_published": "2026-04-29",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "-cgSwOBLPSY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=53UmQ-BRMsI",
+      "title": "HANDS UP POLICY W/ GUEST HOST JAMES FARR - LIVE 8 AM",
+      "show_name": "KBLA 1580",
+      "date_found": "2026-04-30",
+      "date_published": "2026-04-30",
+      "search_target": "Adam Miller",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "53UmQ-BRMsI"
     }
   ]
 }
