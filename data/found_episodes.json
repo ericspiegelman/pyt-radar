@@ -4216,6 +4216,51 @@
         "transcript": "#"
       },
       "video_id": "C4E1VxrVGU4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DJmgYzua2lo",
+      "title": "Druski, the Most Consequential Comedian? And LA Mayor Karen Bass on Wildfires, Housing, &amp; a 2nd Term",
+      "show_name": "Higher Learning",
+      "date_found": "2026-05-01",
+      "date_published": "2026-05-01",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "DJmgYzua2lo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XRN6puMMCcI",
+      "title": "WHCD, Tech CEO&#39;s, Karen Bass? PUNCHIE TV Ep 085 | Wed 4-29-26",
+      "show_name": "Punchie TV",
+      "date_found": "2026-05-01",
+      "date_published": "2026-04-30",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "XRN6puMMCcI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=P8tMiQTS2Bc",
+      "title": "Spencer Pratt Surges! Gavin&#39;s Latest Debacle. ",
+      "show_name": "The Rich Zeoli Podcast ",
+      "date_found": "2026-05-01",
+      "date_published": "2026-05-01",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "P8tMiQTS2Bc"
     }
   ]
 }
