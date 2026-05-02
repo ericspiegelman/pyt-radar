@@ -4261,6 +4261,21 @@
         "transcript": "#"
       },
       "video_id": "P8tMiQTS2Bc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=pheCFflC-3Q",
+      "title": "\u201cFraud, Fires &amp; Fallout: Comey, Karen Bass, and a Wild Week in America | Ep. 31\u201d",
+      "show_name": "The Wiley Wire",
+      "date_found": "2026-05-02",
+      "date_published": "2026-05-01",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "pheCFflC-3Q"
     }
   ]
 }
