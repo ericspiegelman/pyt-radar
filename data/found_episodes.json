@@ -4298,6 +4298,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "HIR6rXahkaQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=yV4QZiRXWSM",
+      "title": "LA Mayor Karen Bass slammed for \u2018despicable\u2019 attack on Palisades Fire victim Spencer Pratt",
+      "show_name": "JJ The Psychotherapist",
+      "date_found": "2026-05-03",
+      "date_published": "2026-05-02",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "yV4QZiRXWSM"
     }
   ]
 }
