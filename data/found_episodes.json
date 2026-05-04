@@ -4320,6 +4320,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "eAV2QYUe5wg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7JnqKomyHK0",
+      "title": "Valley Strong Recap: Rally &amp; Canvass for Mayor Karen Bass",
+      "show_name": "DiversityNewsTV",
+      "date_found": "2026-05-04",
+      "date_published": "2026-05-03",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "7JnqKomyHK0"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZoTHG89KXi8",
+      "title": "Reality TV Star Releases Ad That Makes LA Consider Voting Republican",
+      "show_name": "Actual Friends",
+      "date_found": "2026-05-04",
+      "date_published": "2026-05-02",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ZoTHG89KXi8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=14MHaP9BKuo",
+      "title": "Nithya Raman Is LEADING in the Polls!? + LA Shuts Down Inventor\u2019s Anti-Copper Theft Device",
+      "show_name": "Adam Carolla",
+      "date_found": "2026-05-04",
+      "date_published": "2026-05-04",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "14MHaP9BKuo"
     }
   ]
 }
