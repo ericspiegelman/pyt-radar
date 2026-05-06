@@ -4639,6 +4639,61 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "NkSKCE6eQGs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=HUMeO5yUBfg",
+      "title": "Karen Bass let my life \u2018BURN DOWN\u2019: Spencer Pratt",
+      "show_name": "JJ The Psychotherapist",
+      "date_found": "2026-05-06",
+      "date_published": "2026-05-06",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "HUMeO5yUBfg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Mx4Pc3LHeuk",
+      "title": "LA Mayor Race EXPOSED: Karen Bass vs Raman vs Spencer \u2013 You Won&#39;t Believe Who&#39;s Winning!",
+      "show_name": "ArnieVilleTV",
+      "date_found": "2026-05-06",
+      "date_published": "2026-05-05",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "Mx4Pc3LHeuk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EkpIETz0YIc",
+      "title": "Lefties Losing It: Will this brilliant ad see Spencer Pratt elected?",
+      "show_name": "Sky News Australia",
+      "date_found": "2026-05-06",
+      "date_published": "2026-05-06",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "EkpIETz0YIc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=oJRn4A3mUvE",
+      "title": "Fighting for the Lives of Dogs &amp; Exposing Systematic Corruption | The Fame Game Ep.41",
+      "show_name": "heidiandspencer",
+      "date_found": "2026-05-06",
+      "date_published": "2026-04-30",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "oJRn4A3mUvE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=lY8eoVURHtI",
+      "title": "Fixing Politics w/ Adam Conover and LA Mayoral Hopeful Nithya Raman",
+      "show_name": "Podcast But Outside",
+      "date_found": "2026-05-06",
+      "date_published": "2026-05-06",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "lY8eoVURHtI"
     }
   ]
 }
