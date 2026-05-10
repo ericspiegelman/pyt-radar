@@ -5343,6 +5343,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "Ftvkf_FHHjg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=LZhHFoE2uJY",
+      "title": "Tish Hyman Clashes Over REAL WOMEN as Jeanie Buss Backs Spencer Pratt in LA Race",
+      "show_name": "Carolla Fan Collection",
+      "date_found": "2026-05-10",
+      "date_published": "2026-05-08",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "LZhHFoE2uJY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=McK5QTp5gxo",
+      "title": "Spencer Pratt vs. Karen Bass: The Most Explosive Debate in LA History",
+      "show_name": "Dukta Feelgood",
+      "date_found": "2026-05-10",
+      "date_published": "2026-05-08",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "McK5QTp5gxo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1pMEa908bpc",
+      "title": "Spencer Pratt Goes On Attack During Heated Homelessness Clash In LA Mayor Debate",
+      "show_name": "Mo News",
+      "date_found": "2026-05-10",
+      "date_published": "2026-05-08",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "1pMEa908bpc"
     }
   ]
 }
