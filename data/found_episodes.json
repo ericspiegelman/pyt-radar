@@ -9601,6 +9601,83 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "KlvENaub6dI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CEKcxwTu7oU",
+      "title": "Spencer Pratt GRABS The Mic From Bill And Nobody Expected This To Happen to LA Mayor ",
+      "show_name": "Omoge BlogTV",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "CEKcxwTu7oU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8LVO-G4bzb4",
+      "title": "EVEN TMZ ADMITS IT: Spencer Pratt About to HUMILIATE Karen Bass",
+      "show_name": "NERK NEWS",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-23",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "8LVO-G4bzb4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=elNelsIU5aU",
+      "title": "Spencer Pratt GRABS The Mic From host &amp;: Nobody Expected This To Happen to LA Mayor",
+      "show_name": "Omoge News",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "elNelsIU5aU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=KuNTXPndv4g",
+      "title": "THEY ARE PANICKING",
+      "show_name": "Timcast IRL",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "KuNTXPndv4g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=yXWnuFz9ojk",
+      "title": "Sam Hyde The Spencer Pratt Situation, Homeless Problem, Los Angeles Dumpster FIRE &amp; Governor NEWSOM!",
+      "show_name": "Dollar Stream",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "yXWnuFz9ojk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ru43YceRSBA",
+      "title": "Can Spencer Pratt Win L.A. Mayor?",
+      "show_name": "Elex Michaelson",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ru43YceRSBA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Z5YTQoyw4xg",
+      "title": "Destiny Reacts To Nithya Raman Interview With Hasan Piker",
+      "show_name": "DGG clips",
+      "date_found": "2026-05-24",
+      "date_published": "2026-05-24",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "Z5YTQoyw4xg"
     }
   ]
 }
