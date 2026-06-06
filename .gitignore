@@ -1,0 +1,10 @@
+lunar-depths/.env
+.env
+.venv
+# Google service-account key for Sheets write access — never commit
+fast-channel/service_account.json
+**/service_account*.json
+# griffithtv trigger-optimization scratch (regenerable)
+fast-channel/griffithtv-eval/
+__pycache__/
+*.pyc

@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "blog",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080"],
+      "port": 8080
+    },
+    {
+      "name": "dodger-tickets",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3847", "-d", "/Users/ericspiegelman/dodger-tickets"],
+      "port": 3847
+    },
+    {
+      "name": "lunar-depths",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/ericspiegelman/PYT-Radar/lunar-depths/server.py"],
+      "port": 8888
+    },
+    {
+      "name": "fast-channel",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8077", "-d", "/Users/ericspiegelman/PYT-Radar/fast-channel"],
+      "port": 8077
+    }
+  ]
+}
