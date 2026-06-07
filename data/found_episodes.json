@@ -14451,6 +14451,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "Pojk4aBTJHY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EWyz9-mmSSM",
+      "title": "The LA Mayor\u2019s Race Just Became a National Warning Sign",
+      "show_name": "Riley Gaines",
+      "date_found": "2026-06-07",
+      "date_published": "2026-06-06",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "EWyz9-mmSSM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=l_kYoXwsAxI",
+      "title": "Spencer Pratt is a &#39;responsible and serious&#39; candidate, political commentator says",
+      "show_name": "Fox News Clips",
+      "date_found": "2026-06-07",
+      "date_published": "2026-06-07",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "l_kYoXwsAxI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=njQNvCiIMNM",
+      "title": "Lesbian Handshakes and Finger Squat Racks",
+      "show_name": "Revenge Of",
+      "date_found": "2026-06-07",
+      "date_published": "2026-06-04",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "njQNvCiIMNM"
     }
   ]
 }
