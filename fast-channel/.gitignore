@@ -1,6 +1,0 @@
-# Never commit the Google service-account key or scratch
-service_account.json
-*service_account*.json
-griffithtv-eval/
-__pycache__/
-*.pyc
