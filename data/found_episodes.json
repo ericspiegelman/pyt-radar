@@ -15683,6 +15683,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "FBOpwK_e-c8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XAenegtsjm8",
+      "title": "Latest News | Residents give thoughts on Spencer Pratt&#39;s potential move to Bentonville",
+      "show_name": "5NEWS",
+      "date_found": "2026-06-14",
+      "date_published": "2026-06-14",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "XAenegtsjm8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2gbGtQ-c0BU",
+      "title": "Happy Juneteenth | 420",
+      "show_name": "theboomerbunker",
+      "date_found": "2026-06-14",
+      "date_published": "2026-06-09",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "2gbGtQ-c0BU"
     }
   ]
 }
