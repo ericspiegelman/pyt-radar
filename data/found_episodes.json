@@ -15705,6 +15705,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "2gbGtQ-c0BU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WvNZ0P8ovqg",
+      "title": "Was the LA Mayoral Election RIGGED Against Spencer Pratt?",
+      "show_name": "PKA Clips",
+      "date_found": "2026-06-14",
+      "date_published": "2026-06-14",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "WvNZ0P8ovqg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=npoGUVi34AQ",
+      "title": "Steve Hilton Makes SHOCK Spencer Pratt Announcement After Election Win | &#39;Revenge&#39;...",
+      "show_name": "Benny Johnson",
+      "date_found": "2026-06-14",
+      "date_published": "2026-06-14",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "npoGUVi34AQ"
     }
   ]
 }
