@@ -15738,6 +15738,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "0uPDInTV-hc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mZZSocUx5no",
+      "title": "Spencer Pratt Announces His Next BIG Move | Ep 276",
+      "show_name": "Liz Wheeler",
+      "date_found": "2026-06-15",
+      "date_published": "2026-06-15",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "mZZSocUx5no"
     }
   ]
 }
