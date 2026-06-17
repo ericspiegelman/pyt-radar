@@ -15925,6 +15925,28 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "Zglf4dB_pM8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Tlskb5J9aZc",
+      "title": "Victor Davis Hanson:  After Spencer Pratt&#39;s Office Burned Down He Declared \u2018It&#39;s War\u2019",
+      "show_name": "The Daily Signal",
+      "date_found": "2026-06-17",
+      "date_published": "2026-06-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "Tlskb5J9aZc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=FCfznNESyNg",
+      "title": "DL Hughley GOES OFF on Spencer Pratt, Bill Maher &amp; Stephen A. Smith",
+      "show_name": "DL Hughley",
+      "date_found": "2026-06-17",
+      "date_published": "2026-06-11",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "FCfznNESyNg"
     }
   ]
 }
