@@ -15903,6 +15903,28 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "r1EvtOp10Uk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=S8SoCvvCpFw",
+      "title": "\u2018Cover up\u2019: Spencer Pratt teases shocking details to implicate Karen Bass and Gavin Newsom",
+      "show_name": "Sky News Australia",
+      "date_found": "2026-06-17",
+      "date_published": "2026-06-17",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "S8SoCvvCpFw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Zglf4dB_pM8",
+      "title": "Newsom Is A &quot;Simplistic Moron&quot; | Now Nithya Raman Cares About Safety?! | Newsom Investigation Update",
+      "show_name": "John Kobylt Show & John Kobylt Radio",
+      "date_found": "2026-06-17",
+      "date_published": "2026-06-17",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "Zglf4dB_pM8"
     }
   ]
 }
