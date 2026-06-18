@@ -15991,6 +15991,50 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "VZ7wgr11_8o"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JkVLLMaHu_E",
+      "title": "Spencer Pratt Teams Up with Karen Bass&#39; BROTHER to Sue the LA Mayor!",
+      "show_name": "BlazeTV",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-17",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "JkVLLMaHu_E"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dRGplMo0-KU",
+      "title": "Trump&#39;s BIG Opportunity With Spencer Pratt",
+      "show_name": "Liz Wheeler",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-18",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "dRGplMo0-KU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=roa9pb5nqg8",
+      "title": "Spencer Pratt Raises Serious Questions About the LA Election",
+      "show_name": "BFr3sh",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "roa9pb5nqg8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cvYJYap2uEc",
+      "title": "L.A. Mayoral Candidate Nithya Raman Reacts to Spencer Pratt\u2019s Post-Election Tirade and Fraud Claims",
+      "show_name": "MS NOW",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-13",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "cvYJYap2uEc"
     }
   ]
 }
