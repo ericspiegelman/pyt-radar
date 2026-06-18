@@ -15947,6 +15947,50 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "FCfznNESyNg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1QBW48Z4IdQ",
+      "title": "Mayor Karen Bass Has UNHINGED MELTDOWN on CNN Interview",
+      "show_name": "Brandon Lehman Zone",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-18",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "1QBW48Z4IdQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AB9lPfSRzdg",
+      "title": "More On Californication Of Spencer Pratt With Chris Gleason",
+      "show_name": "CDM",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-18",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "AB9lPfSRzdg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ADPKvVymNvU",
+      "title": "Pop Culture Chaos &amp; Another Unhinged Listener Email",
+      "show_name": "Serena Laturnas",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-18",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ADPKvVymNvU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=VZ7wgr11_8o",
+      "title": "\u00a1QUE ALGUIEN ME EXPLIQUE! El misterio de Spencer Pratt | Ep. 400 - Gustavo Vargas",
+      "show_name": "VOZ",
+      "date_found": "2026-06-18",
+      "date_published": "2026-06-13",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "VZ7wgr11_8o"
     }
   ]
 }
