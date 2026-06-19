@@ -16090,6 +16090,28 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "sk9afCjCQA0"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xKiezw3NDII",
+      "title": "Imelda Padilla Doesn&#39;t Hold Back: Spencer Pratt, Karen Bass, Banning Nas &amp; More! | Scottie N Frnds",
+      "show_name": "SBRBN",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-19",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "xKiezw3NDII"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=U50RY78ccEg",
+      "title": "&quot;Wow, Okay&quot; \u2013 Jen Is Back! 65lbs of Bikinis, Kids Hate Taxes, &amp; Spencer Pratt Recap - Balls and S...",
+      "show_name": "Chris Fenton",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-19",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "U50RY78ccEg"
     }
   ]
 }
