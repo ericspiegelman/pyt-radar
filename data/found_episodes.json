@@ -16035,6 +16035,61 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "cvYJYap2uEc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=t1qR1wOmsmY",
+      "title": "Karmelo Anthony Verdict Fallout + California&#39;s Ongoing Mess | PP 05",
+      "show_name": "Pretty Political",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-16",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "t1qR1wOmsmY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vA3R7wEAz-g",
+      "title": "Spencer Pratt: How to Be Famous (Summer Series)",
+      "show_name": "Voxera Production Official",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-19",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "vA3R7wEAz-g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z5CzldUC5JQ",
+      "title": "Spencer Pratt Lost \u2014 But He Is Not Done",
+      "show_name": "Pretty Political",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "z5CzldUC5JQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=O5MuvyW6MdQ",
+      "title": "Spencer Pratt isn&#39;t done with Los Angeles",
+      "show_name": "Cumulus News Talk",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-12",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "O5MuvyW6MdQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sk9afCjCQA0",
+      "title": "Gavin Newsom &amp; $347M In Behested Payments | Nithya Raman&#39;s Word Salad | Newsom Is &quot;Fool&#39;s Gold&quot;!",
+      "show_name": "John Kobylt Show & John Kobylt Radio",
+      "date_found": "2026-06-19",
+      "date_published": "2026-06-18",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "sk9afCjCQA0"
     }
   ]
 }
