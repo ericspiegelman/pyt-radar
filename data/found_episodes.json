@@ -16189,6 +16189,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "mstay1WDNRw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=yKeipjbxFi4",
+      "title": "Frank Stallone NewsNation LA Mayoral Coverage: Spencer Pratt, LA Crime &amp; Leaving California!",
+      "show_name": "Frank Stallone Podcast - Who is this Guy?",
+      "date_found": "2026-06-21",
+      "date_published": "2026-06-20",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "yKeipjbxFi4"
     }
   ]
 }
