@@ -16200,6 +16200,39 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "yKeipjbxFi4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XevESYvYcQg",
+      "title": "Bill Maher &amp; Spencer Pratt Sound Alarm on Los Angeles&#39; Growing Problems",
+      "show_name": "CelebCore",
+      "date_found": "2026-06-21",
+      "date_published": "2026-06-21",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "XevESYvYcQg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rx-AeO5zf5g",
+      "title": "Spencer Pratt: Homeless vs Living on the Street /Compassion vs Autonomy",
+      "show_name": "Anonymous Addiction Deprogramming Podcast",
+      "date_found": "2026-06-21",
+      "date_published": "2026-06-20",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "rx-AeO5zf5g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xEJnymglHsY",
+      "title": "Time to Pack, Spencer Pratt",
+      "show_name": "The Morning ReWrite",
+      "date_found": "2026-06-21",
+      "date_published": "2026-06-20",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "xEJnymglHsY"
     }
   ]
 }
