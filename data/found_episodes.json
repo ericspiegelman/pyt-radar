@@ -16233,6 +16233,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "xEJnymglHsY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TegrA8h_x2E",
+      "title": "How Nithya Raman Got Her Votes with Christian Hartsock",
+      "show_name": "Politics in Perspective with Tom Del Beccaro",
+      "date_found": "2026-06-22",
+      "date_published": "2026-06-22",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "TegrA8h_x2E"
     }
   ]
 }
