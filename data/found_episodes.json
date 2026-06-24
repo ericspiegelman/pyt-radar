@@ -16850,6 +16850,28 @@
       "match_type": "mentioned",
       "status": "transcript_unavailable",
       "video_id": "rJz3WrUfgfI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8XVOCGsjFl0",
+      "title": "LA Medicare Fraud Bust | The Air Is &quot;Not Dangerous&quot; | Abused Skid Row Animals Get Celeb Help",
+      "show_name": "John Kobylt Show & John Kobylt Radio",
+      "date_found": "2026-06-24",
+      "date_published": "2026-06-24",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "8XVOCGsjFl0"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=OYH1vED75TA",
+      "title": "Jelly Jim and Secret GFs - The Hills Season 3, Episode 22",
+      "show_name": "Millennial TeaV",
+      "date_found": "2026-06-24",
+      "date_published": "2026-06-23",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "OYH1vED75TA"
     }
   ]
 }
