@@ -16894,6 +16894,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "UetVTPlAw28"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ea4xMZ_FBGk",
+      "title": "Bill Maher Couldn&#39;t Argue With Spencer Pratt&#39;s Common Sense Message",
+      "show_name": "MagaReality",
+      "date_found": "2026-06-25",
+      "date_published": "2026-06-25",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "ea4xMZ_FBGk"
     }
   ]
 }
