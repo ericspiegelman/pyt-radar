@@ -1,0 +1,83 @@
+# PRESIDENTS ADDRESS ! RELIGIOUS LIBERTY COMMISSION
+
+**Show:** 6/27/26
+**Date Published:** 2026-06-26
+**Date Found:** 2026-06-26
+**URL:** http://doctorchillville.com?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website
+**Search Target:** Spencer Pratt (guest)
+**Duration:** 16 minutes
+
+## Summary
+
+This 16-minute episode of 6/27/26 mentions Spencer Pratt.
+
+**Sentiment:** neutral
+**Sentiment Detail:** Automated analysis — sentiment could not be determined without Claude API.
+
+**Topics:** Spencer Pratt, 6/27/26
+
+## Key Moment
+
+> "Search target mentioned in this episode"
+> — Unknown at 00:00
+> *Automated detection — review recommended*
+
+## Full Transcript
+
+[00:00] **Speaker A:** Dan Patrick, and I want to thank you, Dan, because you've done a fantastic job. Fantastic job. Vice Chairman Ben Carson. Dr. Ben Carson, my friend. He was originally my opponent. He ran very, very tough. I didn't like running against him. He was very tough. He was a tough one, but he's a great gentleman. Attorney General Todd Blanch. Where's Todd?
+
+[00:22] **Speaker B:** Todd?
+
+[00:23] **Speaker A:** You're doing good. Everybody tells me what a good job you're doing. I agree. They're all even. The senators are all saying, well, he's doing a great job. Secretary of Housing and Urban Development Scott Turner. Scott, thank you. Dr. Ryan Anderson. Ryan, thank you very much. Bishop Robert Barron. Attorney Allison Ho. Dr. Phil. Some would call him Dr. Phil McGraw. We all know him as Dr. Phil, one of the most successful people ever on television, I might add. Thank you, Phil. President and CEO of First Liberty Institute, Kelly Shackelford. Kelly, thank you. Rabbi Meir Soloveitchek. Thank you, Rabbi. Pastor Paula White has been with the campaign from day one. And Jenny Corn worked with Paula so well. We've got, I think, 94% of the vote, the evangelical vote. Nobody's ever gotten a number like that. And we're very honored and part of it is because of the people standing behind me. The director of the White House Domestic Policy Council, Vince Haley. He used to be my speechwriter. Now he went on to policy and he's doing a great job. He's a fantastic guy. In May of last year, I established the Presidential Commission on Religious Liberty to outline threats to the free exercise of religion in our country and to provide recommendations for action. America was founded by people of faith, and it was settled as a haven for religious freedom. So important as we prepare to celebrate the 250th anniversary of our founding next week. It is only appropriate that we work to strengthen this fundamental right and to most essentially have liberty for generations to come. We want religious liberty. We want liberty, but we also want religious liberty. We will closely study this report that is being presented to me as president today, and my administration will continue to work with the, really, the pillars of protecting religious liberty for all Americans. And we must also remain one nation under God. We will never let that phrase be stolen from us. You know, people are trying to steal it. We all know that very well. That phrase will never be stolen. It will stand proudly in our courts and everywhere else where we have it. And I want to thank this great team of outstanding work. And I'd like to start off with the chairman, Dan Patrick, and say a few words about the report, followed by a couple of the people that I know up here so well. And they're going to speak at random if they want, but it will be followed by Vice Chairman Dr. Ben Carson. So, Dan, if you would, you'll start it off, and then Ben, and then you could say a few words, everybody. As you want. Thank you.
+
+[03:19] **Speaker C:** Yes, sir. First of all, Mr. President, thank you for hosting us today, and thank you for establishing this commission. It was just 13 months ago when we stood in the Rose Garden. Now it's an incredibly beautiful Rose Garden today. We just stood there and we talked about religious liberty and that no president in our history has stood more for God than this president. He has been unashamed to speak the word of Jesus. He's been unashamed to speak up for all faiths. And he established this commission so that we would assure Americans that religious liberty, that this great inheritance from our founding fathers, would continue for another 250 years. And Mr. President, we believe this will be one of your greatest legacies, and you happen to be the perfect president to be here in the 250th celebration. The question is, what is religious liberty? It's our conscience. It's that little voice inside of us that tells us right from wrong. It's that voice that when we're in trouble, we can talk to in our quiet moments. It's that voice when we feel unloved and alone that can comfort us through a higher power. When governments can take away your religious liberty, they're putting their hand in your heart and taking everything you believe in. And if governments can do that, then they become God. The president spoke earlier today of the communist threat in this country. We know what communists do around the world. They remove God, they close the churches, they punish the believers. And so this is so important at this point in time in history. And we didn't know about this communist movement a year ago when we were here. But this is the perfect time to stand up and say to America, you have been given this great inheritance and you deserve to have religious liberty. The key is that after 103 witnesses, after 7 months of testimony, after 200 pages of testimony that we're delivering today, we found there was one constant theme. The overwhelming majority of our witnesses said that they were attacked and punished, and what was used against them was one phrase that's not in the Constitution, and that phrase is separation of church and state. The left has used that one phrase that was one line out of one of hundreds of letters by Thomas Jefferson to batter and hammer people of faith for the last 70 to 80 years. And this report will speak very clearly that we want to be sure Americans understand that they cannot be attacked by that phrase any longer. So we have 12 recommendations. I'll read the first 6. My great vice chairman will read the next 6, and then members will speak to these issues. So, Mr. President, recommendation number 1: Instruct the Department of Justice to issue guidance clarifying the proper understanding of the Establishment Clause and the separation of church and state. Number 2, the Department of Justice, the Department of Health and Human Services, the Equal Employment Opportunity Commission shall issue Know Your Rights posters for students, parents, public teachers, administrators, religious leaders, religious institutions, healthcare workers, and military service members. Thank you, Carson. I'll let you finish with the remaining 7, 6, 6. Go ahead.
+
+[07:00] **Speaker D:** Combat Anti-Semitism through enforcement of civil rights laws, litigation of credible allegations of anti-Semitic discrimination and violence, and civic education. Protect religious Americans from government-led litigation targeting their free exercise. Repeal the Johnson Amendment. Order the Department of War to streamline and improve the religious accommodation process. Continue efforts to restore the retirement or re-enlistment eligibility of service members who lost employment, health insurance, pensions, and other benefits because of their religious beliefs about COVID vaccines. And lastly, honor the courage of religious liberty heroes through creating a Presidential Medal of Religious Liberty and First Freedom Hero Awards to recognize Americans who stand up for religious freedom and play an indispensable role in protecting citizens' constitutional rights. And, Mr. President, we just want to thank you, first of all, for appointing us to this commission, and secondly, for your steadfast dedication to religious liberty. I don't think anybody has done as much as you have, maybe not everybody else put together. And some people in the beginning thought it was just fake, it was just politics, but you've been steadfast throughout the whole thing. And it's a big part of America. Our founding document says that our rights come from our Creator and not from government. And people who try to divorce us from that heritage, do they realize that that's in our founding document? Do they realize that our Pledge of Allegiance says we are one nation under God? Do they realize that many courtrooms in the land, on the wall it says, "In God we trust"? That every coin in their pocket, every bill in their wallet says, "In God we trust"? So if it's in all those places, but we're not supposed to talk about it, maybe we need to see a psychiatrist.
+
+[09:08] **Speaker A:** Thank you.
+
+[09:11] **Speaker C:** Other members?
+
+[09:13] **Speaker A:** Would anybody like to say anything?
+
+[09:15] **Speaker E:** Anybody?
+
+[09:16] **Speaker C:** Dr. Feld?
+
+[09:17] **Speaker F:** Well, Mr. President, I want to underline that this wasn't a performative commission. I remember walking in there, the Attorney General's there. I walk in the next one, the President of the United States is there seeing what's going on with the commission. And what stuck out at me for me is how many Americans showed up saying that they were persecuted in healthcare, military, education, different walks of life for living their faith and standing up for their faith. It's not just the liberty to choose which house of worship they want. It's actually getting into their daily life, and they're being persecuted in their jobs, in their in their professions. And that's where the, the fight for liberty is actually showing up. And, and they're having the courage to come and talk about that. They can't show a cross on their desk at school. They, they can't refuse a vaccine because it's against their religion. And, and they're having the courage to stand up for that. And President Trump is backing them all the way. And this commission is making it all transparent, and I'm just very honored to have been part of that.
+
+[10:33] **Speaker A:** Thank you very much, Phil. Appreciate your support. You're a great, great gentleman. Thank you. Anybody?
+
+[10:39] **Speaker B:** Yep.
+
+[10:39] **Speaker E:** Mr. President, just thank you for creating this commission. You know, as we celebrate the 250th, we're reminded that we're created equal, we're endowed by our Creator with inalienable rights, that the right to religious freedom for the Founders is because of duties to the Creator. What we heard over and over during our commission hearings were people who thought that the Creator should banished from the public square, that the Establishment Clause meant that religion had to be kept in a closet. We saw over and over again students being told they can form a club but not if it's a religious club. They can speak at commencement but not if they mention God. Parents can get vouchers but not if they use it at a religious school. Over and over again, double standards where religious Americans were victimized. And then we saw unjust ideologies, particularly trans ideology, where parents were told, we're going to secretly transition your kids. Medical doctors were told, if you blow the whistle on this, we're going to crash you over and over again. The recommendation that I really want to encourage you to make prominent is the last one that Dr. Carson read. Who a community celebrates shows what a community values, and we should be celebrating the heroes of religious liberty. Over and over again, we saw men and women who were victimized, and then they fought back and they won, and we should celebrate those heroes.
+
+[11:52] **Speaker A:** Thank you very much.
+
+[11:54] **Speaker B:** Thank you, Mr. President. I just want to add first how grateful I am for the privilege of serving on this commission and for being given the opportunity to work for the religious liberty of all Americans. Dr. Carson, as part of the recommendations of this commission mentioned fighting against antisemitism, fighting against Jew hatred. And of course, your administration has been so, so incredible in the way that it's worked on this issue. I'll be heading back now for Shabbat to New York. As you know, the Jewish community there faces a lot of threats. And it's a scary time in New York right now.
+
+[12:30] **Speaker A:** Serious threats.
+
+[12:31] **Speaker B:** Very serious threats, as you mentioned in your speech today. And I, for one, am profoundly grateful for your leadership on this matter and the incredible leadership of the Justice Department on this matter and of the entire administration. Thank you.
+
+[12:43] **Speaker A:** Thank you very much. Thank you, Reverend. Appreciate it. This is the report. It was just presented to me by the group. Beautiful. And you'll all get a copy of this. During the day. And you'll see it's quite a report. A lot of very important things in this report having to do with religion and actually some other topics also. But it's very important.
+
+[13:11] **Speaker C:** Paula, did you want to speak?
+
+[13:12] **Speaker G:** I want to say thank you, President Trump. You are the greatest champion of faith. And these were not just superficial woundings that we heard against people of faith. They were egregious acts that were very difficult to even listen to, that you would think wouldn't happen in a country like ours, but they did to 4-year-olds, 6-year-olds, little children, to moms, dads, communities. The rejection, the pain, the trauma that was caused simply because of faith. And it is just inconceivable that no one has stood up like you have stood up to fight for faith, which gives us meaning and purpose and hope and an ability to continue to be our better selves. So thank you for honoring people of faith and being the greatest champion with this religious commission, with two DOJ task force, with the historical White House Faith Office, and all the many other things you've done. We could sit here and list this all day, but your history will go down as the greatest history of a president that fought for people of all faiths. And we're grateful.
+
+[14:16] **Speaker A:** Thank you.
+
+[14:17] **Speaker G:** Yes, sir.
+
+[14:17] **Speaker A:** Thank you very much.
+
+[14:18] **Speaker H:** Mr. President, I'm very grateful to you as well. The commission was A wonderful year. I enjoyed the meetings very much, and the witnesses were very impressive. People we heard— I'm struck as I stand in this historic place looking over the portrait of James Madison. We spent a lot of time talking about the First Amendment. No one in this commission wants an established religion, but we all want the free exercise of religion. We sense that being limited different ways. I think we also sense that behind a lot of the particular offenses, there was this great battle, you might say, with what I call the culture of self-invention, that my freedom determines value. I invent who I am.
+
+[14:51] **Speaker D:** I determine what's good.
+
+[14:53] **Speaker H:** And the avatars of that culture realize that the religious people stand to thwart that view. We think there are objective goods, moral goods, spiritual goods that we ought to align our freedom with. And I think that came through a lot in the witness testimony. But it was a wonderful experience. I think this commission accomplished a lot. So God bless you for drawing it into existence.
+
+[15:12] **Speaker A:** Thank you very much. Vince, you want to say something?
+
+[15:15] **Speaker I:** Yes, sir. Our founders know and wrote that no government has the right to become between the citizen and the relationship with God. It's one of the most powerful forces in life. Life, in anybody's life. I'd say two things about this report. One, it's a body of evidence. We took testimony so people can judge for themselves what people said in this report's body of evidence. And to violate religious liberty is self-destructive in two ways. One, religious people, religious organizations provide so much fruit for society, whether it's education, healthcare. To violate the beliefs of those organizations and the people that work there would be undermining for all citizens and the type of value they get from that. And secondly, the people that defend our freedom writ large are often religious people because they get a power from above. And so if you go after religious people, you're actually undermining, undermining the very foundations of our freedom and those who will protect in this country.
