@@ -16905,6 +16905,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "ea4xMZ_FBGk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=x2TDYzx7AE0",
+      "title": "Spencer Pratt: How to Be Famous (FBF)",
+      "show_name": "Voxera Production Official",
+      "date_found": "2026-06-26",
+      "date_published": "2026-06-26",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "x2TDYzx7AE0"
     }
   ]
 }
