@@ -17321,6 +17321,51 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/71850310e4f74dff8122b97105a6dd6b/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7HY98MGdUEE",
+      "title": "Spencer Pratt Announces FEDERAL INVESTIGATION Into Mass-Homeless Voter Fraud in LA | They Got CAUGHT",
+      "show_name": "Benny Johnson",
+      "date_found": "2026-06-27",
+      "date_published": "2026-06-27",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "7HY98MGdUEE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=jsO63z1Lumw",
+      "title": "Spencer Pratt&#39;s Shocking Election Triumph Sends Bill Maher Into a Fury",
+      "show_name": "FAME DNA",
+      "date_found": "2026-06-27",
+      "date_published": "2026-06-25",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "jsO63z1Lumw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EoA486P-naM",
+      "title": "SwifTEA: TS11- The Tortured Poets Department- Announced During 13th Grammy Win!",
+      "show_name": "YEA Podcasts",
+      "date_found": "2026-06-27",
+      "date_published": "2026-06-27",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "EoA486P-naM"
     }
   ]
 }
