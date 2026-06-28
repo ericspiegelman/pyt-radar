@@ -17366,6 +17366,21 @@
         "transcript": "#"
       },
       "video_id": "EoA486P-naM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=V_vN35af26g",
+      "title": "Spencer Pratt Taking Souls- with Marty Up North",
+      "show_name": "Do Something Podcast",
+      "date_found": "2026-06-28",
+      "date_published": "2026-06-28",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "V_vN35af26g"
     }
   ]
 }
