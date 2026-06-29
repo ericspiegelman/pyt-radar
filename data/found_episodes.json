@@ -17531,6 +17531,51 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/6b2dba6e0dd54501bbfdf9ee00be9462/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=silgd8z-Sfo",
+      "title": "Bill Maher Blows Up As Spencer Pratt Shocks Everyone With Election Win",
+      "show_name": "Reality Reloaded",
+      "date_found": "2026-06-29",
+      "date_published": "2026-06-29",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "silgd8z-Sfo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TIXw_tRbF1E",
+      "title": "Bill Maher STUNNED as Spencer Pratt SHOCKS Everyone with Election Victory!",
+      "show_name": "Aesthetic Rida",
+      "date_found": "2026-06-29",
+      "date_published": "2026-06-28",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "TIXw_tRbF1E"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Bim-weJVvHk",
+      "title": "Nithya Raman on Beating Spencer Pratt, Challenging Karen Bass, and the Future of LA | Talk Easy",
+      "show_name": "Talk Easy with Sam Fragoso",
+      "date_found": "2026-06-29",
+      "date_published": "2026-06-28",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "Bim-weJVvHk"
     }
   ]
 }
