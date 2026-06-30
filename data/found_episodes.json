@@ -17846,6 +17846,21 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/c6adc0a7b5a04c6384ee07e03632f74d/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WURKUNPgqo0",
+      "title": "Teresa Giudice PT 2: RHONJ News, Wendy Williams Broke, Heidi Montag and Spencer Pratt&#39;s Go Fund M...",
+      "show_name": "Undressed Podcast",
+      "date_found": "2026-06-30",
+      "date_published": "2026-06-29",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "WURKUNPgqo0"
     }
   ]
 }
