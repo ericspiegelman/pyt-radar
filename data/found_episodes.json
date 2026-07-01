@@ -18116,6 +18116,36 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/70b0cbe3213c4f96b1b2c2ae61b92fe2/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Nm1ksUJ7pdk",
+      "title": "Pratt &amp; Trump",
+      "show_name": "Sam Shalhoub",
+      "date_found": "2026-07-01",
+      "date_published": "2026-06-30",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "Nm1ksUJ7pdk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=b1Ic_RKPnxM",
+      "title": "The Nature Of Belief - MCMANUS #06",
+      "show_name": "McManus Podcast",
+      "date_found": "2026-07-01",
+      "date_published": "2026-07-01",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "b1Ic_RKPnxM"
     }
   ]
 }
