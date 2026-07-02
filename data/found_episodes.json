@@ -18416,6 +18416,36 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/5fcf1c61915546209f0f70fa3ca25a85/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GAK8HfxhW_8",
+      "title": "&quot;We Have The Money, It&#39;s Just Being STOLEN&quot; Spencer Pratt EXPOSES LA&#39;s Homeless FRAUD Scheme!",
+      "show_name": "ClassE",
+      "date_found": "2026-07-02",
+      "date_published": "2026-07-02",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "GAK8HfxhW_8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JEVA9cR8a8A",
+      "title": "&#39;&#39;Bill Maher Can\u2019t Believe Spencer Pratt\u2019s Stunning Election Win&#39;&#39;",
+      "show_name": "Capital Pulse",
+      "date_found": "2026-07-02",
+      "date_published": "2026-07-01",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "JEVA9cR8a8A"
     }
   ]
 }
