@@ -18446,6 +18446,36 @@
         "transcript": "#"
       },
       "video_id": "JEVA9cR8a8A"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XVHDDs4QUVY",
+      "title": "Viral Videos Don\u2019t Win Elections",
+      "show_name": "Smoke and Power",
+      "date_found": "2026-07-03",
+      "date_published": "2026-07-01",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "XVHDDs4QUVY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cLVZu_dRDzk",
+      "title": "Nithya Raman Wants to Be L.A.&#39;s Mayor",
+      "show_name": "Elex Michaelson",
+      "date_found": "2026-07-03",
+      "date_published": "2026-07-03",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "cLVZu_dRDzk"
     }
   ]
 }
