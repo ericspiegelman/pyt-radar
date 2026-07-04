@@ -18761,6 +18761,21 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/fe9a661a85bb404c909953cbfb3b5072/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dZKkAUIqZFY",
+      "title": "Spencer Pratt Confesses How Reality TV Fake-Ruined His Life",
+      "show_name": "Nour Dz \u0645\u0637\u0628\u062e \u0646\u0648\u0631",
+      "date_found": "2026-07-04",
+      "date_published": "2026-07-04",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "dZKkAUIqZFY"
     }
   ]
 }
