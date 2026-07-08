@@ -19226,6 +19226,32 @@
         "transcript": "#"
       },
       "video_id": "0Q31HUnyJSc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=HoCfrowZ7GA",
+      "title": "Bill Maher Loses It As Spencer Pratt Shocks Everyone With Election Win",
+      "show_name": "Woke Hub",
+      "date_found": "2026-07-08",
+      "date_published": "2026-07-08",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "summary_failed",
+      "dropbox_links": {
+        "summary": "#",
+        "transcript": "#"
+      },
+      "video_id": "HoCfrowZ7GA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4kneW3wF_ac",
+      "title": "Are You Blessed or Cursed? | Spencer Pratt. Love America? Teen Boating. Viral Pic. | JLP Tue 7/7/26",
+      "show_name": "Jesse Lee Peterson",
+      "date_found": "2026-07-08",
+      "date_published": "2026-07-07",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "4kneW3wF_ac"
     }
   ]
 }
