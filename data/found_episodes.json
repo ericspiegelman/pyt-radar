@@ -19551,6 +19551,83 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/798dd7d96cac4c2a93050d9a4e489811/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fK2s3WZwBqM",
+      "title": "Karen Bass Booed At Boyle Heights Town Hall",
+      "show_name": "John Phillips And Randy Wang",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "fK2s3WZwBqM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kFBCReSgXJM",
+      "title": "Full interview: How LA will ensure speedy cleanup of Boyle Heights warehouse",
+      "show_name": "NBCLA",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "kFBCReSgXJM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3SWIAg1toHg",
+      "title": "What&#39;s Happening in LA Is Coming to Your State",
+      "show_name": "Tom Bilyeu Clips",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "3SWIAg1toHg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TC80aGY6OvA",
+      "title": "Spencer Pratt bashes Mamdani&#39;s new map of NYC that leaves out Irish, Italian communities | RISING",
+      "show_name": "The Hill",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "TC80aGY6OvA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8wnUmoVslhw",
+      "title": "Spencer Pratt shares video with claims of &#39;janky&#39; voting system after LA mayoral loss",
+      "show_name": "Page Six",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "8wnUmoVslhw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MCWcN7hSK8c",
+      "title": "Spencer Pratt Has Some Thoughts On California Elections",
+      "show_name": "Cumulus News Talk",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-09",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "MCWcN7hSK8c"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DKVNrsDTxL4",
+      "title": "IS DIGITAL INTIMACY AN OXYMORON? | Gracie Canaan &amp; Leon Neyfakh | GWF Podcast Ep. 705 (FULL EPISODE)",
+      "show_name": "GWF Podcast w/Corinne Fisher & Krystyna Hutchinson",
+      "date_found": "2026-07-10",
+      "date_published": "2026-07-10",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "DKVNrsDTxL4"
     }
   ]
 }
