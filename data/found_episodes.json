@@ -19716,6 +19716,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "biv9aWhDy7g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1k7g6IPTyYA",
+      "title": "Spencer Pratt! Real Americans Let&#39;s Go! \ud83d\udcaa\ud83c\uddfa\ud83c\uddf8\ud83e\udd85",
+      "show_name": "GodFingah",
+      "date_found": "2026-07-12",
+      "date_published": "2026-07-12",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "1k7g6IPTyYA"
     }
   ]
 }
