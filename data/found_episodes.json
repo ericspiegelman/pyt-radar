@@ -20047,6 +20047,17 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "lCu4CQ53oS4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3KoUOewPkKY",
+      "title": "Your House Burned Down \u2014 Here&#39;s a Stuffed Animal | Karen Bass",
+      "show_name": "The Alex Marlow Show",
+      "date_found": "2026-07-15",
+      "date_published": "2026-07-14",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "3KoUOewPkKY"
     }
   ]
 }
