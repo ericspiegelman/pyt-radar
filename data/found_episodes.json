@@ -20058,6 +20058,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "3KoUOewPkKY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vYEPchq5Mkg",
+      "title": "Did Karen Bass Just Encourage Meth Use?",
+      "show_name": "Cumulus News Talk",
+      "date_found": "2026-07-16",
+      "date_published": "2026-07-15",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "vYEPchq5Mkg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TlF4Q3ll-Ek",
+      "title": "\ud83d\udea8Spencer Pratt ROCKS Political World, Releases Ballot Harvesting BOMBSHELL | Breaking The Internet",
+      "show_name": "Benny Johnson",
+      "date_found": "2026-07-16",
+      "date_published": "2026-07-16",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "TlF4Q3ll-Ek"
     }
   ]
 }
