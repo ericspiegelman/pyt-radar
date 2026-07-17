@@ -20135,6 +20135,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "aky5Ghawunw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=R66sTwsBRXg",
+      "title": "#28 - Why Spencer Pratt and USA Soccer Are Great and Candace Is Not",
+      "show_name": "Reform Or Die",
+      "date_found": "2026-07-17",
+      "date_published": "2026-07-16",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "R66sTwsBRXg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2uiaGf8OcuI",
+      "title": "How Mail-In Ballots Knocked Spencer Pratt Out | Joe Rogan &amp; JD Vance",
+      "show_name": "PodClips Studio",
+      "date_found": "2026-07-17",
+      "date_published": "2026-07-16",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "2uiaGf8OcuI"
     }
   ]
 }
