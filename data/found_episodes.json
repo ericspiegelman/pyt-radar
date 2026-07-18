@@ -20223,6 +20223,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "Uf8CBPl4mbA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fwnq7tC907E",
+      "title": "Karen Bass Fire Response Under Scrutiny\u2014Where Are the Records? | Adam Carolla Show",
+      "show_name": "Adam Carolla & Colleagues",
+      "date_found": "2026-07-18",
+      "date_published": "2026-07-18",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "fwnq7tC907E"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=849lzcVlFSg",
+      "title": "Spencer Pratt  |  Vote Harvesters",
+      "show_name": "Epitome_News_Now",
+      "date_found": "2026-07-18",
+      "date_published": "2026-07-17",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "849lzcVlFSg"
     }
   ]
 }
