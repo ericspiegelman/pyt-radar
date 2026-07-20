@@ -20582,6 +20582,28 @@
       "match_type": "guest",
       "status": "transcript_unavailable",
       "video_id": "VCZHTEfNrW8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=35QWsuoc-yw",
+      "title": "Spencer Pratt on Fixing LA: Wildfires, Homelessness, Corruption &amp; the Fight to Take It Back",
+      "show_name": "Family Cartoon",
+      "date_found": "2026-07-20",
+      "date_published": "2026-07-19",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "35QWsuoc-yw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=l2rlIZlI-58",
+      "title": "Nithya Raman: \u00bfD\u00f3nde est\u00e1n las 2.000 viviendas para indigentes? Gast\u00f3 $60 MILLONES y solo entreg\u00f3 3",
+      "show_name": "VOZ",
+      "date_found": "2026-07-20",
+      "date_published": "2026-07-17",
+      "search_target": "Nithya Raman",
+      "match_type": "mentioned",
+      "status": "transcript_unavailable",
+      "video_id": "l2rlIZlI-58"
     }
   ]
 }
