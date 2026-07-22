@@ -20945,6 +20945,17 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/7571b39704674deea757019242acfb9a/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=QBUTP8VKlds",
+      "title": "Club Random with Bill Maher: Spencer Pratt\u2019s Surprising Way to Help the Homeless",
+      "show_name": "Club Random Podcast Plus",
+      "date_found": "2026-07-22",
+      "date_published": "2026-07-22",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "QBUTP8VKlds"
     }
   ]
 }
