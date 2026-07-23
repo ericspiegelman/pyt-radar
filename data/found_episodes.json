@@ -21196,6 +21196,39 @@
         "transcript": "#"
       },
       "audio_url": "https://audio.listennotes.com/e/p/88397efe98b34b37b0a92a19b5e247eb/"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=wNL_wsoY0mo",
+      "title": "Homeless Numbers Rising Under Karen Bass",
+      "show_name": "John Phillips And Randy Wang",
+      "date_found": "2026-07-23",
+      "date_published": "2026-07-23",
+      "search_target": "Karen Bass",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "wNL_wsoY0mo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=edqcIbaKk0c",
+      "title": "Club Random with Bill Maher: Spencer Pratt Exposes Negligence, His House &amp; the Mayor\u2019s Race",
+      "show_name": "Club Random Podcast Plus",
+      "date_found": "2026-07-23",
+      "date_published": "2026-07-23",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "edqcIbaKk0c"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cpkIWvrcVas",
+      "title": "Were The Los Angeles Mayoral Primaries RIGGED? A Conversation With Latrice Littleton",
+      "show_name": "The Ratchet Christian",
+      "date_found": "2026-07-23",
+      "date_published": "2026-07-23",
+      "search_target": "Spencer Pratt",
+      "match_type": "guest",
+      "status": "transcript_unavailable",
+      "video_id": "cpkIWvrcVas"
     }
   ]
 }
